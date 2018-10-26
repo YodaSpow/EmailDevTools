@@ -1,0 +1,23 @@
+a[href^="#"], a[href*="##"] {
+  position: relative;
+  display:inline-block;
+}
+a[href^="#"]::before, a[href*="##"]::before {
+  content: 'Need links!';
+  text-transform: uppercase;
+  font-family: Verdana, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 12px;
+  position: absolute;
+  left: 30px;
+  top: -5px;
+  box-shadow: 0px 1px 3px 0px slateblue;
+  color: black;
+  padding: 3px;
+  transform: rotate(-17deg);
+  background-color: yellow;
+  width: 84px;
+  text-align: center;
+  letter-spacing: 0;
+  font-weight: normal;
+}
