@@ -1,0 +1,192 @@
+body,
+html {
+  position: relative;
+}
+#navBar {
+  padding-bottom:70px!important;
+}
+nav {
+  overflow:hidden;
+  /*background: #4caf50;*/
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  float:left;
+  border-bottom: 1px solid rgba(19, 70, 21, 0.7);
+  box-sizing: border-box;   
+}
+.structureToggle {
+  border-right: 1px solid rgba(19, 70, 21, 0.7);  
+}
+nav li:hover {
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2; 
+}
+
+#navBar + .content {
+  padding-top: 100px;
+}
+
+nav a,
+nav button {
+  font-family: sans-serif;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 15px 15px;
+  text-align: left;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  display:block;
+  margin:0;
+  width: 100%;
+}
+button:hover {
+  filter: brightness(100%) contrast(120%);
+  -webkit-filter: brightness(100%) contrast(130%); 
+}
+.redB {
+  background-color: #f44336;
+}
+/* Links */
+.yes a[href^="#"],
+.yes a[href*="##"] {
+  position: relative;
+  display: inline-block;
+  -webkit-filter: drop-shadow(0px 0px 3px rgba(255, 0, 0, 0.8));
+  drop-shadow: (0px 0px 3px rgba(255, 0, 0, 0.8));
+}
+.yes a[href^="#"]:before,
+.yes a[href*="##"]:before {
+  content: "";
+  border: solid transparent;
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  border-left: 0px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid red;
+}
+.yes a[href^="#"]:after,
+.yes a[href*="##"]:after {
+  content: "Need link!";
+  position: absolute;
+  font-family: Verdana, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 12px;
+  width: 100px;
+  text-align: center;
+  background: red;
+  color: white;
+  margin: 0;
+  padding: 5px;
+  border-radius: 2px;
+  letter-spacing: 0;
+  left: 10px;
+  top: -32px;
+  z-index: 10;
+}
+.bgImage { background-image: none!important; }
+/* fall-back font-stack */
+.fonts:not(.fa) {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+.sTable table {
+  box-shadow: 0 0 0 1px rgba(255,255,255,.9), 0 0 0 2px rgba(0, 152, 253,.5); 
+}
+.sTR tr {
+  box-shadow: 0 0 0 1px rgba(255,255,255,.9), 0 0 0 2px rgba(102, 153, 153,.5);
+}
+.sTD td {
+  box-shadow: 0 0 0 1px rgba(255,255,255,.9), 0 0 0 2px rgba(37, 253, 153,.5);   
+}
+.sTH th {
+  box-shadow: 0 0 0 1px rgba(255,255,255,.9), 0 0 0 2px rgba(204, 0, 153,.5);  
+}
+.sTD td, .sTH th {
+    /*background:white!important; color:black!important; */
+}
+.sSpan span {
+  background:rgba(0, 0, 0,.65);
+  color: white!important;
+}
+.sA a {
+  display:inline-block;
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(204, 0, 153, .5));
+  drop-shadow: (0px 0px 5px rgba(204, 0, 153, .5));    
+}
+/*
+@-moz-document url-prefix() {
+  .sA a {
+  filter: none;
+  box-shadow: 0px 0px 5px rgba(204, 0, 153, 0.8);   
+  }
+}
+*/
+.spam .red, .spam .orange, .spam .spamBG2 {
+  color:white; letter-spacing:0; padding: 2px 4px; margin: -2px 3px 0 3px; display:inline-block; border-radius:3px; -webkit-filter: drop-shadow(0px 0px 3px rgba(255, 0, 0, 0.8)); drop-shadow: (0px 0px 3px rgba(255, 0, 0, 0.8)); text-shadow: 0 2px 0 2px rgba(0, 0, 0, 1);
+}
+.spam .red { background-color:rgba(255, 0, 0,.7); }
+.spam .orange { background-color:rgba(255,90,0,1);}
+.spam .spamBG2 { background-color:rgba(204, 0, 153,.7);}
+
+/* Hide a for Dropdown */
+.sT {display:none;}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px; 
+    padding: 15px 15px;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: default;
+}
+
+.dropdown:hover .dropbtn, .active {
+    background-color: orange;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a, .dropdown-content button {
+    float: none;
+    color: white;
+    display: block;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    /*background-color: #ddd;*/
+  
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    position:relative;
+    /*position: relative; /* */
+}
