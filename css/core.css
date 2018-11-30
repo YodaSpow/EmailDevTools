@@ -99,7 +99,7 @@ button:hover {
   top: -32px;
   z-index: 10;
 }
-.bgImage { background-image: none!important; }
+td[background].bgImage { background-image: none!important; }
 /* fall-back font-stack */
 .fonts:not(.fa) {
   font-family: Arial, Helvetica, sans-serif !important;
