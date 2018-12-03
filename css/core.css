@@ -64,6 +64,7 @@ button:hover {
 .yes a[href*="##"], 
 a[href*="#srcid=11026"],
 a[href*="?intcmpid="],
+a[href*="http://t.e.currys.co.uk"],
 a[href*=" https"],
 a[href*=" ?"] {
   position: relative;
@@ -75,6 +76,7 @@ a[href*=" ?"] {
 .yes a[href*="##"]:before, 
 a[href*="#srcid=11026"]:before,
 a[href*="?intcmpid="]:before,
+a[href*="http://t.e.currys.co.uk"]:before,
 a[href*=" https"]:before,
 a[href*=" ?"]:before {
   content: "";
@@ -90,6 +92,7 @@ a[href*=" ?"]:before {
 .yes a[href*="##"]:after, 
 a[href*="#srcid=11026"]:after,
 a[href*="?intcmpid="]:after,
+a[href*="http://t.e.currys.co.uk"]:after,
 a[href*=" https"]:after,
 a[href*=" ?"]:after {
   content: "Need link!";
@@ -119,6 +122,11 @@ a[href*="#srcid=11026"]:after {
 a[href*="?intcmpid="]:after {
   content: "URL contains: ?intcmpid=";
   width: 200px;
+}
+/* http://t.e.currys.co.uk */
+a[href*="http://t.e.currys.co.uk"]:after {
+  content: "old ESP link tracking";
+  width: 200px;  
 }
 /* White-space before https */
 a[href*=" https"]:after {
