@@ -61,14 +61,22 @@ button:hover {
 }
 /* Links */
 .yes a[href^="#"],
-.yes a[href*="##"] {
+.yes a[href*="##"], 
+a[href*="#srcid=11026"],
+a[href*="?intcmpid="],
+a[href*=" https"],
+a[href*=" ?"] {
   position: relative;
   display: inline-block;
   -webkit-filter: drop-shadow(0px 0px 3px rgba(255, 0, 0, 0.8));
   drop-shadow: (0px 0px 3px rgba(255, 0, 0, 0.8));
 }
 .yes a[href^="#"]:before,
-.yes a[href*="##"]:before {
+.yes a[href*="##"]:before, 
+a[href*="#srcid=11026"]:before,
+a[href*="?intcmpid="]:before,
+a[href*=" https"]:before,
+a[href*=" ?"]:before {
   content: "";
   border: solid transparent;
   position: absolute;
@@ -79,25 +87,48 @@ button:hover {
   border-top: 20px solid red;
 }
 .yes a[href^="#"]:after,
-.yes a[href*="##"]:after {
+.yes a[href*="##"]:after, 
+a[href*="#srcid=11026"]:after,
+a[href*="?intcmpid="]:after,
+a[href*=" https"]:after,
+a[href*=" ?"]:after {
   content: "Need link!";
   position: absolute;
   font-family: Verdana, Helvetica, sans-serif;
   font-weight: bold;
-  text-transform: uppercase;
   font-size: 11px;
   line-height: 12px;
   width: 100px;
   text-align: center;
+  letter-spacing: 0;
   background: red;
   color: white;
   margin: 0;
   padding: 5px;
   border-radius: 2px;
-  letter-spacing: 0;
   left: 10px;
   top: -32px;
   z-index: 10;
+}
+/* #srcid=11026 */
+a[href*="#srcid=11026"]:after {
+  content: "URL contains: #srcid=11026";
+  width: 200px;
+}
+/* ?intcmpid= */
+a[href*="?intcmpid="]:after {
+  content: "URL contains: ?intcmpid=";
+  width: 200px;
+}
+/* White-space before https */
+a[href*=" https"]:after {
+  content: "white-space before https";
+  width: 200px;
+}
+/* white-space before tracking query ? */
+a[href*=" ?"]:after {
+  content: "white-space before tracking";
+  width: 200px;
 }
 td[background].bgImage { background-image: none!important; }
 /* fall-back font-stack */
@@ -128,14 +159,6 @@ td[background].bgImage { background-image: none!important; }
   -webkit-filter: drop-shadow(0px 0px 5px rgba(204, 0, 153, .5));
   drop-shadow: (0px 0px 5px rgba(204, 0, 153, .5));    
 }
-/*
-@-moz-document url-prefix() {
-  .sA a {
-  filter: none;
-  box-shadow: 0px 0px 5px rgba(204, 0, 153, 0.8);   
-  }
-}
-*/
 .spam .red, .spam .orange, .spam .spamBG2 {
   color:white; letter-spacing:0; padding: 2px 4px; margin: -2px 3px 0 3px; display:inline-block; border-radius:3px; -webkit-filter: drop-shadow(0px 0px 3px rgba(255, 0, 0, 0.8)); drop-shadow: (0px 0px 3px rgba(255, 0, 0, 0.8)); text-shadow: 0 2px 0 2px rgba(0, 0, 0, 1);
 }
