@@ -1,6 +1,8 @@
 $(window).on("load", function() {
   var wrapperClass = "body > table";
   $(wrapperClass).addClass("content");
+  // Pseudo tooltip for images ALT
+  $("img[alt*='£'], [alt*='&'], [alt*='#'], [alt*='alt']").wrap( "<div class='fauxImg'></div>" );
   
   // All images
   $(document).ready(function() {
@@ -10,22 +12,20 @@ $(window).on("load", function() {
       if (flag == 0) {
         $("img").each(function() {
           var $this = $(this);
-          //$this.attr("src", $this.attr("src").replace(/\/css\//g, "/cssN/"));
           $this.attr("src", $this.attr("src").replace(/http/g, "-http"));
         });
-        //$(tog).text("IMG");
         $(tog).addClass("redB");
         $("td").addClass("bgImage");
+        $(wrapperClass).addClass("altText");
         flag = 1;
       } else if (flag == 1) {
         $("img").each(function() {
           var $this = $(this);
-          //$this.attr("src", $this.attr("src").replace(/\/cssN\//g, "/css/"));
           $this.attr("src", $this.attr("src").replace(/-http/g, "http"));
         });
-        //$(tog).text("IMG");
         $(tog).removeClass("redB");
         $("td").removeClass("bgImage");
+        $(wrapperClass).removeClass("altText");
         flag = 0;
       }
     });
@@ -51,22 +51,68 @@ $(window).on("load", function() {
   // Links
   $(document).ready(function() {
     var flag = 0;
-    var tog = ".lT";
+    var tog = ".lTlinks";
     $(tog).click(function() {
       if (flag == 0) {
         $(tog).addClass("redB");
-        $(tog).text("Links");
-        $(document.body).addClass("yes");
+        $(wrapperClass).addClass("yes");
         flag = 1;
       } else if (flag == 1) {
         $(tog).removeClass("redB");
-        $(tog).text("Links");
-        $(document.body).removeClass("yes");
+        $(wrapperClass).removeClass("yes");
         flag = 0;
       }
     });
   });
-  // spamToggle
+  // category
+  $(document).ready(function() {
+    var flag = 0;
+    var tog = ".lTCategory";
+    $(tog).click(function() {
+      if (flag == 0) {
+        $(tog).addClass("redB");
+        $(wrapperClass).addClass("category");
+        flag = 1;
+      } else if (flag == 1) {
+        $(tog).removeClass("redB");
+        $(wrapperClass).removeClass("category");
+        flag = 0;
+      }
+    });
+  });  
+  // pageType
+  $(document).ready(function() {
+    var flag = 0;
+    var tog = ".lTPageType";
+    $(tog).click(function() {
+      if (flag == 0) {
+        $(tog).addClass("redB");
+        $(wrapperClass).addClass("pageType");
+        flag = 1;
+      } else if (flag == 1) {
+        $(tog).removeClass("redB");
+        $(wrapperClass).removeClass("pageType");
+        flag = 0;
+      }
+    });
+  });  
+  // _label="2NOM2_Category"
+  $(document).ready(function() {
+    var flag = 0;
+    var tog = ".lTlabel";
+    $(tog).click(function() {
+      if (flag == 0) {
+        $(tog).addClass("redB");
+        $(wrapperClass).addClass("label");
+        flag = 1;
+      } else if (flag == 1) {
+        $(tog).removeClass("redB");
+        $(wrapperClass).removeClass("label");
+        flag = 0;
+      }
+    });
+  });    
+  // spam
   $(document).ready(function() {
     var flag = 0;
     var tog = ".spT";
@@ -84,7 +130,6 @@ $(window).on("load", function() {
       }
     });
   });
-  // Structures  
   // table
   $(document).ready(function() {
     var flag = 0;
@@ -105,6 +150,7 @@ $(window).on("load", function() {
   $(document).ready(function() {
     var flag = 0;
     var tog = ".sTtd";
+
     $(tog).click(function() {
       if (flag == 0) {
         $(tog).addClass("redB");
@@ -169,10 +215,16 @@ $(window).on("load", function() {
   /* Active DropDowns */
   // https://www.w3schools.com/jquery/html_toggleclass.asp
   $(document).ready(function() {
-    $(".dropdown-content button").click(function() {
-      $(".dropbtn").toggleClass("redB"); // active
+    $(".dstructure button").click(function() {
+      $(".dropSt").toggleClass("redB"); // active
     });
   });
+  $(document).ready(function() {
+    $(".dlinks button").click(function() {
+      $(".dropLt").toggleClass("redB"); // active
+    });
+  });
+
   
   console.log("window loaded");
 });
@@ -199,6 +251,7 @@ $("body>table").before("<div id='navBar'></div>");
     navLink,
     dropDiv,
     dropButton,
+    linkDrop,
     structureDrop;
 
   navElem.appendChild(navList);
@@ -223,19 +276,27 @@ $("body>table").before("<div id='navBar'></div>");
   navElem.className = "task_flyout fixed"; // nav
   navList.children[0].className = "imgToggle"; // li button
   navList.children[1].className = "fontToggle";
-  navList.children[2].className = "linksToggle";
+  navList.children[2].className = "linksToggle dN";
   navList.children[3].className = "spamToggle";
   navList.children[4].className = "structureToggle dN"; // dN hides navItems CSS
 
+ 
   // Drop-Down:
   // Structure: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar
   //dropDiv = document.createElement("div");
   //dropDiv.appendChild(dropButton);
   //dropButton = document.createElement("button");
   //dropButton.className = "dropbtn";
+  
+  linkDrop = document.createElement("div");
+   linkDrop.innerHTML =
+    '<button class="dropbtn dropLt">Links <i class="fa"></i> </button> <div class="dropdown-content dlinks"> <button class="lTlinks">Links</button> <button class="lTPageType">PageType</button> <button class="lTCategory">Category</button> <button class="lTlabel">Label</button></div>';
+  linkDrop.className = "dropdown";
+  navList.children[2].appendChild(linkDrop); 
+  
   structureDrop = document.createElement("div");
   structureDrop.innerHTML =
-    '<button class="dropbtn">Structure <i class="fa fa-caret-down"></i> </button> <div class="dropdown-content"> <button class="sTtable">&lt;table&gt;</button> <button class="sTtd">&lt;td&gt;</button> <button class="sTth">&lt;th&gt;</button> <button class="sTspan">&lt;span&gt;</button> <button class="sTa">&lt;a&gt;</button> </div>';
+    '<button class="dropbtn dropSt">Structure <i class="fa"></i> </button> <div class="dropdown-content dstructure"> <button class="sTtable">&lt;table&gt;</button> <button class="sTtd">&lt;td&gt;</button> <button class="sTth">&lt;th&gt;</button> <button class="sTspan">&lt;span&gt;</button> <button class="sTa">&lt;a&gt;</button> </div>';
   structureDrop.className = "dropdown";
   navList.children[4].appendChild(structureDrop);
 
@@ -247,7 +308,7 @@ $("body>table").before("<div id='navBar'></div>");
 
 
 $(window).scroll(function() {
-  if ($(this).scrollTop() > 80) {
+  if ($(this).scrollTop() > 40) {
     $(".task_flyout").addClass("sticky");
   } else {
     $(".task_flyout").removeClass("sticky");
