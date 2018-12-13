@@ -72,7 +72,7 @@ button:hover {
 .altText .fauxImg,
 
 a[href*="#srcid=11026"],
-a[href*="?intcmpid="],
+a[href*="?intcmp"],
 a[href*="http://t.e.currys.co.uk"],
 a[href*=" https"],
 a[href*=" ?"] {
@@ -93,7 +93,7 @@ a[href*=" ?"] {
 .altText .fauxImg:before,
 
 a[href*="#srcid=11026"]:before,
-a[href*="?intcmpid="]:before,
+a[href*="?intcmp"]:before,
 a[href*="http://t.e.currys.co.uk"]:before,
 a[href*=" https"]:before,
 a[href*=" ?"]:before {
@@ -118,7 +118,7 @@ a[href*=" ?"]:before {
 .altText .fauxImg:after,
 
 a[href*="#srcid=11026"]:after,
-a[href*="?intcmpid="]:after,
+a[href*="?intcmp"]:after,
 a[href*="http://t.e.currys.co.uk"]:after,
 a[href*=" https"]:after,
 a[href*=" ?"]:after {
@@ -160,9 +160,9 @@ a[href*="#srcid=11026"]:after {
   content: "URL contains: #srcid=11026";
   width: 200px;
 }
-/* ?intcmpid= */
-a[href*="?intcmpid="]:after {
-  content: "URL contains: ?intcmpid=";
+/* ?intcmp */
+a[href*="?intcmp"]:after {
+  content: "URL contains: ?intcmp";
   width: 200px;
 }
 /* http://t.e.currys.co.uk */
