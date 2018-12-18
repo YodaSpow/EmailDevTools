@@ -186,7 +186,7 @@ a[href*=" ?"]:after {
   width: 200px;  
 }
 /* Alt is done with jquery global selector on load */
-.altText .fauxImg { border: 1px solid red; box-sizing:border-box; }
+.altText img { border: 1px solid red; box-sizing:border-box; }
 .altText .fauxImg:after {
   content: "Image ALT has invalid character";
   width: 200px;
