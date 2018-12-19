@@ -5,7 +5,7 @@
 <p align="center">A cross-browser development tool for HTML email</p>
 
 ### Info
-EmailTools allows you to see Image Alt styling, empty links and have a fast over of an HTML email WITHOUT touching the source code for the HTML.
+EmailTools allows you to see Image Alt styling, empty links and have a **fast overview** of an HTML email WITHOUT touching the source code for the HTML.
 
 **Note:** _Javascript NEEDs to come out of HTML for send-time through your Email Service Provider (ESP).
 
@@ -27,7 +27,7 @@ After forking/cloning put this code at bottom of your HTML body:
 <script src="scripts/core.js"></script>
 ```
 ### Integrated into HTML for sendtime automatic removal
-You can put a data-driven IF statement from your ESP, using a primary key field in your send-data which is *never empty*: 
+You can put a data-driven IF statement from your ESP, using a primary key field in your send-data which is **never empty**: 
 ```
 <!-- Email Tools -->
 &lt;% if ( chainProfile.partyId == "") { %&gt;
