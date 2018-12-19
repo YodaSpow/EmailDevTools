@@ -1,7 +1,7 @@
 $(window).on("load", function() {
   var wrapperClass = "body > table";
   $(wrapperClass).addClass("content");
-  // Pseudo tooltip for images ALT
+  // Pseudo tooltip for images ALT: DIV only appears based on these conditions
   $("img[alt*='£'], [alt*='&'], [alt*='#'], [alt*='alt']").wrap( "<div class='fauxImg'></div>" );
   
   // All images
@@ -179,6 +179,22 @@ $(window).on("load", function() {
       }
     });
   });
+  // img
+    $(document).ready(function() {
+    var flag = 0;
+    var tog = ".sTimg";
+    $(tog).click(function() {
+      if (flag == 0) {
+        $(tog).addClass("redB");
+        $(wrapperClass).addClass("sImg");
+        flag = 1;
+      } else if (flag == 1) {
+        $(tog).removeClass("redB");
+        $(wrapperClass).removeClass("sImg");
+        flag = 0;
+      }
+    });
+  });
   // span
   $(document).ready(function() {
     var flag = 0;
@@ -296,7 +312,7 @@ $("body>table").before("<div id='navBar'></div>");
   
   structureDrop = document.createElement("div");
   structureDrop.innerHTML =
-    '<button class="dropbtn dropSt">Structure <i class="fa"></i> </button> <div class="dropdown-content dstructure"> <button class="sTtable">&lt;table&gt;</button> <button class="sTtd">&lt;td&gt;</button> <button class="sTth">&lt;th&gt;</button> <button class="sTspan">&lt;span&gt;</button> <button class="sTa">&lt;a&gt;</button> </div>';
+    '<button class="dropbtn dropSt">Structure <i class="fa"></i> </button> <div class="dropdown-content dstructure"> <button class="sTtable">&lt;table&gt;</button> <button class="sTtd">&lt;td&gt;</button> <button class="sTth">&lt;th&gt;</button> <button class="sTimg">&lt;img&gt;</button> <button class="sTspan">&lt;span&gt;</button> <button class="sTa">&lt;a&gt;</button> </div>';
   structureDrop.className = "dropdown";
   navList.children[4].appendChild(structureDrop);
 
@@ -344,7 +360,9 @@ $("*")
   // .highlight(" free", "spamBG2") // works: joiner maybe on Right
   // .highlight("free ", "spamBG3") // works: joiner maybe on Left
   .highlight(" Knowhow", "orange")
-  .highlight(" Knowhow ", "orange");
+  .highlight(" Knowhow ", "orange")
+  .highlight("'", "red");
+  //.highlight("£", "red"); doesnt work
 // .highlight(" & ", "spamBG") // doesnt work reads rendered HTML not unescaped UTF8 entities.
 
 // Spam Word:

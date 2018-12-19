@@ -60,26 +60,35 @@ button:hover {
   background-color: #f44336;
 }
 /* Tooltips: position start */
-/* Very useful:https://www.w3schools.com/css/css_attribute_selectors.asp */
 .yes a[href^="#"],
 .yes a[href*="##"], 
 .pageType a[href*="PageType"],
 .category a[href*="Category"],
 .label a[_label*="_Category"],
 .sTable table:not([role*="presentation"]),
-
-/* Alt is done with jquery global selector on load */
+.sTable td > table + table, 
+.sTable th > table + table,
 .altText .fauxImg,
-
 a[href*="#srcid=11026"],
 a[href*="?intcmp"],
 a[href*="http://t.e.currys.co.uk"],
 a[href*=" https"],
 a[href*=" ?"] {
   position: relative;
-  display: inline-block;
   -webkit-filter: drop-shadow(0px 0px 3px rgba(255, 0, 0, 0.8));
   drop-shadow: (0px 0px 3px rgba(255, 0, 0, 0.8));
+}
+.yes a[href^="#"],
+.yes a[href*="##"], 
+.pageType a[href*="PageType"],
+.category a[href*="Category"],
+.label a[_label*="_Category"],
+a[href*="#srcid=11026"],
+a[href*="?intcmp"],
+a[href*="http://t.e.currys.co.uk"],
+a[href*=" https"],
+a[href*=" ?"] {
+  display: inline-block;
 }
 /* Tooltips: set arrow */
 .yes a[href^="#"]:before,
@@ -88,10 +97,9 @@ a[href*=" ?"] {
 .category a[href*="Category"]:before,
 .label a[_label*="_Category"]:before,
 .sTable table:not([role*="presentation"]):before,
-
-/* Alt is done with jquery global selector on load */
+.sTable td > table + table:before, 
+.sTable th > table + table:before,
 .altText .fauxImg:before,
-
 a[href*="#srcid=11026"]:before,
 a[href*="?intcmp"]:before,
 a[href*="http://t.e.currys.co.uk"]:before,
@@ -113,10 +121,9 @@ a[href*=" ?"]:before {
 .category a[href*="Category"]:after,
 .label a[_label*="_Category"]:after,
 .sTable table:not([role*="presentation"]):after,
-
-/* Alt is done with jquery global selector on load */
+.sTable td > table + table:after, 
+.sTable th > table + table:after,
 .altText .fauxImg:after,
-
 a[href*="#srcid=11026"]:after,
 a[href*="?intcmp"]:after,
 a[href*="http://t.e.currys.co.uk"]:after,
@@ -185,8 +192,14 @@ a[href*=" ?"]:after {
   content: "Missing role= presentation";
   width: 200px;  
 }
+/* Table align method Warning */
+.sTable td > table + table:after, 
+.sTable th > table + table:after  {
+  content: "Table Align method!!!";
+  width: 200px;
+}
 /* Alt is done with jquery global selector on load */
-.altText img { border: 1px solid red; box-sizing:border-box; }
+.altText img, .sImg img { border: 1px solid red; box-sizing:border-box; }
 .altText .fauxImg:after {
   content: "Image ALT has invalid character";
   width: 200px;
@@ -205,7 +218,7 @@ td[background].bgImage {
   box-shadow: 0 0 0 1px rgba(255,255,255,.9), 0 0 0 2px rgba(102, 153, 153,.5);
 }
 .sTD td {
-  box-shadow: 0 0 0 1px rgba(255,255,255,.9), 0 0 0 2px rgba(37, 253, 153,.5);   
+  box-shadow: 0 0 0 1px rgba(255,255,255,.9), 0 0 0 2px rgba(37, 253, 153,.5); 
 }
 .sTH th {
   box-shadow: 0 0 0 1px rgba(255,255,255,.9), 0 0 0 2px rgba(204, 0, 153,.5);  
