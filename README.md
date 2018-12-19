@@ -7,7 +7,7 @@
 ### Info
 EmailTools allows you to see Image Alt styling, empty links and have a fast over of an HTML email WITHOUT touching the source code for the HTML.
 
-**Note:** _Javascript NEEDs to come out of HTML for send-time through your ESP._
+**Note:** _Javascript NEEDs to come out of HTML for send-time through your Email Service Provider (ESP).
 
 <p align="center">
   <img src="./img/cover.png" alt="bamboo-screenshot">
@@ -25,4 +25,15 @@ After forking/cloning put this code at bottom of your HTML body:
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link href="css/core.css" rel="stylesheet" type="text/css" />
 <script src="scripts/core.js"></script>
+```
+### Integrated into HTML for sendtime automatic removal
+You can put a data-driven IF statement from your ESP, using a primary key field in your send-data which is *never empty*: 
+```
+<!-- Email Tools -->
+&lt;% if ( chainProfile.partyId == "") { %&gt;
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="http://somedomain.com/emailTool/core.css" rel="stylesheet" type="text/css" />
+<script src="http://somedomain.com/emailTool/core.js"></script>
+&lt;% } %&gt;
+<!-- // -->
 ```
