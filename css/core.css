@@ -72,6 +72,7 @@ button:hover {
 a[href*="#srcid=11026"],
 a[href*="?intcmp"],
 a[href*="http://t.e.currys.co.uk"],
+.missingQuery,
 a[href*=" https"],
 a[href*=" ?"] {
   position: relative;
@@ -83,9 +84,10 @@ a[href*=" ?"] {
 .pageType a[href*="PageType"],
 .category a[href*="Category"],
 .label a[_label*="_Category"],
-a[href*="#srcid=11026"],
+a[href*="#srcid"],
 a[href*="?intcmp"],
 a[href*="http://t.e.currys.co.uk"],
+.missingQuery,
 a[href*=" https"],
 a[href*=" ?"] {
   display: inline-block;
@@ -100,9 +102,10 @@ a[href*=" ?"] {
 .sTable td > table + table:before, 
 .sTable th > table + table:before,
 .altText .fauxImg:before,
-a[href*="#srcid=11026"]:before,
+a[href*="#srcid"]:before,
 a[href*="?intcmp"]:before,
 a[href*="http://t.e.currys.co.uk"]:before,
+.missingQuery:before,
 a[href*=" https"]:before,
 a[href*=" ?"]:before {
   content: "";
@@ -124,9 +127,10 @@ a[href*=" ?"]:before {
 .sTable td > table + table:after, 
 .sTable th > table + table:after,
 .altText .fauxImg:after,
-a[href*="#srcid=11026"]:after,
+a[href*="#srcid"]:after,
 a[href*="?intcmp"]:after,
 a[href*="http://t.e.currys.co.uk"]:after,
+.missingQuery:after,
 a[href*=" https"]:after,
 a[href*=" ?"]:after {
   content: "Need link!";
@@ -162,9 +166,9 @@ a[href*=" ?"]:after {
   content: "Label is not set";
   width: 150px;  
 }
-/* #srcid=11026 */
-a[href*="#srcid=11026"]:after {
-  content: "URL contains: #srcid=11026";
+/* #srcid */
+a[href*="#srcid"]:after {
+  content: "URL contains: #srcid";
   width: 200px;
 }
 /* ?intcmp */
@@ -177,6 +181,11 @@ a[href*="http://t.e.currys.co.uk"]:after {
   content: "Old-send ESP URL";
   width: 200px;  
 }
+/* Missing tracking ? */
+.missingQuery:after {
+  content: "Missing: ?";
+  width: 90px;  
+}
 /* White-space before https */
 a[href*=" https"]:after {
   content: "White-space before HTTPS";
@@ -184,7 +193,7 @@ a[href*=" https"]:after {
 }
 /* white-space before tracking query ? */
 a[href*=" ?"]:after {
-  content: "White-space before TRACKING";
+  content: "White-space before Tracking";
   width: 200px;
 }
 /* Table missing: role="presentation" */

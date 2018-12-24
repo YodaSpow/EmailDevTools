@@ -3,6 +3,10 @@ $(window).on("load", function() {
   $(wrapperClass).addClass("content");
   // Pseudo tooltip for images ALT: DIV only appears based on these conditions
   $("img[alt*='£'], [alt*='&'], [alt*='#'], [alt*='alt']").wrap( "<div class='fauxImg'></div>" );
+  // Missing ? for tracking
+  $("a").addClass("link");
+  $("a[href*='mailto'], a[href*='MirrorPageUrl'], a[_label*='Social']").removeClass("link");
+  $( ".link" ).not("a[href*='?']").addClass("missingQuery");
   
   // All images
   $(document).ready(function() {
