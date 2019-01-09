@@ -3,7 +3,7 @@ html {
   position: relative;
 }
 #navBar {
-  padding-bottom:70px!important;
+  padding-bottom:0px!important;
 }
 nav {
   overflow:hidden;

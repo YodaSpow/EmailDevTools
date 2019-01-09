@@ -5,7 +5,7 @@ $(window).on("load", function() {
   $("img[alt*='£'], [alt*='&'], [alt*='#'], [alt*='alt']").wrap( "<div class='fauxImg'></div>" );
   // Missing ? for tracking
   $("a").addClass("link");
-  $("a[href*='mailto'], a[href*='MirrorPageUrl'], a[_label*='Social']").removeClass("link");
+  $( ".link" ).not("a[href*='https://www.currys.co.uk']").removeClass("link");
   $( ".link" ).not("a[href*='?']").addClass("missingQuery");
   
   // All images
