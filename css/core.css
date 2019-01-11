@@ -1,12 +1,13 @@
 body,
 html {
-  position: relative;
+  position: relative; 
+}
+body {
+  margin-top: 70px;
+  border-top: 1px solid #cccccc;
 }
 #navBar {
   padding-bottom:0px!important;
-}
-nav {
-  overflow:hidden;
 }
 nav ul {
   list-style-type: none;
@@ -15,13 +16,7 @@ nav ul {
 }
 nav li {
   float:left;
-  border-bottom: 1px solid rgba(19, 70, 21, 0.7);
-  box-sizing: border-box;   
-}
-.structureToggle {
-  border-right: 1px solid rgba(19, 70, 21, 0.7);  
-}
-nav li:hover {
+  box-sizing: border-box; 
 }
 .fixed {
   position: fixed;
@@ -29,8 +24,15 @@ nav li:hover {
   left: 0;
   z-index: 2; 
 }
-#navBar + .content {
-  padding-top: 100px;
+.fixed:after {
+left: 100%;  
+background: #4caf50;
+bottom: 0;
+content: "";
+position: absolute;
+top: 0;
+width: 9999px;
+height: 48px;
 }
 nav a,
 nav button {
@@ -47,18 +49,80 @@ nav button {
   outline: none;
   display:block;
   margin:0;
+}
+.dropdown button, .dropdown a {
   width: 100%;
 }
-button:hover {
+nav a:hover, button:hover {
   filter: brightness(100%) contrast(120%);
   -webkit-filter: brightness(100%) contrast(130%); 
 }
+.logo {
+  color: #6fff75;
+  text-shadow: 0px 1px 2px #317134;
+}
+/* Dropdown styling */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+.dropdown .dropbtn {
+    font-size: 16px; 
+    padding: 15px 15px;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: default;
+}
+/* Triangle for Dropdown */
+.fa {
+  position: relative;
+  display: inline-block; 
+  width: 5px;
+}
+.fa:before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 0px;  
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 8px solid #fff;
+}
+.dropdown:hover .dropbtn, .active {
+    background-color: orange;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+.dropdown-content a, .dropdown-content button {
+    float: none;
+    color: white;
+    display: block;
+    border-bottom: 1px solid #347736;
+    text-align: left;
+}
+.dropdown-content a:first-child, .dropdown-content button:first-child {
+    border-top: 1px solid #946000; 
+}
+.dropdown-content a:last-child, .dropdown-content button:last-child {
+    border:none; 
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    position:relative;
+}
+
 .dropLt {
   min-width:105px;
 }
 .redB {
   background-color: #f44336;
 }
+
 /* Tooltips: position start */
 .yes a[href^="#"],
 .yes a[href*="##"], 
@@ -68,7 +132,6 @@ button:hover {
 .sTable table:not([role*="presentation"]),
 .sTable td > table + table, 
 .sTable th > table + table,
-.altText .fauxImg,
 a[href*="#srcid=11026"],
 a[href*="?intcmp"],
 a[href*="http://t.e.currys.co.uk"],
@@ -79,11 +142,15 @@ a[href*=" ?"] {
   -webkit-filter: drop-shadow(0px 0px 3px rgba(255, 0, 0, 0.8));
   drop-shadow: (0px 0px 3px rgba(255, 0, 0, 0.8));
 }
+.altText .fauxImg {
+  position: relative;
+}
 .yes a[href^="#"],
 .yes a[href*="##"], 
 .pageType a[href*="PageType"],
 .category a[href*="Category"],
 .label a[_label*="_Category"],
+.altText .fauxImg,
 a[href*="#srcid"],
 a[href*="?intcmp"],
 a[href*="http://t.e.currys.co.uk"],
@@ -181,6 +248,8 @@ a[href*="http://t.e.currys.co.uk"]:after {
   content: "Old-send ESP URL";
   width: 200px;  
 }
+/* PCWB global tracking exists */
+
 /* Missing tracking ? */
 .missingQuery:after {
   content: "Missing: ?";
@@ -242,55 +311,6 @@ td[background].bgImage {
   drop-shadow: (0px 0px 5px rgba(204, 0, 153, .5));    
 }
 
-/* Dropdown styling */
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-.dropdown .dropbtn {
-    font-size: 16px; 
-    padding: 15px 15px;
-    border: none;
-    outline: none;
-    color: white;
-    cursor: default;
-}
-/* Triangle for Dropdown */
-.fa {
-  position: relative;
-  display: inline-block; 
-  width: 5px;
-}
-.fa:before {
-  content: "";
-  position: absolute;
-  top: -9px;
-  left: 0px;  
-	border-left: 4px solid transparent;
-	border-right: 4px solid transparent;
-	border-top: 8px solid #fff;
-}
-.dropdown:hover .dropbtn, .active {
-    background-color: orange;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-.dropdown-content a, .dropdown-content button {
-    float: none;
-    color: white;
-    display: block;
-    border-bottom: 1px solid rgba(0,0,0,.2);
-    text-align: left;
-}
-.dropdown:hover .dropdown-content {
-    display: block;
-    position:relative;
-}
 
 .spam .red, .spam .orange, .spam .spamBG2 {
   color:white; letter-spacing:0; padding: 2px 4px; margin: -2px 3px 0 3px; display:inline-block; border-radius:3px; -webkit-filter: drop-shadow(0px 0px 3px rgba(255, 0, 0, 0.8)); drop-shadow: (0px 0px 3px rgba(255, 0, 0, 0.8)); text-shadow: 0 2px 0 2px rgba(0, 0, 0, 1);
@@ -301,3 +321,28 @@ td[background].bgImage {
 
 /* Fix to hide for Dropdown */
 .sT, .lT {display:none;}
+
+/* MQ */
+@media only screen and (min-width: 0px) and (max-width: 649px) {
+  body {
+    margin-top: 220px;
+  } 
+  .task_flyout {
+    width:100%;
+  }  
+  nav li {
+    float:none; 
+  }
+  .dropdown {
+    float: none;
+    overflow: hidden;
+  }
+  nav a, nav button, .dropdown .dropbtn {
+    font-size: 14px; 
+    padding: 8px 8px;
+    width: 100%;
+  }
+  nav li {
+    border-bottom: 1px solid #347736;
+  }  
+}

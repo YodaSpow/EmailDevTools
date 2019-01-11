@@ -3,11 +3,24 @@ $(window).on("load", function() {
   $(wrapperClass).addClass("content");
   // Pseudo tooltip for images ALT: DIV only appears based on these conditions
   $("img[alt*='£'], [alt*='&'], [alt*='#'], [alt*='alt']").wrap( "<div class='fauxImg'></div>" );
-  // Missing ? for tracking
-  $("a").addClass("link");
-  $( ".link" ).not("a[href*='https://www.currys.co.uk']").removeClass("link");
-  $( ".link" ).not("a[href*='?']").addClass("missingQuery");
   
+  // Whitelisted domains URLs for the checks: 
+  var currysD = "a[href*='currys.co.uk']",
+      idD     = "a[href*='idmobile.co.uk']",
+      pcwbD   = "a[href*='pcworldbusiness.co.uk']",
+      tkhD    = "a[href*='teamknowhow.com']",
+      domainURL = currysD + "," + idD + "," + pcwbD + "," + tkhD,
+      linkCheck = "link";
+  
+  $(domainURL).addClass("linkCheck");
+  $( ".linkCheck" ).not(domainURL).removeClass("linkCheck");
+  $( ".linkCheck" ).not("a[href*='?']").addClass("missingQuery");
+
+  // Firefox fix
+  $(document).ready(function() {         
+    $(".iT, .fT, .spT").removeAttr("href");
+  });  
+    
   // All images
   $(document).ready(function() {
     var flag = 0;
@@ -154,7 +167,6 @@ $(window).on("load", function() {
   $(document).ready(function() {
     var flag = 0;
     var tog = ".sTtd";
-
     $(tog).click(function() {
       if (flag == 0) {
         $(tog).addClass("redB");
@@ -232,19 +244,34 @@ $(window).on("load", function() {
     });
   });
   
-  /* Active DropDowns */
+  /* Active DropDowns  - Doesn't work if more than 1 is selected.*/
   // https://www.w3schools.com/jquery/html_toggleclass.asp
-  $(document).ready(function() {
-    $(".dstructure button").click(function() {
-      $(".dropSt").toggleClass("redB"); // active
-    });
-  });
+
   $(document).ready(function() {
     $(".dlinks button").click(function() {
       $(".dropLt").toggleClass("redB"); // active
     });
   });
+  $(document).ready(function() {
+    $(".dstructure button").click(function() {
+      $(".dropSt").toggleClass("redB"); // active
+    });
+  });  
 
+
+// https://www.tutorialrepublic.com/faq/hide-dropdown-menu-on-click-outside-of-the-element-in-jquery.php  
+$(document).ready(function(){
+    // Show hide popover
+    $(".dN").click(function(){
+        $(this).find(".dropdown-content").slideToggle("fast"); 
+    });
+});
+$(document).on("click", function(event){
+    var $trigger = $(".dN");
+    if($trigger !== event.target && !$trigger.has(event.target).length){
+        $(".dropdown-content").slideUp("fast");
+    }            
+});
   
   console.log("window loaded");
 });
@@ -256,13 +283,14 @@ $("body>table").before("<div id='navBar'></div>");
 (function() {
   // All toggles we'd like to add
   var navItems = [
+    { href: "https://github.com/YodaSpow/EmailDevTools", text: "EmailTools", class: "logo" },
     { href: "#", text: "Images", class: "iT" },
     { href: "#", text: "Fonts", class: "fT" },
     { href: "#", text: "Links", class: "lT" },
     { href: "#", text: "Spam", class: "spT" },
-    { href: "#", text: "Structure", class: "sT" }
+    { href: "#", text: "Structure", class: "sT"}
   ];
-
+  
   // A few variables for use later
   // http://jsfiddle.net/sDbff/3/
   var navElem = document.createElement("nav"),
@@ -280,10 +308,10 @@ $("body>table").before("<div id='navBar'></div>");
   for (var i = 0; i < navItems.length; i++) {
     // Create a fresh list item, and anchor
     navItem = document.createElement("li");
-    navLink = document.createElement("button");
+    navLink = document.createElement("a");
 
     // Set properties on anchor
-    //navLink.href = navItems[i].href;
+    navLink.href = navItems[i].href;
     navLink.classList = navItems[i].class;
     navLink.innerHTML = navItems[i].text;
 
@@ -294,47 +322,40 @@ $("body>table").before("<div id='navBar'></div>");
 
   // Set toggle classes
   navElem.className = "task_flyout fixed"; // nav
-  navList.children[0].className = "imgToggle"; // li button
-  navList.children[1].className = "fontToggle";
-  navList.children[2].className = "linksToggle dN";
-  navList.children[3].className = "spamToggle";
-  navList.children[4].className = "structureToggle dN"; // dN hides navItems CSS
-
- 
-  // Drop-Down:
-  // Structure: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar
-  //dropDiv = document.createElement("div");
-  //dropDiv.appendChild(dropButton);
-  //dropButton = document.createElement("button");
-  //dropButton.className = "dropbtn";
+  navList.children[0].className = "tool"; // li button
+  navList.children[1].className = "imgToggle"; // li button
+  navList.children[2].className = "fontToggle";
+  navList.children[3].className = "linksToggle dN";
+  navList.children[4].className = "spamToggle";
+  navList.children[5].className = "structureToggle dN"; // dN hides navItems CSS
   
   linkDrop = document.createElement("div");
    linkDrop.innerHTML =
     '<button class="dropbtn dropLt">Links <i class="fa"></i> </button> <div class="dropdown-content dlinks"> <button class="lTlinks">Links</button> <button class="lTPageType">PageType</button> <button class="lTCategory">Category</button> <button class="lTlabel">Label</button></div>';
   linkDrop.className = "dropdown";
-  navList.children[2].appendChild(linkDrop); 
+  navList.children[3].appendChild(linkDrop); 
   
   structureDrop = document.createElement("div");
   structureDrop.innerHTML =
     '<button class="dropbtn dropSt">Structure <i class="fa"></i> </button> <div class="dropdown-content dstructure"> <button class="sTtable">&lt;table&gt;</button> <button class="sTtd">&lt;td&gt;</button> <button class="sTth">&lt;th&gt;</button> <button class="sTimg">&lt;img&gt;</button> <button class="sTspan">&lt;span&gt;</button> <button class="sTa">&lt;a&gt;</button> </div>';
   structureDrop.className = "dropdown";
-  navList.children[4].appendChild(structureDrop);
+  navList.children[5].appendChild(structureDrop);
 
   // Add list to div before HTML email.
   window.onload = function() {
-    document.getElementById("navBar").appendChild(navElem);
+    document.getElementById("navBar").appendChild(navElem);    
   };
 })();
 
 
+
 $(window).scroll(function() {
-  if ($(this).scrollTop() > 40) {
+  if ($(this).scrollTop() > 70) {
     $(".task_flyout").addClass("sticky");
   } else {
     $(".task_flyout").removeClass("sticky");
   }
 });
-
 
 // Spam Finder
 // https://codepen.io/spowart/pen/WYpNrx?editors=1010
@@ -365,7 +386,7 @@ $("*")
   // .highlight("free ", "spamBG3") // works: joiner maybe on Left
   .highlight(" Knowhow", "orange")
   .highlight(" Knowhow ", "orange")
-  .highlight("'", "red");
+  .highlight("'", "red")
   //.highlight("£", "red"); doesnt work
 // .highlight(" & ", "spamBG") // doesnt work reads rendered HTML not unescaped UTF8 entities.
 
