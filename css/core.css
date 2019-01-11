@@ -136,6 +136,7 @@ a[href*="#srcid=11026"],
 a[href*="?intcmp"],
 a[href*="http://t.e.currys.co.uk"],
 .missingQuery,
+.notSecure,
 a[href*=" https"],
 a[href*=" ?"] {
   position: relative;
@@ -155,6 +156,7 @@ a[href*="#srcid"],
 a[href*="?intcmp"],
 a[href*="http://t.e.currys.co.uk"],
 .missingQuery,
+.notSecure,
 a[href*=" https"],
 a[href*=" ?"] {
   display: inline-block;
@@ -173,6 +175,7 @@ a[href*="#srcid"]:before,
 a[href*="?intcmp"]:before,
 a[href*="http://t.e.currys.co.uk"]:before,
 .missingQuery:before,
+.notSecure:before,
 a[href*=" https"]:before,
 a[href*=" ?"]:before {
   content: "";
@@ -198,6 +201,7 @@ a[href*="#srcid"]:after,
 a[href*="?intcmp"]:after,
 a[href*="http://t.e.currys.co.uk"]:after,
 .missingQuery:after,
+.notSecure:after,
 a[href*=" https"]:after,
 a[href*=" ?"]:after {
   content: "Need link!";
@@ -254,6 +258,11 @@ a[href*="http://t.e.currys.co.uk"]:after {
 .missingQuery:after {
   content: "Missing: ?";
   width: 90px;  
+}
+/* Is not HTTPS */
+.notSecure:after {
+  content: "No HTTPS";
+  width: 100px;  
 }
 /* White-space before https */
 a[href*=" https"]:after {

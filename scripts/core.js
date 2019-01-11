@@ -5,16 +5,18 @@ $(window).on("load", function() {
   $("img[alt*='£'], [alt*='&'], [alt*='#'], [alt*='alt']").wrap( "<div class='fauxImg'></div>" );
   
   // Whitelisted domains URLs for the checks: 
-  var currysD = "a[href*='currys.co.uk']",
+  var currysD = "a[href*='www.currys.co.uk']",
       idD     = "a[href*='idmobile.co.uk']",
       pcwbD   = "a[href*='pcworldbusiness.co.uk']",
       tkhD    = "a[href*='teamknowhow.com']",
-      domainURL = currysD + "," + idD + "," + pcwbD + "," + tkhD,
+      ttD     = "a[href*='techtalk.currys.co.uk']",
+      domainURL = currysD + "," + idD + "," + pcwbD + "," + tkhD + "," + ttD,
       linkCheck = "link";
   
   $(domainURL).addClass("linkCheck");
   $( ".linkCheck" ).not(domainURL).removeClass("linkCheck");
   $( ".linkCheck" ).not("a[href*='?']").addClass("missingQuery");
+  $( ".linkCheck" ).not("a[href*='https']").addClass("notSecure");
 
   // Firefox fix
   $(document).ready(function() {         
