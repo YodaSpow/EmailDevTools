@@ -1,0 +1,1 @@
+alert('EmailTool Script would load here');

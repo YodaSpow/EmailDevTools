@@ -334,10 +334,14 @@ td[background].bgImage {
 /* MQ */
 @media only screen and (min-width: 0px) and (max-width: 649px) {
   body {
-    margin-top: 220px;
+    margin-top: 40px;
   } 
+  .fixed:after {
+  height: 32px;
+  border-bottom: 1px solid #347736;
+  }  
   .task_flyout {
-    width:100%;
+    width:40%;
   }  
   nav li {
     float:none; 
@@ -349,7 +353,6 @@ td[background].bgImage {
   nav a, nav button, .dropdown .dropbtn {
     font-size: 14px; 
     padding: 8px 8px;
-    width: 100%;
   }
   nav li {
     border-bottom: 1px solid #347736;

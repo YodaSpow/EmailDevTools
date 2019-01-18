@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Working 1</title>
+</head>
+<body>
+  
+<!--
+https://stackoverflow.com/questions/7789521/how-to-link-external-javascript-file-onclick-of-button
+http://jsfiddle.net/4WGRP/ 
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_addeventlistener3
+-->
+  
+<button type="button" value="Submit" onclick="myclick()" id="tempBTN">EmailTools</button>
+  
+<p id="demo"></p>  
+  
+  
+<script type="text/javascript">
+  
+function myclick(){
+    var btn = document.getElementById('tempBTN');
+    btn.onclick = function(){
+      
+      /*
+      var versionUpdate = (new Date()).getTime();
+      var script = document.createElement("script");
+      var link = document.createElement("link");
+      script.type = "text/javascript";
+      script.src = "./scripts/test.js?v=" + versionUpdate;
+      link.type = "text/css;"
+      link.rel = "stylesheet"
+      link.href = "css/core.css?v=" + versionUpdate;
+      document.body.appendChild(link);
+      document.body.appendChild(script);  
+      */
+      
+      
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "./scripts/test2.js"; 
+      //document.getElementsByTagName("script")[0].appendChild(script);
+      document.body.appendChild(script); 
+      return false;
+      
+    }
+    document.getElementById('tempBTN').click();
+    document.getElementById('tempBTN').remove();
+}
+  
+    
+</script>  
+</body>
+</html>

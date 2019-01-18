@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Default OFF: EmailTools</title>
+</head>
+<body>
+  
+<!--
+https://stackoverflow.com/questions/7789521/how-to-link-external-javascript-file-onclick-of-button
+http://jsfiddle.net/4WGRP/ 
+-->
+  
+<button type="button" value="Submit" onclick="myclick()" id="tempBTN">EmailTools</button>
+  
+  
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="min-width:650px; table-layout: fixed;">
+  <tr>
+    <td width="100%" align="center" valign="top" bgcolor="#f6f6f6" style="min-width:100vm;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="min-width:650px; table-layout: fixed;">
+        <!-- Top -->
+        <tr>
+          <td align="center" valign="top" bgcolor="#feffff" style="padding-top: 5px;">
+            <table width="650" border="0" cellspacing="0" cellpadding="0" class="dw3" style="border:none;">
+              <!-- PreHeader -->
+              <tr>
+                <td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:10px; line-height: 12px; color:#333333; padding-bottom:4px;">Turn your home into a thoughtful home with Google Home Hub and Nest&nbsp;Thermostat&nbsp;E.</td>
+              </tr>
+              <!-- Brand -->
+              <tr>
+                <td>
+                  <table role="presentation" width="650" border="0" align="center" cellpadding="0" cellspacing="0" class="dw">
+                    <tr>
+                      <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:10px; line-height: 12px; color:#333332;">&nbsp;Add <a href="mailto:<%= delivery.mailParameters.senderAddress %>" style="text-decoration:underline; color:#333333;">&lt;%= delivery.mailParameters.senderAddress %&gt;</a> to your address book </td>
+                      <td align="right" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:10px; line-height: 12px; color:#333332;"><a href="<%@ include view='MirrorPageUrl' %>" _label="Mirror Page" _type="mirrorPage" style="text-decoration:underline; color:#333333;">Online version</a></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- Logo -->
+              <tr>
+                <td align="center" style="padding: 10px 0px 10px 0px;"><a href="##HDR##?<%@ include view='dixDIXtrackingCPCW1' %>~HOM~HOM~HDR~<%@ include view='dixDIXtrackingCPCW2' %>" _label="HDR"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/CORE/CPCW_logo_3x.png" alt="##alt##" width="280" height="57" class="w70" style="display:block; margin:0 auto; font-family:gothamBlack, Arial Black, Helvetica, sans-serif; color:#6A2C6B; font-size:24px; line-height:45px;" border="0" /></a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+    
+<!-- -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+<script type="text/javascript" language="javascript">
+var versionUpdate = (new Date()).getTime();
+var script = document.createElement("script");
+var link = document.createElement("link");
+script.type = "text/javascript";
+script.src = "scripts/core_v2.js?v=" + versionUpdate;
+link.type = "text/css;"
+link.rel = "stylesheet"
+link.href = "css/core.css?v=" + versionUpdate;
+document.body.appendChild(link);
+document.body.appendChild(script);
+</script>  
+  
+<script type="text/javascript"> 
+  // Hook point for Toggle nav
+  $("body>table").before("<div id='navBar'></div>");  
+  
+  function myclick(){
+    var btn = document.getElementById('tempBTN');
+    btn.onclick = function(){
+      
+      // Begin
+// Raw Javascript
+(function() {
+  // All toggles we'd like to add
+  var navItems = [
+    { href: "https://github.com/YodaSpow/EmailDevTools", text: "EmailTools", class: "logo" },
+    { href: "#", text: "Images", class: "iT" },
+    { href: "#", text: "Fonts", class: "fT" },
+    { href: "#", text: "Links", class: "lT" },
+    { href: "#", text: "Spam", class: "spT" },
+    { href: "#", text: "Structure", class: "sT"}
+  ];
+  
+  // A few variables for use later
+  // http://jsfiddle.net/sDbff/3/
+  var navElem = document.createElement("nav"),
+    navList = document.createElement("ul"),
+    navItem,
+    navLink,
+    dropDiv,
+    dropButton,
+    linkDrop,
+    structureDrop;
+
+  navElem.appendChild(navList);
+
+  // Cycle over each nav item
+  for (var i = 0; i < navItems.length; i++) {
+    // Create a fresh list item, and anchor
+    navItem = document.createElement("li");
+    navLink = document.createElement("a");
+
+    // Set properties on anchor
+    navLink.href = navItems[i].href;
+    navLink.classList = navItems[i].class;
+    navLink.innerHTML = navItems[i].text;
+
+    // Add anchor to list item, and list item to list
+    navItem.appendChild(navLink);
+    navList.appendChild(navItem);
+  }
+
+  // Set toggle classes
+  navElem.className = "task_flyout fixed"; // nav
+  navList.children[0].className = "tool"; // li button
+  navList.children[1].className = "imgToggle"; // li button
+  navList.children[2].className = "fontToggle";
+  navList.children[3].className = "linksToggle dN";
+  navList.children[4].className = "spamToggle";
+  navList.children[5].className = "structureToggle dN"; // dN hides navItems CSS
+  
+  linkDrop = document.createElement("div");
+   linkDrop.innerHTML =
+    '<button class="dropbtn dropLt">Links <i class="fa"></i> </button> <div class="dropdown-content dlinks"> <button class="lTlinks">Links</button> <button class="lTPageType">PageType</button> <button class="lTCategory">Category</button> <button class="lTlabel">Label</button></div>';
+  linkDrop.className = "dropdown";
+  navList.children[3].appendChild(linkDrop); 
+  
+  structureDrop = document.createElement("div");
+  structureDrop.innerHTML =
+    '<button class="dropbtn dropSt">Structure <i class="fa"></i> </button> <div class="dropdown-content dstructure"> <button class="sTtable">&lt;table&gt;</button> <button class="sTtd">&lt;td&gt;</button> <button class="sTth">&lt;th&gt;</button> <button class="sTimg">&lt;img&gt;</button> <button class="sTspan">&lt;span&gt;</button> <button class="sTa">&lt;a&gt;</button> </div>';
+  structureDrop.className = "dropdown";
+  navList.children[5].appendChild(structureDrop);
+
+  // Add list to div before HTML email.
+  window.onload = function() {
+    document.getElementById("navBar").appendChild(navElem);    
+  };
+})();      
+      // End
+      
+    }
+    document.getElementById('tempBTN').click();
+    document.getElementById('tempBTN').remove();
+}
+  
+
+</script>    
+
+
+  
+<!--
+Absolute URLs:
+https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/core.js
+https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/core.css
+-->
+  
+<!-- REF 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" language="javascript">
+var versionUpdate = (new Date()).getTime();
+var script = document.createElement("script");
+var link = document.createElement("link");
+script.type = "text/javascript";
+script.src = "scripts/core.js?v=" + versionUpdate;
+link.type = "text/css;"
+link.rel = "stylesheet"
+link.href = "css/core.css?v=" + versionUpdate;
+document.body.appendChild(link);
+document.body.appendChild(script);
+</script> 
+-->
+  
+</body>
+</html>
