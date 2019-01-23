@@ -14,15 +14,39 @@ $(window).on("load", function() {
       linkCheck = "link";
   
   $(domainURL).addClass("linkCheck");
-  $( ".linkCheck" ).not(domainURL).removeClass("linkCheck");
+  // $( ".linkCheck" ).not(domainURL).removeClass("linkCheck");
   $( ".linkCheck" ).not("a[href*='?']").addClass("missingQuery");
   $( ".linkCheck" ).not("a[href*='https']").addClass("notSecure");
 
-  // Firefox fix
-  $(document).ready(function() {         
-    $(".iT, .fT, .spT").removeAttr("href");
+  $(document).ready(function() {  
+  // Firefox fix  
+  $(".logo, .iT, .fT, .spT").removeAttr("href");
+  // 1st load, turn off EmailTools Nav
+  $( "nav li" ).not(".tool").addClass("hideNav");
+  $( ".logo" ).addClass("redB");
+  $( ".fixed" ).addClass("beforeNav");  
   });  
-    
+  
+  // Default load of EmailTools
+  $(document).ready(function() {
+    var flag = 0;
+    var tog = ".tool .logo";
+    $(tog).click(function() {
+      if (flag == 0) {
+        $("nav li").removeClass("hideNav");
+        $(".logo").removeClass("redB");
+        $( ".fixed" ).removeClass("beforeNav");
+        // Mobile Nav push class for MQ
+        $("body").addClass("mobNav");
+        flag = 1;
+      } else if (flag == 1) {
+        // refresh page
+        //window.location.href=window.location.href;
+        window.location.reload(true);
+        flag = 0;
+      }
+    });
+  }); 
   // All images
   $(document).ready(function() {
     var flag = 0;

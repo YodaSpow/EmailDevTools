@@ -3,7 +3,7 @@ html {
   position: relative; 
 }
 body {
-  margin-top: 70px;
+  margin-top: 60px;
   border-top: 1px solid #cccccc;
 }
 #navBar {
@@ -33,6 +33,9 @@ position: absolute;
 top: 0;
 width: 9999px;
 height: 48px;
+}
+.beforeNav:after {
+background: none;  
 }
 nav a,
 nav button {
@@ -116,11 +119,13 @@ nav a:hover, button:hover {
     position:relative;
 }
 
+.hideNav { display:none; }
+
 .dropLt {
   min-width:105px;
 }
 .redB {
-  background-color: #f44336;
+  background-color: #f44336; color:#ffffff;
 }
 
 /* Tooltips: position start */
@@ -335,13 +340,17 @@ td[background].bgImage {
 @media only screen and (min-width: 0px) and (max-width: 649px) {
   body {
     margin-top: 40px;
-  } 
+  }
+  .mobNav {
+    margin-top: 215px;  
+  }
   .fixed:after {
   height: 32px;
   border-bottom: 1px solid #347736;
   }  
   .task_flyout {
-    width:40%;
+    /*width:40%;*/
+    width:100%;
   }  
   nav li {
     float:none; 

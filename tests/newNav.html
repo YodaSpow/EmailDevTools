@@ -1,0 +1,874 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="https://currys-ssl.cdn.dixons.com/grafx/favicon.png" />
+<link rel="Shortcut Icon" type="image/x-icon" href="https://currys-ssl.cdn.dixons.com/grafx/favicon.ico" />
+<link rel="apple-touch-icon" href="https://currys-ssl.cdn.dixons.com/grafx/apple-touch-icon.png" />
+<base target="_blank">
+<title></title>
+&lt;% if ( chainProfile.partyId !== "") { %&gt;
+&lt;%@ include view='dixCoreMasterTemplateCSS' %&gt;
+&lt;% } else { %&gt;
+<link href="https://currys-ssl.cdn.dixons.com/css/themes/email/AC/CORE/css/CoreMasterTemplateCSS.css" rel="stylesheet" type="text/css" />
+&lt;% } %&gt;
+<style type="text/css">
+body { background-color: #f6f6f6; }
+@media only screen and (min-width: 0px) and (max-width: 649px) {
+.w80 { width: 80%!important; }
+.tc { width: 80%!important; height: auto!important; }
+}
+@media only screen and (min-width: 441px) and (max-width: 649px) {
+.h1, .h1 a { font-size: 35px!important; line-height:1.1em!important; }
+}
+@media only screen and (max-width: 440px) {
+.h1, .h1 a { font-size: 30px!important; line-height: 1.1em!important; }
+.p { font-size: 14px!important; line-height: 1.6em!important; }
+.tc { width: 90%!important; height: auto!important; }
+}
+</style>
+<!--[if (mso)|(mso 16)]>
+<style type="text/css">body, table, td, a, span { font-family: Arial, Helvetica, sans-serif!important; }
+a {text-decoration: none;}
+sup { font-size:80%; line-height:1; vertical-align:top; mso-text-raise: 30%; }
+</style>
+<![endif]-->
+
+<!--[if gte mso 9]>
+<xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml>
+<![endif]-->
+</head>
+<!-- AC Version 2.9 -->
+<body id="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" yahoo="fix" style="font-family: Arial,Helvetica,sans-serif;" bgcolor="#f6f6f6">
+<script>
+<% var CampaignName= 'GoogleHomeHub'; %>
+<% var CampaignType= 'TAR'; %>
+<% var shortDayOfWeek= formatDate(new Date(), '%A').toUpperCase(); %>
+</script>
+<!-- rpcampaign: <%= CampaignName %><%= formatDate(new Date(targetData.BroadcastDate), '%4Y%2M%2D') %> -->
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="min-width:650px; table-layout: fixed;">
+  <tr>
+    <td width="100%" align="center" valign="top" bgcolor="#f6f6f6" style="min-width:100vm;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="min-width:650px; table-layout: fixed;">
+        <!-- Top -->
+        <tr>
+          <td align="center" valign="top" bgcolor="#feffff" style="padding-top: 5px;">
+            <table width="650" border="0" cellspacing="0" cellpadding="0" class="dw3" style="border:none;">
+              <!-- PreHeader -->
+              <tr>
+                <td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:10px; line-height: 12px; color:#333333; padding-bottom:4px;">Turn your home into a thoughtful home with Google Home Hub and Nest&nbsp;Thermostat&nbsp;E.</td>
+              </tr>
+              <!-- Brand -->
+              <tr>
+                <td>
+                  <table role="presentation" width="650" border="0" align="center" cellpadding="0" cellspacing="0" class="dw">
+                    <tr>
+                      <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:10px; line-height: 12px; color:#333332;">&nbsp;Add <a href="mailto:<%= delivery.mailParameters.senderAddress %>" style="text-decoration:underline; color:#333333;">&lt;%= delivery.mailParameters.senderAddress %&gt;</a> to your address book </td>
+                      <td align="right" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:10px; line-height: 12px; color:#333332;"><a href="<%@ include view='MirrorPageUrl' %>" _label="Mirror Page" _type="mirrorPage" style="text-decoration:underline; color:#333333;">Online version</a></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- Logo -->
+              <tr>
+                <td align="center" style="padding: 10px 0px 10px 0px;"><a href="##HDR##?<%@ include view='dixDIXtrackingCPCW1' %>~HOM~HOM~HDR~<%@ include view='dixDIXtrackingCPCW2' %>" _label="HDR"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/CORE/CPCW_logo_3x.png" alt="##alt##" width="280" height="57" class="w70" style="display:block; margin:0 auto; font-family:gothamBlack, Arial Black, Helvetica, sans-serif; color:#6A2C6B; font-size:24px; line-height:45px;" border="0" /></a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        
+        <!-- Top -->
+        <tr>
+          <td align="center" valign="top" bgcolor="#feffff" style="padding-top: 5px;">
+            <table role="presentation" width="650" border="0" cellspacing="0" cellpadding="0" class="dw3" style="border:none;">
+              <!-- Brand -->
+              <tr>
+                <td>
+                  <table role="presentation" width="650" border="0" align="center" cellpadding="0" cellspacing="0" class="dw">
+                    <tr>
+                      <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:10px; line-height: 12px; color:#333332;">&nbsp;Add <a href="mailto:specialoffers@store.currys.co.uk" style="text-decoration:underline; color:#333333;">specialoffers@store.currys.co.uk</a> to your address book </td>
+                      <td align="right" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:10px; line-height: 12px; color:#333332;"><a href="%%view_email_url%%" alias="Online_Version" style="text-decoration:underline; color:#333333;">Online version</a></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- Logo -->
+              <tr>
+                <td align="center" style="padding: 10px 0px 10px 0px;"> <a href="https://www.currys.co.uk/gbuk/index.html?srcid=8324&cmpid=em~%%=v(@ChainGroup)=%%~%%=v(@CampaignName)=%%~%%=v(@Prefix)=%%_%%=v(@CampaignType)=%%~wk%%WeekNo%%~%%=v(@EMtype)=%%~%%=v(@BroadcastY)=%%%%= v(@BroadcastM)=%%%%= v(@BroadcastD)=%%~%%=v(@CustomerType)=%%~HOM~HOM~HDR~%%jobid%%&emid=%%NameID%%" alias="HDR"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/CORE/CPCW_logo_3x.png" alt="Currys PC World" width="280" height="57" class="w70" style="display:block; margin:0 auto; font-family:gothamBlack, Arial Black, Helvetica, sans-serif; color:#6A2C6B; font-size:24px; line-height:45px;" border="0" /></a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>        
+        <!-- Navigation -->
+        <tr>
+          <td align="center" valign="top" bgcolor="#e9e9e9">
+            <table role="presentation" width="650" border="0" cellspacing="0" cellpadding="0" class="dw">
+              <tr>
+                <td align="center" bgcolor="#e9e9e9" style="padding: 10px 0px 10px 0px;">
+                  <table role="presentation" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#e9e9e9" class="dw3">
+                    <tr>
+                      <td width="37" height="22" align="left" valign="middle" class="hideT hideM"><a href="##HOM##<%@ include view='dixDIXtrackingCPCW1' %>~HOM~HOM~NAV~<%@ include view='dixDIXtrackingCPCW2' %>" _label="NAV_HOM" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 12px; color:#333333; text-decoration:none; -webkit-text-size-adjust: 90%;">Home</a></td>
+                      <td width="65" height="22" align="center" valign="middle" class="hideborder" style="border-left:#cccccc solid 1px;"><a href="https://www.currys.co.uk/gbuk/household-appliances-35-u.html?<%@ include view='dixDIXtrackingCPCW1' %>~UNI~MDA~NAV~<%@ include view='dixDIXtrackingCPCW2' %>" _label="NAV_MDA" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 12px; color:#333333; text-decoration:none; -webkit-text-size-adjust: 90%;">Kitchen <br />
+                        Appliances</a></td>
+                      <td width="70" height="22" align="center" valign="middle" class="hideM" style="border-left:#cccccc solid 1px;"><a href="https://www.currys.co.uk/gbuk/home-appliances-36-u.html?<%@ include view='dixDIXtrackingCPCW1' %>~UNI~SKA~NAV~<%@ include view='dixDIXtrackingCPCW2' %>" _label="NAV_SKA" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 12px; color:#333333; text-decoration:none; -webkit-text-size-adjust: 90%;">Small <br />
+                        Appliances</a></td>
+                      <td width="80" height="22" align="center" valign="middle" style="border-left:#cccccc solid 1px;"><a href="https://www.currys.co.uk/gbuk/tv-and-home-entertainment-31-u.html?<%@ include view='dixDIXtrackingCPCW1' %>~UNI~TVN~NAV~<%@ include view='dixDIXtrackingCPCW2' %>" _label="NAV_TVN" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 12px; color:#333333; text-decoration:none; -webkit-text-size-adjust: 90%;">TV &amp; <br />
+                        Entertainment</a></td>
+                      <td width="56" height="22" align="center" valign="middle" class="hideT hideM" style="border-left:#cccccc solid 1px;"><a href="https://www.currys.co.uk/gbuk/cameras-and-camcorders-38-u.html?<%@ include view='dixDIXtrackingCPCW1' %>~UNI~IMG~NAV~<%@ include view='dixDIXtrackingCPCW2' %>" _label="NAV_IMG" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 12px; color:#333333; text-decoration:none; -webkit-text-size-adjust: 90%;">Cameras</a></td>
+                      <td width="59" height="22" align="center" valign="middle" class="hideM" style="border-left:#cccccc solid 1px;"><a href="https://www.currys.co.uk/gbuk/audio-32-u.html?<%@ include view='dixDIXtrackingCPCW1' %>~UNI~AUD~NAV~<%@ include view='dixDIXtrackingCPCW2' %>" _label="NAV_AUD" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 12px; color:#333333; text-decoration:none; -webkit-text-size-adjust: 90%;">Audio</a></td>
+                      <td width="62" height="22" align="center" valign="middle" style="border-left:#cccccc solid 1px;"><a href="https://www.currys.co.uk/gbuk/computing/laptops-315-c.html?<%@ include view='dixDIXtrackingCPCW1' %>~CAT~LAP~NAV~<%@ include view='dixDIXtrackingCPCW2' %>" _label="NAV_LAP" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 12px; color:#333333; text-decoration:none; -webkit-text-size-adjust: 90%;">Computing</a></td>
+                      <td width="99" height="22" align="center" valign="middle" class="hideT hideM" style="border-left:#cccccc solid 1px;"><a href="https://www.currys.co.uk/gbuk/computing-accessories-40-u.html?<%@ include view='dixDIXtrackingCPCW1' %>~UNI~ACC~NAV~<%@ include view='dixDIXtrackingCPCW2' %>" _label="NAV_ACC" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 12px; color:#333333; text-decoration:none; -webkit-text-size-adjust: 90%;">PC Accessories</a></td>
+                      <td width="60" height="22" align="center" valign="middle" style="border-left:#cccccc solid 1px;"><a href="https://www.currys.co.uk/gbuk/phones-broadband-and-sat-nav/mobile-phones-and-accessories-362-c.html?<%@ include view='dixDIXtrackingCPCW1' %>~CAT~MOB~NAV~<%@ include view='dixDIXtrackingCPCW2' %>" _label="NAV_MOB" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 12px; color:#333333; text-decoration:none; -webkit-text-size-adjust: 90%;">Mobile Phones</a></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- 1BNR1 -->
+        <tr>
+          <td align="center" style="padding: 20px 0px 30px 0px;">
+            <table role="presentation" width="650" border="0" align="center" cellpadding="0" cellspacing="0" class="dw3">
+              <tbody>
+                <tr> 
+                  <!-- TH -->
+                  <th align="center" width="650" bgcolor="#f5f5f5" class="dw db" style="border-top: 1px solid #cccccc; border-bottom: 1px solid #cccccc;">
+                    <table role="presentation" width="100%" class="dw3" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <th width="10" height="10" class="dw db">&nbsp;</th>
+                        <th width="280" class="dw db" style="font-weight:normal;">
+                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td align="center"><a href="https://www.idmobile.co.uk/upgrades?utm_source=<%= TrackingSource %>&utm_medium=<%= TrackingMedium %>&utm_campaign=<%= TrackingCampaign %>&utm_content=MainBNR" _label="MainBNR_OTH"><img align="center" width="280" height="213" src="https://currys-ssl.cdn.dixons.com/css/themes/email/iD/2018-2019/retention/props/up_retbnr03.png" border="0" class="cta" alt=" Upgrade and save" style="display:block;" /></a></td>
+                            </tr>
+                          </table>
+                        </th>
+                        <th width="10" height="10" class="dw db">&nbsp;</th>
+                        <th width="340" class="dw db" style="font-weight:normal;">
+                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td class="hAuto" align="center" valign="middle" style="padding: 20px 0px 20px 0px;"><a href="https://www.idmobile.co.uk/upgradesutm_source=<%= TrackingSource %>&utm_medium=<%= TrackingMedium %>&utm_campaign=<%= TrackingCampaign %>&utm_content=MainBNR" _label="MainBNR_OTH" style="font-family: gtwBold, Arial Black, Helvetica, sans-serif; font-size: 32px; line-height:34px; color:#6ab978; text-decoration: none;">Save up to &pound;30 off any&nbsp;phone.</a></td>
+                            </tr>
+                          </table>
+                        </th>
+                        <th width="10" height="10" class="dw db">&nbsp;</th>
+                      </tr>
+                    </table>
+                  </th>
+                  <!-- // TH --> 
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>        
+        <!-- External Image call like KickDynamics -->
+        <tr>
+          <td style="padding:20px 0px 0px 0px;">
+            <table role="presentation" width="650" border="0" cellpadding="0" cellspacing="0" align="center" class="dw">
+              <tr>
+                <td width="650" align="center" valign="top" class="dw"><a href="#Dummy" _label="MainBNR_OTH"><img class="dw altHDR" align="left" width="650" height="168" src="http://img.kickdyn.com/11029/jyqX9epjfu1KT4S4d2i3/imgancnt.png" alt="External Image call" style="display:block; color:#feffff; font-size:36px; line-height:40px; font-weight:bold; text-align:center; background:#000001; text-transform:uppercase;" border="0" /></a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>  
+        <!-- 2BNR (1-2) -->
+        <tr>
+          <td align="center" style="padding-bottom: 50px;">
+            <table role="presentation" width="650" cellpadding="0" cellspacing="0" border="0" align="center" class="dw3">
+              <tr>
+                <td height="30" align="center" class="f28 inlineTxt" style="font-family:gothamBlack, Arial black, Helvetica, sans-serif; font-size: 25px; font-weight: bold; color:#0c347b; letter-spacing:-0.04em; padding: 4px 0px 4px 0px;">Table Aligned Method</td>
+              </tr>
+              <tr>
+                <td align="left" valign="top" style="padding:10px 0px 0px 0px;">
+                  <!-- Banner 1 -->
+                  <table role="presentation" width="310" align="left" border="0" cellspacing="0" cellpadding="0" class="dw">
+                    <tr>
+                      <td align="left" valign="top">
+                        <table role="presentation" align="left" width="310" border="0" cellpadding="0" cellspacing="0" class="dw">
+                          <tr>
+                            <td valign="top" align="left" style="line-height:1%; mso-line-height-rule:exactly;"><a href="##2BNR1##<%@ include view='dixDIXtrackingCPCW1' %>~PageType~Category~2BNR1~<%@ include view='dixDIXtrackingCPCW2' %>" _label="2BNR1_Category"><img align="left" width="310" height="196" src="https://placeholdit.imgix.net/~text?txtsize=110&bg=00b0e8&txtclr=feffff&txt=880x560&w=880&h=560" alt="##alt##" border="0" class="dw" style="display:block;" /></a></td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle" style="padding:2px 0px 0px 0px;"><a href="##2BNR1##?<%@ include view='dixDIXtrackingCPCW1' %>~PageType~Category~2BNR1~<%@ include view='dixDIXtrackingCPCW2' %>" _label="2BNR1_Category" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; color:#0c347b; text-decoration: underline;">Find out more</a></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- // banner 1 -->
+
+                  <!-- Banner 2 -->
+                  <table role="presentation" width="334" align="left" border="0" cellspacing="0" cellpadding="0" class="dw">
+                    <tr>
+                      <td align="right" class="tP30">
+                        <table role="presentation" align="right" width="310" border="0" cellpadding="0" cellspacing="0" class="dw">
+                          <tr>
+                            <td valign="top" align="left" style="line-height:1%; mso-line-height-rule:exactly;"><a href="##2BNR2##?<%@ include view='dixDIXtrackingCPCW1' %>~PageType~Category~2BNR2~<%@ include view='dixDIXtrackingCPCW2' %>" _label="2BNR2_Category"><img align="left" width="310" height="196" src="https://placeholdit.imgix.net/~text?txtsize=110&bg=00b0e8&txtclr=feffff&txt=880x560&w=880&h=560" alt="##alt##" border="0" class="dw" style="display:block;" /></a></td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle" style="padding:2px 0px 0px 0px;"><a href="##2BNR2##?<%@ include view='dixDIXtrackingCPCW1' %>~PageType~Category~2BNR2~<%@ include view='dixDIXtrackingCPCW2' %>" _label="2BNR2_Category" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; color:#0c347b; text-decoration: underline;">Find out more</a></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- // banner 2 -->
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>                    
+        <!-- 2NOM (1-2) BG test -->
+        <tr>
+          <td align="center" style="padding: 50px 0px 50px 0px;">
+            <table role="presentation" width="650" border="0" align="center" cellpadding="0" cellspacing="0" class="dw3">
+              <tbody>
+                <tr>
+                  <td align="center" class="f28 inlineTxt" style="font-family:gothamBlack, Arial black, Helvetica, sans-serif; font-size: 25px; line-height:25px; font-weight: bold; color:#636363; letter-spacing:-0.04em; padding-bottom:10px;">See the action in the&nbsp;clarity it deserves</td>
+                </tr>
+                <tr>
+                  <td align="center" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size: 14px; line-height: 16px; color:#666665; padding:10px 0px 20px 0px;">Built&#8209;in Sports Mode and Ultra Motion technology are perfect for watching sport, even with high-speed action the picture will stay crystal&nbsp;clear.</td>
+                </tr>
+                <tr>
+                  <th align="center" width="650" class="dw db">
+                    <table role="presentation" width="650" class="dw" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <th width="310" class="dw db" style="font-weight:normal;">
+                          <table role="presentation" width="100%" align="center" class="dw" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td class="hAuto" background="https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk05/HisenseTV/V6/bg_anim_loop_fifatv_V1b.gif" bgcolor="#feffff" width="310" height="196" valign="top" style="background-image:url(https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk05/HisenseTV/V6/bg_anim_loop_fifatv_V1b.gif);background-size:100%; background-size:cover; background-size:contain; background-position: top left; background-repeat:no-repeat; background:url(https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk05/HisenseTV/V6/bg_anim_loop_fifatv_V1b.gif) 0 0 / cover #feffff;">
+                                <!--[if gte mso 9]>
+                                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:310px;height:196px;">
+                                <v:fill type="frame" src="https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk05/HisenseTV/V6/bg_anim_loop_fifatv_V1b.gif" color="#feffff" />
+                                <v:textbox inset="0,0,0,0">
+                                <![endif]-->
+                                <div>
+                                  <table role="presentation" width="310" class="dw" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                      <tr>
+                                        <th width="310" class="hAuto dw" style="font-weight:normal;" dir="ltr">
+                                          <table role="presentation" width="310" border="0" align="center" cellpadding="0" cellspacing="0" class="dw">
+                                            <tr>
+                                              <td align="center" valign="top"><a href="##2NOM1##?<%@ include view='dixDIXtrackingCPCW1' %>~PageType~Category~2NOM1~<%@ include view='dixDIXtrackingCPCW2' %>#srcid=11026" _label="2NOM1_Category"><img align="center" width="310" height="196" src="https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk05/HisenseTV/V6/NOM1.png" alt=" TV alt 1" style="display:block;" class="dw" border="0" /></a></td>
+                                            </tr>
+                                          </table>
+                                        </th>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <!--[if gte mso 9]>
+                                </v:textbox>
+                                </v:rect>
+                                <![endif]-->
+                              </td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#666666; padding-top:10px;">1 in 20 chance to get your money back&sup1;</td>
+                            </tr>
+                            <tr>
+                              <td height="45" align="center" valign="middle" class="nomTitle"><a href="https://www.currys.co.uk/gbuk/smart-tech/smart-tech/smart-watches-and-fitness/smart-watches/apple-watch-series-4-space-grey-black-sports-loop-40-mm-10185450-pdt.html ?<%@ include view='dixDIXtrackingCPCW1' %>~PageType~Category~2NOM1~<%@ include view='dixDIXtrackingCPCW2' %>" _label="2NOM1_Category" style="font-family:Arial, Helvetica, sans-serif; font-size: 14px; line-height: 16px; font-weight: bold; color:#0c347b; text-decoration: none;">Hisense 55&quot; U7A Smart&nbsp;4K Ultra&nbsp;HD&nbsp;HDR&nbsp;TVs</a></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="middle">
+                                <table role="presentation" width="94%" border="0" align="center" cellpadding="0" cellspacing="0" class="dw3">
+                                  <tr>
+                                    <td height="33" style="border-top: solid 1px #dedede; border-bottom: solid 1px #dedede;">
+                                      <table role="presentation" width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="dw">
+                                        <tr>
+                                          <td align="center" valign="bottom" width="48%" style="font-family:Arial, Helvetica, sans-serif; font-size: 18px; line-height: 20px; color:#666666;">Only <a href="##2NOM1##?<%@ include view='dixDIXtrackingCPCW1' %>~PageType~Category~2NOM1~<%@ include view='dixDIXtrackingCPCW2' %>" _label="2NOM1_Category" style="font-family:Arial, Helvetica, sans-serif; font-size: 18px; line-height:20px; font-weight: bold; color:#cb003a; text-decoration: underline;">&pound;599.00</a></td>
+                                          <td align="center" valign="bottom" width="48%" style="font-family:Arial, Helvetica, sans-serif; font-size: 18px; line-height: 20px; color:#666666;">Save &pound;200.00</td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#666666; padding-top: 10px;">Was &pound;799.00</td>
+                            </tr>
+                            <tr>
+                              <td height="40" align="center" valign="middle"><a href="https://www.currys.co.uk/gbuk/yourplan-1347-commercial.html?<%@ include view='dixDIXtrackingCPCW1' %>~COM~SER~2NOM1~<%@ include view='dixDIXtrackingCPCW2' %>#store" _label="2NOM1_SER" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#0c347b; text-decoration:none;">Flexible credit available</a></td>
+                            </tr>
+                            <tr>
+                              <td align="center">
+                                <table role="presentation" width="210" class="cta" border="0" cellpadding="0" cellspacing="0" align="center">
+                                  <tr>
+                                    <td height="44" valign="middle" align="center" bgcolor="#569622" class="hAuto"><a href=" https://www.currys.co.uk/gbuk/smart-tech/smart-tech/smart-watches-and-fitness/smart-watches/apple-watch-series-4-space-grey-black-sports-loop-40-mm-10185450-pdt.html?<%@ include view='dixDIXtrackingCPCW1' %>~PageType~Category~2NOM1~<%@ include view='dixDIXtrackingCPCW2' %>" _label="2NOM1_Category" style="background-color:#569622; border-radius:3px; color:#feffff; display:block; font-family:gothamBook, Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; line-height:44px; text-align:center; text-decoration:none; -webkit-text-size-adjust:inherit;">Buy or reserve &gt;</a></td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </th>
+                        <th width="30" height="30" class="db bP20" align="center">&nbsp;</th>
+                        <th width="310" class="dw db" style="font-weight:normal;">
+                          <table role="presentation" width="100%" align="center" class="dw" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td class="hAuto" background="https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk05/HisenseTV/V6/bg_anim_loop_fifatv_V1b.gif" bgcolor="#feffff" width="310" height="196" valign="top" style="background-image:url(https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk05/HisenseTV/V6/bg_anim_loop_fifatv_V1b.gif);background-size:100%; background-size:cover; background-size:contain; background-position: top left; background-repeat:no-repeat; background:url(https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk05/HisenseTV/V6/bg_anim_loop_fifatv_V1b.gif) 0 0 / cover #feffff;">
+                                <!--[if gte mso 9]>
+                                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:310px;height:196px;">
+                                <v:fill type="frame" src="https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk05/HisenseTV/V6/bg_anim_loop_fifatv_V1b.gif" color="#feffff" />
+                                <v:textbox inset="0,0,0,0">
+                                <![endif]-->
+                                <div>
+                                  <table role="presentation" width="310" class="dw" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                      <tr>
+                                        <th width="310" class="hAuto dw" style="font-weight:normal;" dir="ltr">
+                                          <table role="presentation" width="310" border="0" align="center" cellpadding="0" cellspacing="0" class="dw">
+                                            <tr>
+                                              <td align="center" valign="top"><a href="##2NOM2##?<%@ include view='dixDIXtrackingCPCW1' %>~PageType~Category~2NOM2~<%@ include view='dixDIXtrackingCPCW2' %>?intcmpid=" _label="2NOM2_Category"><img align="center" width="310" height="196" src="https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk05/HisenseTV/V6/NOM2.png" alt=" TV alt 2" style="display:block;" class="dw" border="0" /></a></td>
+                                            </tr>
+                                          </table>
+                                        </th>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <!--[if gte mso 9]>
+                                </v:textbox>
+                                </v:rect>
+                                <![endif]-->
+                              </td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#666666; padding-top:10px;">1 in 20 chance to get your money back&sup1;</td>
+                            </tr>
+                            <tr>
+                              <td height="45" align="center" valign="middle" class="nomTitle"><a href="##2NOM2##?<%@ include view='dixDIXtrackingCPCW1' %>~PageType~Category~2NOM2~<%@ include view='dixDIXtrackingCPCW2' %>" _label="2NOM2_Category" style="font-family:Arial, Helvetica, sans-serif; font-size: 14px; line-height: 16px; font-weight: bold; color:#0c347b; text-decoration: none;">Hisense 65&quot; Smart&nbsp;4K Ultra&nbsp;HD&nbsp;TVs</a></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="middle">
+                                <table role="presentation" width="94%" border="0" align="center" cellpadding="0" cellspacing="0" class="dw3">
+                                  <tr>
+                                    <td height="33" style="border-top: solid 1px #dedede; border-bottom: solid 1px #dedede;">
+                                      <table role="presentation" width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="dw">
+                                        <tr>
+                                          <td align="center" valign="bottom" width="48%" style="font-family:Arial, Helvetica, sans-serif; font-size: 18px; line-height: 20px; color:#666666;">Only <a href="##2NOM2##?<%@ include view='dixDIXtrackingCPCW1' %>~PageType~Category~2NOM2~<%@ include view='dixDIXtrackingCPCW2' %>" _label="2NOM2_Category" style="font-family:Arial, Helvetica, sans-serif; font-size: 18px; line-height:20px; font-weight: bold; color:#cb003a; text-decoration: underline;">&pound;699.00</a></td>
+                                          <td align="center" valign="bottom" width="48%" style="font-family:Arial, Helvetica, sans-serif; font-size: 18px; line-height: 20px; color:#666666;">Save &pound;100.00</td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#666666; padding-top: 10px;">Was &pound;799.00</td>
+                            </tr>
+                            <tr>
+                              <td height="40" align="center" valign="middle"><a href="https://www.currys.co.uk/gbuk/yourplan-1347-commercial.html?<%@ include view='dixDIXtrackingCPCW1' %>~COM~SER~2NOM2~<%@ include view='dixDIXtrackingCPCW2' %>#store" _label="2NOM2_SER" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#0c347b; text-decoration:none;">Flexible credit available</a></td>
+                            </tr>
+                            <tr>
+                              <td align="center">
+                                <table role="presentation" width="210" class="cta" border="0" cellpadding="0" cellspacing="0" align="center">
+                                  <tr>
+                                    <td height="44" valign="middle" align="center" bgcolor="#569622" class="hAuto"><a href="http://t.e.currys.co.uk?<%@ include view='dixDIXtrackingCPCW1' %>~PageType~Category~2NOM2~<%@ include view='dixDIXtrackingCPCW2' %>" _label="2NOM2_Category" style="background-color:#569622; border-radius:3px; color:#feffff; display:block; font-family:gothamBook, Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; line-height:44px; text-align:center; text-decoration:none; -webkit-text-size-adjust:inherit;">Buy or reserve &gt;</a></td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                    </table>
+                  </th>
+                </tr>
+                <tr>
+                  <td align="center" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size: 11px; line-height: 14px; color:#666665; padding:20px 0px 0px 0px;">&sup1; GB&nbsp;16+. Excludes NI. Ends&nbsp;midnight&nbsp;26.06.18. Purchase of 55&quot; + TV from Currys PC World required. Register at <a href="https://www.currys.co.uk/FreeTV?<%@ include view='dixDIXtrackingCPCW1' %>~COM~TsCs~2NOM~<%@ include view='dixDIXtrackingCPCW2' %>" _label="2NOM_TsCs" style="font-family:Arial, Helvetica, sans-serif; font-size: 11px; line-height: 16px; color:#666665; text-decoration:none;">currys.co.uk/FreeTV</a> from 32-42 days after purchase for chance to win refund of TV purchase cost (max. value &pound;24,999). For full terms see <a href="https://www.currys.co.uk/gbuk/free-tv-708-commercial.html?<%@ include view='dixDIXtrackingCPCW1' %>~COM~TsCs~2NOM~<%@ include view='dixDIXtrackingCPCW2' %>" _label="2NOM_TsCs" style="font-family:Arial, Helvetica, sans-serif; font-size: 11px; line-height: 16px; color:#666665; text-decoration:none;">website</a>.</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>        
+				<!-- mBnr -->
+        <tr>
+          <td align="center" style="padding-top:30px; padding-bottom: 50px;">
+            <table role="presentation" width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="dw3">
+              <tbody>
+                <tr>
+                	<!-- safe bg -->
+                  <th width="600" bgcolor="#feffff" align="center" class="dw db">
+                    <table role="presentation" width="600" class="dw" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <th width="600" class="dw db" style="font-weight:normal; display:block;">
+                          <table role="presentation" width="600" border="0" cellspacing="0" cellpadding="0" class="dw">
+                            <tr>
+                              <td><a href="https://www.currys.co.uk/gbuk/search-keywords/xx_xx_32095_xx_xx/249770%257c249761/xx-criteria.html?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~SMA~MainBNR~<%@ include view='dixDIXtrackingCPCW2' %>" _label="MainBNR_SMA">
+                              <img align="left" width="600" height="365" src="https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk26/GoogleHomeHub/v1/mBNR2.jpg" alt=" Hey Google" border="0" class="hideAll" style="display:block;" />
+                              <!--[if !mso]><!-- -->
+                              <img align="left" width="1" height="1" src="https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk26/GoogleHomeHub/v1/mBNR-m3.jpg" alt=" Hey Google" border="0" class="dw" style="display:block;" />
+                              <!--<![endif]--> 
+                              </a></td>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                      <!-- Intro -->
+                      <tr>
+                        <th width="600" bgcolor="#feffff" class="dw db" style="font-weight:normal; display:block; padding-top: 20px;">
+                          <table role="presentation" width="80%" border="0" align="center" cellpadding="0" cellspacing="0" class="tc-">
+                            <tr>
+                              <td align="left" class="f27 inlineTxt" style="padding-bottom: 15px;"><a href="https://www.currys.co.uk/gbuk/search-keywords/xx_xx_32095_xx_xx/249770%257c249761/xx-criteria.html?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~SMA~IntroTXT1~<%@ include view='dixDIXtrackingCPCW2' %>" _label="IntroTXT1_SMA" style="font-family:gothamBook, Arial, Helvetica, sans-serif; font-weight:bold; font-size:28px; line-height:32px; color:#6e2c6b; letter-spacing:-0.02em; text-decoration:none; -webkit-text-size-adjust:inherit;">Introducing <span>Google Home&nbsp;Hub.</span> <br class="hideAll" /><span>Help at a&nbsp;glance.</span></a></td>
+                            </tr>
+                            <tr>
+                              <td align="left" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size: 15px; line-height:20px; font-weight: normal; color:#575756; font-weight:normal; text-transform:none; text-decoration: none;" class="p">With the Google Assistant built in, use your voice to view your latest events and reminders, control compatible smart devices, and get answers from Google and YouTube. <br /><br />Get your hands on a Google Home Hub today from <a href="https://www.currys.co.uk/gbuk/index.html?<%@ include view='dixDIXtrackingCPCW1' %>~HOM~HOM~IntroTXT2~<%@ include view='dixDIXtrackingCPCW2' %>" _label="IntroTXT2_HOM" style="font-family:Arial, Helvetica, sans-serif; font-size: 15px; line-height:26px; font-weight: normal; color:#575756; text-transform:none; text-decoration: underline;">Currys&nbsp;PC&nbsp;World</a> and&nbsp;get 6&nbsp;months of YouTube Premium for&nbsp;free.&sup1;</td>
+                            </tr>
+                            <tr>
+                              <td align="center" style="padding: 30px 0px 0px 0px;">
+                                <table role="presentation" width="100%" class="dw" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <th width="200" class="dw db tP10 bP20" align="center" style="font-weight:normal; padding: 15px 0px 15px 0px;">
+                                      <table role="presentation" width="200" class="cta w80" border="0" cellpadding="0" cellspacing="0" align="center">
+                                        <tr>
+                                          <td height="44" valign="middle" align="center" bgcolor="#0d428a" class="hAuto"><a href="##IntroBTN##?<%@ include view='dixDIXtrackingCPCW1' %>~PRO~SMA~IntroBTN~<%@ include view='dixDIXtrackingCPCW2' %>" _label="IntroBTN_SMA" style="background-color:#0d428a; border-radius:3px; color:#feffff; display:block; font-family:gothamBook, Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; line-height:44px; text-align:center; text-decoration:none; -webkit-text-size-adjust:inherit;">Shop now &gt;</a></td>
+                                        </tr>
+                                      </table>
+                                    </th>
+                                    <th width="280" class="dw db" align="center" style="font-weight:normal;">
+                                      <table role="presentation" width="280" align="center" border="0" cellspacing="0" cellpadding="0" class="dw">
+                                        <tr>
+                                          <td width="150" align="center" valign="middle" class="hideAll">&nbsp;</td>
+                                          <td height="44" align="center" valign="middle" class="hAuto"><a href="https://www.currys.co.uk/gbuk/smart-tech/smart-tech/smart-home/voice-control-assistants/google-home-hub-chalk-10186047-pdt.html?<%@ include view='dixDIXtrackingCPCW1' %>~PRO~SMA~IntroBTN~<%@ include view='dixDIXtrackingCPCW2' %>" _label="IntroBTN_SMA" style="color:#575756; display:block; font-family:gothamBook, Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; line-height:44px; text-align:center; text-decoration:none; -webkit-text-size-adjust:inherit;">Only <span style="color:#0d428a;">&pound;139.00</span></a></td>
+                                        </tr>
+                                      </table>
+                                    </th>                                    
+                                  </tr>                              
+                                </table>
+                              </td>
+                            </tr>                                                        
+                          </table>
+                        </th>
+                      </tr>
+                      <!-- BabyWrapper -->
+                      <tr>
+                        <td align="center" bgcolor="#0d428a">
+                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <!-- Feature 1 -->
+                            <tr>
+                              <th width="600" class="dw db" style="font-weight:normal; display:block;">
+                                <table role="presentation" width="600" border="0" cellspacing="0" cellpadding="0" class="dw">
+                                  <tr>
+                                    <td><a href="https://www.currys.co.uk/gbuk/search-keywords/xx_xx_32095_xx_xx/249770%257c249761/xx-criteria.html?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~SMA~1BNR1~<%@ include view='dixDIXtrackingCPCW2' %>" _label="1BNR1_SMA"><img align="left" width="600" height="372" src="https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk26/GoogleHomeHub/v1/f1b.jpg" alt=" " border="0" class="dw" style="display:block;" /></a></td>
+                                  </tr>
+                                </table>
+                              </th>
+                            </tr> 
+                            <!-- Feature 1 txt -->
+                            <tr>
+                              <th width="600" class="dw db" style="font-weight:normal; display:block; padding-top: 20px; padding-bottom: 20px;">
+                                <table role="presentation" width="80%" border="0" align="center" cellpadding="0" cellspacing="0" class="tc-">
+                                  <tr>
+                                    <td align="left" class="h1-" style="padding-bottom: 15px; family:gothamBook, Arial, Helvetica, sans-serif; font-weight:bold; font-size:23px; line-height:25px; color:#feffff; letter-spacing:-0.02em; text-transform:uppercase; -webkit-text-size-adjust:inherit;">Personalise your daily routines</td>
+                                  </tr>
+                                  <tr>
+                                    <td align="left" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size: 15px; line-height:20px; font-weight: normal; color:#feffff; font-weight:normal; text-transform:none; text-decoration: none;" class="p">With Voice Match, just say &ldquo;Hey Google, good morning&rdquo; to see your personalised events, commute, reminders or &ldquo;Hey Google, good night&rdquo; to set an alarm, turn off the lights, and&nbsp;much&nbsp;more.</td>
+                                  </tr>                                                      
+                                </table>
+                              </th>
+                            </tr>                      
+                            <!-- Feature 2 -->
+                            <tr>
+                              <th width="600" class="dw db" style="font-weight:normal; display:block;">
+                                <table role="presentation" width="600" border="0" cellspacing="0" cellpadding="0" class="dw">
+                                  <tr>
+                                    <td><a href="##1BNR2##?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~SMA~1BNR2~<%@ include view='dixDIXtrackingCPCW2' %>" _label="1BNR2_SMA"><img align="left" width="600" height="320" src="https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk26/GoogleHomeHub/v1/f2a.jpg" alt=" Show me my calendar" border="0" class="dw" style="display:block;" /></a></td>
+                                  </tr>
+                                </table>
+                              </th>
+                            </tr>                           
+                          </table>
+                        </td>
+                      </tr>
+                      <!-- 1NOM1 -->
+                      <tr>
+                        <th dir="rtl" width="600" bgcolor="#feffff" class="dw db" style="font-weight:normal; display:block; padding-top:20px;">
+                          <table role="presentation" width="600" border="0" cellspacing="0" cellpadding="0" class="dw">
+                            <tr>
+                              <th dir="ltr" width="300" class="dw db tP30 bP10" style="font-weight:normal;"><a href="https://www.currys.co.uk/gbuk/search-keywords/xx_xx_32095_xx_xx/249770%257c249761/xx-criteria.html?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~SMA~1BNR3~<%@ include view='dixDIXtrackingCPCW2' %>" _label="1BNR3_SMA"><img width="300" height="210" src="https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk26/GoogleHomeHub/v1/f3b.jpg" alt=" " border="0" class="dw" style="display:block;" /></a></th>                              
+                              <th dir="ltr" width="300" class="dw db" style="font-weight:normal;">
+                                <table role="presentation" width="80%" class="dw3 center" border="0" cellpadding="0" cellspacing="0" align="center" dir="ltr">
+                                  <tr>
+                                    <td align="right" valign="bottom" class="nomTitle hAuto center"><a href="https://www.currys.co.uk/gbuk/search-keywords/xx_xx_32095_xx_xx/249770%257c249761/xx-criteria.html?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~SMA~1BNR3~<%@ include view='dixDIXtrackingCPCW2' %>" _label="1BNR3_SMA" style="font-family:gothamBook, Arial, Helvetica, sans-serif; font-weight:bold; font-size:22px; line-height:24px; color:#0d428a; letter-spacing:-0.02em; text-decoration:none; -webkit-text-size-adjust:inherit;">Control your connected home in one&nbsp;view</a></td>
+                                  </tr>
+                                </table>
+                              </th>                            
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>   
+                      <!-- 1NOM2 -->
+                      <tr>
+                        <th dir="rtl-" width="600" bgcolor="#feffff" class="dw db" style="font-weight:normal; display:block;">
+                          <table role="presentation" width="600" border="0" cellspacing="0" cellpadding="0" class="dw">
+                            <tr>
+                              <th dir="ltr" width="300" class="dw db tP30 bP10" style="font-weight:normal;"><a href="https://www.currys.co.uk/gbuk/search-keywords/xx_xx_32095_xx_xx/249770%257c249761/xx-criteria.html?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~SMA~1BNR4~<%@ include view='dixDIXtrackingCPCW2' %>" _label="1BNR4_SMA"><img width="300" height="210" src="https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk26/GoogleHomeHub/v1/f4a.jpg" alt=" Show me my photos from Cornwall" border="0" class="dw" style="display:block;" /></a></th>
+                              <th dir="ltr" width="300" class="dw db" style="font-weight:normal;">
+                                <table role="presentation" width="80%" class="dw3 center" border="0" cellpadding="0" cellspacing="0" align="center" dir="ltr">
+                                  <tr>
+                                    <td align="left" valign="bottom" class="nomTitle hAuto center bP30"><a href="##1BNR4##?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~SMA~1BNR4~<%@ include view='dixDIXtrackingCPCW2' %>" _label="1BNR4_SMA" style="font-family:gothamBook, Arial, Helvetica, sans-serif; font-weight:bold; font-size:22px; line-height:24px; color:#0d428a; letter-spacing:-0.02em; text-decoration:none; -webkit-text-size-adjust:inherit;">Relive the moment with Google&nbsp;Photos</a></td>
+                                  </tr>
+                                </table>
+                              </th>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>       
+                      <!-- 1NOM3 -->
+                      <tr>
+                        <th dir="rtl" width="600" bgcolor="#feffff" class="dw db" style="font-weight:normal; display:block; padding:30px 0px 30px 0px;">
+                          <table role="presentation" width="600" border="0" cellspacing="0" cellpadding="0" class="dw">
+                            <tr>
+                              <th dir="ltr" width="300" class="dw db" style="font-weight:normal;"><a href="https://www.currys.co.uk/gbuk/smart-tech/smart-tech/smart-home/voice-control-assistants/google-home-hub-chalk-10186047-pdt.html?<%@ include view='dixDIXtrackingCPCW1' %>~PRO~SMA~1BNR5~<%@ include view='dixDIXtrackingCPCW2' %>" _label="1BNR5_SMA"><img width="300" height="180" src="https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk26/GoogleHomeHub/v1/f5.jpg" alt=" " border="0" class="dw" style="display:block;" /></a></th>                            
+                              <th dir="ltr" width="300" class="dw db" style="font-weight:normal;">
+                                <table role="presentation" width="200" class="cta w80" border="0" cellpadding="0" cellspacing="0" align="center" dir="ltr">
+                                  <tr>
+                                    <td height="44" align="center" valign="middle" class="hAuto"><a href="https://www.currys.co.uk/gbuk/smart-tech/smart-tech/smart-home/voice-control-assistants/google-home-hub-chalk-10186047-pdt.html?<%@ include view='dixDIXtrackingCPCW1' %>~PRO~SMA~1BNR5~<%@ include view='dixDIXtrackingCPCW2' %>" _label="1BNR5_SMA" style="color:#575756; display:block; font-family:gothamBook, Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; line-height:44px; text-align:center; text-decoration:none; -webkit-text-size-adjust:inherit;">Google Home Hub</a></td>
+                                  </tr>                                
+                                  <tr>
+                                    <td height="44" align="center" valign="middle" class="hAuto bP10"><a href="https://www.currys.co.uk/gbuk/smart-tech/smart-tech/smart-home/voice-control-assistants/google-home-hub-chalk-10186047-pdt.html?<%@ include view='dixDIXtrackingCPCW1' %>~PRO~SMA~1BNR5~<%@ include view='dixDIXtrackingCPCW2' %>" _label="1BNR5_SMA" style="color:#575756; display:block; font-family:gothamBook, Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; line-height:44px; text-align:center; text-decoration:none; -webkit-text-size-adjust:inherit;">Only <span style="color:#0d428a;">&pound;139.00</span></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" valign="middle" align="center" bgcolor="#0d428a" class="hAuto"> <a href="https://www.currys.co.uk/gbuk/smart-tech/smart-tech/smart-home/voice-control-assistants/google-home-hub-chalk-10186047-pdt.html?<%@ include view='dixDIXtrackingCPCW1' %>~PRO~SMA~1BNR5~<%@ include view='dixDIXtrackingCPCW2' %>" _label="1BNR5_SMA" style="background-color:#0d428a; border-radius:3px; color:#feffff; display:block; font-family:gothamBook, Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; line-height:44px; text-align:center; text-decoration:none; -webkit-text-size-adjust:inherit;">Shop now &gt;</a> </td>
+                                  </tr>
+                                </table>
+                              </th>                            
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>                                                                          
+                    </table>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <!-- Nest --> 
+        <tr>
+          <td align="center" style="padding-bottom: 50px;">
+            <table role="presentation" width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="dw3">
+              <tbody>
+                <tr>
+                  <th width="600" class="dw db" style="font-weight:normal; display:block;">
+                    <table role="presentation" width="80%" border="0" align="center" cellpadding="0" cellspacing="0" class="tc-">
+                      <tr>
+                        <td align="left" class="h1-" style="padding-bottom: 15px; font-family:gothamBook, Arial, Helvetica, sans-serif; font-weight:bold; font-size:25px; font-weight:bold; line-height:28px; color:#494948; letter-spacing:-0.02em; -webkit-text-size-adjust:inherit;">Keep your home comfortable <span style="display:inline-block;">with Nest</span></td>
+                      </tr>
+                      <tr>
+                        <td align="left" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size: 15px; line-height:20px; font-weight: normal; color:#575756; font-weight:normal; text-transform:none; text-decoration: none;" class="p">The new Nest Thermostat E comes with proven energy-saving features. It&rsquo;s all set with a simple schedule that&rsquo;s easy to adjust. You can control it from anywhere with the Nest app or your Google Home Hub when you&rsquo;re at home. And it&rsquo;s easy to install&nbsp;yourself.</td>
+                      </tr>                                    
+                    </table>                  
+                  </th>
+                </tr>
+                <tr>
+                  <th dir="rtl-" width="600" class="dw db" style="font-weight:normal; display:block; padding-top:30px;">
+                    <table role="presentation" width="600" border="0" cellspacing="0" cellpadding="0" class="dw">
+                      <tr>
+                        <th dir="ltr" width="300" class="dw db" style="font-weight:normal;"><a href="https://www.currys.co.uk/gbuk/smart-tech/smart-tech/smart-home/smart-heating/nest-thermostat-e-10186639-pdt.html?<%@ include view='dixDIXtrackingCPCW1' %>~PRO~SMA~1BNR6~<%@ include view='dixDIXtrackingCPCW2' %>" _label="1BNR6_SMA"><img width="300" height="180" src="https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk26/GoogleHomeHub/v1/nestb_opt.png" alt=" " border="0" class="dw" style="display:block;" /></a></th>                            
+                        <th dir="ltr" width="300" class="dw db" style="font-weight:normal;">
+                          <table role="presentation" width="200" class="cta w80" border="0" cellpadding="0" cellspacing="0" align="center" dir="ltr">
+                            <tr>
+                              <td height="44" align="center" valign="middle" class="hAuto"><a href="https://www.currys.co.uk/gbuk/smart-tech/smart-tech/smart-home/smart-heating/nest-thermostat-e-10186639-pdt.html?<%@ include view='dixDIXtrackingCPCW1' %>~PRO~SMA~1BNR6~<%@ include view='dixDIXtrackingCPCW2' %>" _label="1BNR6_SMA" style="color:#575756; display:block; font-family:gothamBook, Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; line-height:44px; text-align:center; text-decoration:none; -webkit-text-size-adjust:inherit;">Nest Thermostat&nbsp;E</a></td>
+                            </tr>                                
+                            <tr>
+                              <td height="44" align="center" valign="middle" class="hAuto bP10"><a href="https://www.currys.co.uk/gbuk/smart-tech/smart-tech/smart-home/smart-heating/nest-thermostat-e-10186639-pdt.html?<%@ include view='dixDIXtrackingCPCW1' %>~PRO~SMA~1BNR6~<%@ include view='dixDIXtrackingCPCW2' %>" _label="1BNR6_SMA" style="color:#575756; display:block; font-family:gothamBook, Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; line-height:44px; text-align:center; text-decoration:none; -webkit-text-size-adjust:inherit;">Only <span style="color:#0d428a;">&pound;199.99</span></a></td>
+                            </tr>
+                            <tr>
+                              <td height="44" valign="middle" align="center" bgcolor="#0d428a" class="hAuto"><a href="https://www.currys.co.uk/gbuk/smart-tech/smart-tech/smart-home/smart-heating/nest-thermostat-e-10186639-pdt.html?<%@ include view='dixDIXtrackingCPCW1' %>~PRO~SMA~1BNR6~<%@ include view='dixDIXtrackingCPCW2' %>" _label="1BNR6_SMA" style="background-color:#0d428a; border-radius:3px; color:#feffff; display:block; font-family:gothamBook, Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; line-height:44px; text-align:center; text-decoration:none; -webkit-text-size-adjust:inherit;">Shop now &gt;</a></td>
+                            </tr>
+                          </table>
+                        </th>                            
+                      </tr>
+                    </table>
+                  </th>
+                </tr>                   
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <!-- HFWYALF -->
+        <tr>
+          <td align="center" bgcolor="#feffff" style="padding: 20px 0px 50px 0px;">
+            <table role="presentation" class="dw3 hyfwylf" width="650" border="0" cellspacing="0" cellpadding="0">
+              <tbody>
+                <tr>
+                  <td align="center" class="h1-" style="padding-bottom: 15px; font-family:gothamBook, Arial, Helvetica, sans-serif; font-weight:bold; font-size:25px; font-weight:bold; line-height:28px; color:#636363; letter-spacing:-0.02em; -webkit-text-size-adjust:inherit;">Haven&rsquo;t found what you&rsquo;re looking&nbsp;for?</td>
+                </tr>
+                <tr>
+                  <td align="center" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size: 14px; line-height: 16px; color:#666665; padding:10px 0px 10px 0px;">We&rsquo;re dedicated to helping you find everything you&nbsp;need...</td>
+                </tr>
+                <tr>
+                  <!-- TH -->
+                  <th align="center" width="650" class="dw db">
+                    <table role="presentation" width="650" class="dw" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <th width="320" class="dw db">
+                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <th valign="top" style="font-weight:normal;">
+                                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td><a href="https://www.currys.co.uk/gbuk/household-appliances/laundry-332-c.html?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~WMA~CAT1~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT1_WMA"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/footer/mda.jpg" width="100" height="111" border="0" class="aw" alt="Shop" style="display:block;"/></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="top" style="padding-top: 5px;"><a href="https://www.currys.co.uk/gbuk/household-appliances/laundry-332-c.html?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~WMA~CAT1~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT1_WMA" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">Laundry</a></td>
+                                  </tr>
+                                </table>
+                              </th>
+                              <th width="10" height="10" valign="top">&nbsp;</th>
+                              <th valign="top" style="font-weight:normal;">
+                                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td><a href="https://www.currys.co.uk/gbuk/home-appliances/floorcare-337-c.html?<%@ include view='dixDIXtrackingCPCW1' %>~CAT~FLO~CAT2~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT2_FLO"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/footer/flo.jpg" width="100" height="111" border="0" class="aw" alt="Shop" style="display:block;"/></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="top" style="padding-top: 5px;"><a href="https://www.currys.co.uk/gbuk/home-appliances/floorcare-337-c.html?<%@ include view='dixDIXtrackingCPCW1' %>~CAT~FLO~CAT2~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT2_FLO" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">Floorcare</a></td>
+                                  </tr>
+                                </table>
+                              </th>
+                              <th width="10" height="10" valign="top">&nbsp;</th>
+                              <th align="top" style="font-weight:normal;">
+                                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td><a href="https://www.currys.co.uk/gbuk/tv-and-home-entertainment/televisions/televisions/301_3002_30002_xx_xx/xx-criteria.html?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~TVN~CAT3~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT3_TVN"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/footer/tvn.jpg" width="100" height="111" border="0" class="aw" alt="Shop" style="display:block;"/></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="top" style="padding-top: 5px;"><a href="https://www.currys.co.uk/gbuk/tv-and-home-entertainment/televisions/televisions/301_3002_30002_xx_xx/xx-criteria.html?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~TVN~CAT3~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT3_TVN" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">Televisions</a></td>
+                                  </tr>
+                                </table>
+                              </th>
+                            </tr>
+                          </table>
+                        </th>
+                        <th width="330" class="dw db tP20">
+                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <th width="10" height="10" class="hideAll" valign="top">&nbsp;</th>
+                              <th valign="top" style="font-weight:normal;">
+                                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td><a href="https://www.currys.co.uk/gbuk/audio-32-u.html?<%@ include view='dixDIXtrackingCPCW1' %>~UNI~AUD~CAT4~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT4_AUD"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/footer/aud.jpg" width="100" height="111" border="0" class="aw" alt="Shop" style="display:block;"/></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="top" style="padding-top: 5px;"><a href="https://www.currys.co.uk/gbuk/audio-32-u.html?<%@ include view='dixDIXtrackingCPCW1' %>~UNI~AUD~CAT4~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT4_AUD" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">Audio</a></td>
+                                  </tr>
+                                </table>
+                              </th>
+                              <th width="10" height="10" valign="top">&nbsp;</th>
+                              <th valign="top" style="font-weight:normal;">
+                                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td><a href="https://www.currys.co.uk/gbuk/computing/laptops/laptops/315_3226_30328_xx_xx/xx-criteria.html?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~LAP~CAT5~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT5_LAP"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/footer/lap.jpg" width="100" height="111" border="0" class="aw" alt="Shop" style="display:block;"/></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="top" style="padding-top: 5px;"><a href="https://www.currys.co.uk/gbuk/computing/laptops/laptops/315_3226_30328_xx_xx/xx-criteria.html?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~LAP~CAT5~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT5_LAP" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">Laptops</a></td>
+                                  </tr>
+                                </table>
+                              </th>
+                              <th width="10" height="10" valign="top">&nbsp;</th>
+                              <th valign="top" style="font-weight:normal;">
+                                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td><a href="https://www.currys.co.uk/gbuk/gift-vouchers-1030-theme.html?<%@ include view='dixDIXtrackingCPCW1' %>~CON~SER~CAT6~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT6_SER"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/footer/giftcard.jpg" width="100" height="111" border="0" class="aw" alt="Shop" style="display:block;"/></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="top" style="padding-top: 5px;"><a href="https://www.currys.co.uk/gbuk/gift-vouchers-1030-theme.html?<%@ include view='dixDIXtrackingCPCW1' %>~CON~SER~CAT6~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT6_SER" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">Giftcards</a></td>
+                                  </tr>
+                                </table>
+                              </th>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                    </table>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <!-- WHYGIR -->
+        <tr>
+         <td align="center" bgcolor="#feffff" style="padding-bottom: 50px;">
+           <table role="presentation" class="dw3" width="650" border="0" cellspacing="0" cellpadding="0">
+             <tbody>
+               <tr>
+                 <td align="center" class="h1-" style="padding-bottom: 15px; font-family:gothamBook, Arial, Helvetica, sans-serif; font-weight:bold; font-size:25px; font-weight:bold; line-height:28px; color:#636363; letter-spacing:-0.02em; -webkit-text-size-adjust:inherit;">We help you get&nbsp;it&nbsp;right</td>
+               </tr>
+               <tr>
+                 <td align="center" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size: 14px; line-height: 16px; color:#666666; padding: 10px 0px 10px 0px;">We have 1000s of products online, expert colleagues in-store, support over the phone and set-up and installation from Team&nbsp;Knowhow. Choose delivery direct to you, reserve to collect from a store of your choice or pay and collect&nbsp;in&nbsp;store.</td>
+               </tr>
+               <tr>
+                 <th align="center" width="650" class="dw db">
+                   <table role="presentation" width="650" align="center" class="aw" border="0" cellspacing="0" cellpadding="0">
+                     <tr>
+                       <th width="200" valign="top" class="dw db" style="font-weight:normal;">
+                         <table role="presentation" width="100%" align="center" class="dw" border="0" cellspacing="0" cellpadding="0">
+                           <tr>
+                             <td valign="top" align="left"><a href="https://www.currys.co.uk/gbuk/delivery-1021-theme.html?<%@ include view='dixDIXtrackingCPCW1' %>~COM~SER~DEL~<%@ include view='dixDIXtrackingCPCW2' %>" _label="DEL_SER"><img width="200" height="74" src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/fooICO/FD.jpg" alt=" Delivery" border="0" class="marginAuto" style="display:block; color:#0D428A; font-family:gothamBlack, Arial Black, Helvetica, sans-serif; font-size:20px; line-height:44px;" /></a></td>
+                           </tr>
+                           <tr>
+                             <td height="55" align="center" valign="middle" class="hAuto clearBr"><a href="https://www.currys.co.uk/gbuk/delivery-1021-theme.html?<%@ include view='dixDIXtrackingCPCW1' %>~COM~SER~DEL~<%@ include view='dixDIXtrackingCPCW2' %>" _label="DEL_SER" style="font-family:Arial, Helvetica, sans-serif; font-size: 14px; line-height: 16px; font-weight: bold; color:#636363; text-decoration: none;">Free&nbsp;Delivery on 1000s&nbsp;of&nbsp;products<sup style="font-weight:normal;">&dagger;</sup></a></td>
+                           </tr>
+                           <tr>
+                             <td align="center" valign="middle" style="padding:20px 0px 20px 0px;"><a href="https://www.currys.co.uk/gbuk/delivery-1021-theme.html?<%@ include view='dixDIXtrackingCPCW1' %>~COM~SER~DEL~<%@ include view='dixDIXtrackingCPCW2' %>" _label="DEL_SER" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; color:#636363; text-decoration: underline;">Find out more</a></td>
+                           </tr>
+                           <tr>
+<td height="55" align="center" valign="middle" class="hAuto" style="font-family:Arial, Helvetica, sans-serif; font-size: 11px; line-height: 13px; color:#666666;"><sup>&dagger;</sup>Subject to availability.</td>
+                           </tr>
+                         </table>
+                       </th>
+                       <th width="25" height="30" class="db" align="center">&nbsp;</th>
+<th valign="top" class="dw db" style="font-weight:normal;">
+                         <table role="presentation" width="100%" align="center" class="dw" border="0" cellspacing="0" cellpadding="0">
+                           <tr>
+                             <td valign="top" align="center"><a href="https://www.currys.co.uk/gbuk/s/find-a-store.html?<%@ include view='dixDIXtrackingCPCW1' %>~STO~SER~STORE~<%@ include view='dixDIXtrackingCPCW2' %>" _label="STORE_SER"><img width="200" height="74" src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/fooICO/OLS.jpg" alt=" Store" border="0" class="marginAuto" style="display:block; color:#0D428A; font-family:gothamBlack, Arial Black, Helvetica, sans-serif; font-size:20px; line-height:44px;" /></a></td>
+                           </tr>
+                           <tr>
+                             <td height="55" align="center" valign="middle" class="hAuto"><a href="https://www.currys.co.uk/gbuk/s/find-a-store.html?<%@ include view='dixDIXtrackingCPCW1' %>~STO~SER~STORE~<%@ include view='dixDIXtrackingCPCW2' %>" _label="STORE_SER" style="font-family:Arial, Helvetica, sans-serif; font-size: 14px; line-height: 16px; font-weight: bold; color:#636363; text-decoration: none;">Free&nbsp;collection from over 800 stores including Carphone&nbsp;Warehouse</a></td>
+                           </tr>
+                           <tr class="hideAll-">
+                             <td align="center" valign="middle" style="padding:20px 0px 0px 0px;" class="bT20"><a href="https://www.currys.co.uk/gbuk/s/find-a-store.html?<%@ include view='dixDIXtrackingCPCW1' %>~STO~SER~STORE~<%@ include view='dixDIXtrackingCPCW2' %>" _label="STORE_SER" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; color:#636363; text-decoration: underline;">Find your nearest store</a></td>
+                           </tr>
+                         </table>
+                       </th>
+                       <th width="25" height="30" class="db" align="center">&nbsp;</th>
+                       <th valign="top" class="dw db" style="font-weight:normal;">
+                         <table role="presentation" width="100%" align="center" class="dw" border="0" cellspacing="0" cellpadding="0">
+                           <tr>
+                             <td valign="top" align="left"><a href="https://www.currys.co.uk/gbuk/yourplan-1347-commercial.html?<%@ include view='dixDIXtrackingCPCW1' %>~COM~SER~YP~<%@ include view='dixDIXtrackingCPCW2' %>#store" _label="YP_SER"><img width="200" height="74" src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/fooICO/YP.jpg" alt=" Your Plan" border="0" class="marginAuto" style="display:block; color:#0D428A; font-family:gothamBlack, Arial Black, Helvetica, sans-serif; font-size:20px; line-height:44px;" /></a></td>
+                           </tr>
+                           <tr>
+                             <td height="55" align="center" valign="middle" class="hAuto"><a href="https://www.currys.co.uk/gbuk/yourplan-1347-commercial.html?<%@ include view='dixDIXtrackingCPCW1' %>~COM~SER~YP~<%@ include view='dixDIXtrackingCPCW2' %>#store" _label="YP_SER" style="font-family:Arial, Helvetica, sans-serif; font-size: 14px; line-height: 16px; font-weight: bold; color:#636363; text-decoration: none;">Flexible credit available on all purchases from&nbsp;&pound;99</a></td>
+                           </tr>
+                           <tr>
+<td align="center" valign="middle" style="padding:20px 0px 0px 0px;"><a href="https://www.currys.co.uk/gbuk/yourplan-1347-commercial.html?<%@ include view='dixDIXtrackingCPCW1' %>~COM~SER~YP~<%@ include view='dixDIXtrackingCPCW2' %>#store" _label="YP_SER" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; color:#636363; text-decoration: underline;">Find out more</a></td>
+                           </tr>
+                         </table>
+</th>
+                     </tr>
+                   </table>
+                 </th>
+               </tr>
+             </tbody>
+           </table>
+         </td>
+       </tr>
+        <!-- Socials -->
+        <tr>
+          <td align="center" bgcolor="#feffff" style="padding: 0px 0px 30px 0px;">
+            <table role="presentation" class="dw hyfwylf" width="648" border="0" cellspacing="0" cellpadding="0">
+              <tbody>
+                <tr>
+                  <th width="324" class="dw db">
+                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <th width="33%" valign="bottom" style="font-weight:normal;">
+                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td><a href="http://www.facebook.com/curryspcworld" _label="Social1"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/social_facebook.gif" width="108" height="43" border="0" alt="Visit our" class="aw" style="display:block;"/></a></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="top" style="padding-top: 5px;"><a href="http://www.facebook.com/curryspcworld" _label="Social1" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">Facebook</a></td>
+                            </tr>
+                          </table>
+                        </th>
+                        <th width="33%" valign="bottom" style="font-weight:normal;">
+                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td><a href="http://www.twitter.com/curryspcworld" _label="Social2"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/social_twitter.gif" width="108" height="43" border="0" alt="Visit our" class="aw" style="display:block;"/></a></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="top" style="padding-top: 5px;"><a href="http://www.twitter.com/curryspcworld" _label="Social2" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">Twitter</a></td>
+                            </tr>
+                          </table>
+                        </th>
+                        <th width="33%" valign="bottom" style="font-weight:normal;">
+                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td><a href="http://www.pinterest.com/curryspcworld/" _label="Social3"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/social_pinterest.gif" width="108" height="43" border="0" alt="Visit our" class="aw" style="display:block;"/></a></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="top" style="padding-top: 5px;"><a href="http://www.pinterest.com/curryspcworld/" _label="Social3" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">Pinterest</a></td>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                    </table>
+                  </th>
+                  <th width="324" class="dw db tP20">
+                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <th width="33%" valign="bottom" style="font-weight:normal;">
+                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td><a href="http://www.youtube.com/curryspcworld" _label="Social4"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/social_youtube_i.gif" width="108" height="43" border="0" alt="Visit our" class="aw" style="display:block;"/></a></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="top" style="padding-top: 5px;"><a href="http://www.youtube.com/curryspcworld" _label="Social4" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">YouTube</a></td>
+                            </tr>
+                          </table>
+                        </th>
+                        <th width="33%" valign="bottom" style="font-weight:normal;">
+                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td valign="middle"><a href="https://techtalk.currys.co.uk/home/?<%@ include view='dixDIXtrackingCPCW1' %>~TEC~HOM~Social5~<%@ include view='dixDIXtrackingCPCW2' %>" _label="Social5"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/social_techtalk.gif" width="100" height="39" border="0" alt="Our blog" class="aw" style="display:block; margin:0 auto;"/></a></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="top" style="padding-top: 5px;"><a href="https://techtalk.currys.co.uk/home/?<%@ include view='dixDIXtrackingCPCW1' %>~TEC~HOM~Social5~<%@ include view='dixDIXtrackingCPCW2' %>" _label="Social5" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">TechTalk</a></td>
+                            </tr>
+                          </table>
+                        </th>
+                        <th width="33%" valign="bottom" style="font-weight:normal;">
+                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td valign="middle"><a href="https://www.teamknowhow.com/?utm_medium=Email&utm_source=Footer_Icon&utm_campaign=CurrysCRM" _label="Social6"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/social_teamknowhow.gif" width="100" height="39" border="0" alt="Our expert service partner" class="aw" style="display:block; margin:0 auto;"/></a></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="top" style="padding-top: 5px;"><a href="https://www.teamknowhow.com/?utm_medium=Email&utm_source=Footer_Icon&utm_campaign=CurrysCRM" _label="Social6" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">Team Knowhow</a></td>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                    </table>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <!-- Footer GDPR C/PCW -->
+        <tr>
+          <td align="center" valign="top" bgcolor="#f2f2f2" style="padding:30px 0px 30px 0px;">
+            <table role="presentation" width="630" cellpadding="0" cellspacing="0" border="0" align="center" class="dw3" bgcolor="#f2f2f2">
+              <tr>
+                <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height: 13px; color:#333332;"><strong>Important Your Plan information</strong><br />
+                  <br />
+                  DSG Retail Limited acts as a credit broker and not as a lender. Credit is provided by Creation Consumer Finance Ltd. Both DSG Retail Limited and Creation Consumer Finance Ltd are authorised and regulated by the Financial&nbsp;Conduct&nbsp;Authority.<br /><br /></td>
+              </tr>
+              <tr>
+                <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height: 13px; color:#333332;"><strong>Terms and conditions</strong><br /><br />
+                &sup1;free This YouTube Premium free&nbsp;trial offer free is only open to residents of Great Britain who activate a Google Home Hub on or before December 31, 2018. Offer only available to customers who are not current YouTube Premium, YouTube Music Premium, YouTube Red or Google Play Music subscribers, have not been YouTube Premium, YouTube Music Premium, YouTube Red, or Google Play Music subscribers nor participated in a YouTube Premium, YouTube Music Premium, YouTube Red or Google Play Music trial before. Offer must be redeemed by December 31, 2018. Offer is comprised of an initial free&nbsp;14&nbsp;day trial (no form of payment required), however during the 14 day trial you will have the option to extend your trial for a further 6&nbsp;months by providing a valid form of payment. At the end of the 6 month period, you will be automatically charged the standard subscription price, currently &pound;11.99 per month (VAT inclusive if applicable) unless cancelled. You can cancel your 6&nbsp;month trial at no charge at any time before the trial is&nbsp;over. If you do not elect to enter into the additional 6&nbsp;month trial by providing a form of payment, your trial will automatically expire at the end of the initial 14&nbsp;day&nbsp;period. Offer requires a Google account. Full terms here: <a href="youtube.com/t/red_restrictions?gl=GB" _label="TsCs" style="text-decoration:underline; color:#333333;">youtube.com/t/red_restrictions?gl=GB</a>. Promoter: Google Commerce Limited, Gordon House, Barrow Street, Dublin 4, Ireland.</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+&lt;% if ( chainProfile.partyId == "") { %&gt;
+<!-- Email Tools - Local only -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<link href="css/coreNav.css" rel="stylesheet" type="text/css" />
+<script src="scripts/coreNewNav.js"></script> 
+<!-- // -->  
+&lt;% } %&gt;
+</body>
+</html>

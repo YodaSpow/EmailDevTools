@@ -1,0 +1,360 @@
+body,
+html {
+  position: relative; 
+}
+body {
+  margin-top: 70px;
+  border-top: 1px solid #cccccc;
+}
+#navBar {
+  padding-bottom:0px!important;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  float:left;
+  box-sizing: border-box; 
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2; 
+}
+.fixed:after {
+left: 100%;  
+background: #4caf50;
+bottom: 0;
+content: "";
+position: absolute;
+top: 0;
+width: 9999px;
+height: 48px;
+}
+nav a,
+nav button {
+  font-family: sans-serif;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 15px 15px;
+  text-align: left;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  display:block;
+  margin:0;
+}
+.dropdown button, .dropdown a {
+  width: 100%;
+}
+nav a:hover, button:hover {
+  filter: brightness(100%) contrast(120%);
+  -webkit-filter: brightness(100%) contrast(130%); 
+}
+.logo {
+  color: #6fff75;
+  text-shadow: 0px 1px 2px #317134;
+}
+/* Dropdown styling */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+.dropdown .dropbtn {
+    font-size: 16px; 
+    padding: 15px 15px;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: default;
+}
+/* Triangle for Dropdown */
+.fa {
+  position: relative;
+  display: inline-block; 
+  width: 5px;
+}
+.fa:before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 0px;  
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 8px solid #fff;
+}
+.dropdown:hover .dropbtn, .active {
+    background-color: orange;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+.dropdown-content a, .dropdown-content button {
+    float: none;
+    color: white;
+    display: block;
+    border-bottom: 1px solid #347736;
+    text-align: left;
+}
+.dropdown-content a:first-child, .dropdown-content button:first-child {
+    border-top: 1px solid #946000; 
+}
+.dropdown-content a:last-child, .dropdown-content button:last-child {
+    border:none; 
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    position:relative;
+}
+
+.dropLt {
+  min-width:105px;
+}
+.redB {
+  background-color: #f44336;
+}
+
+/* Tooltips: position start */
+.yes a[href^="#"],
+.yes a[href*="##"], 
+.pageType a[href*="PageType"],
+.category a[href*="Category"],
+.label a[_label*="_Category"],
+.sTable table:not([role*="presentation"]),
+.sTable td > table + table, 
+.sTable th > table + table,
+a[href*="#srcid=11026"],
+a[href*="?intcmp"],
+a[href*="http://t.e.currys.co.uk"],
+.missingQuery,
+.notSecure,
+a[href*=" https"],
+a[href*=" ?"] {
+  position: relative;
+  -webkit-filter: drop-shadow(0px 0px 3px rgba(255, 0, 0, 0.8));
+  drop-shadow: (0px 0px 3px rgba(255, 0, 0, 0.8));
+}
+.altText .fauxImg {
+  position: relative;
+}
+.yes a[href^="#"],
+.yes a[href*="##"], 
+.pageType a[href*="PageType"],
+.category a[href*="Category"],
+.label a[_label*="_Category"],
+.altText .fauxImg,
+a[href*="#srcid"],
+a[href*="?intcmp"],
+a[href*="http://t.e.currys.co.uk"],
+.missingQuery,
+.notSecure,
+a[href*=" https"],
+a[href*=" ?"] {
+  display: inline-block;
+}
+/* Tooltips: set arrow */
+.yes a[href^="#"]:before,
+.yes a[href*="##"]:before, 
+.pageType a[href*="PageType"]:before,
+.category a[href*="Category"]:before,
+.label a[_label*="_Category"]:before,
+.sTable table:not([role*="presentation"]):before,
+.sTable td > table + table:before, 
+.sTable th > table + table:before,
+.altText .fauxImg:before,
+a[href*="#srcid"]:before,
+a[href*="?intcmp"]:before,
+a[href*="http://t.e.currys.co.uk"]:before,
+.missingQuery:before,
+.notSecure:before,
+a[href*=" https"]:before,
+a[href*=" ?"]:before {
+  content: "";
+  border: solid transparent;
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  border-left: 0px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid red;
+}
+/* Tooltips: set content */
+.yes a[href^="#"]:after,
+.yes a[href*="##"]:after, 
+.pageType a[href*="PageType"]:after,
+.category a[href*="Category"]:after,
+.label a[_label*="_Category"]:after,
+.sTable table:not([role*="presentation"]):after,
+.sTable td > table + table:after, 
+.sTable th > table + table:after,
+.altText .fauxImg:after,
+a[href*="#srcid"]:after,
+a[href*="?intcmp"]:after,
+a[href*="http://t.e.currys.co.uk"]:after,
+.missingQuery:after,
+.notSecure:after,
+a[href*=" https"]:after,
+a[href*=" ?"]:after {
+  content: "Need link!";
+  position: absolute;
+  font-family: Verdana, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 12px;
+  width: 100px;
+  text-align: center;
+  letter-spacing: 0;
+  background: red;
+  color: white;
+  margin: 0;
+  padding: 5px;
+  border-radius: 2px;
+  left: 10px;
+  top: -32px;
+  z-index: 10;
+}
+/* Category */
+.category a[href*="Category"]:after{
+  content: "Category is not set";
+  width: 150px;    
+}
+/* pageType */
+.pageType a[href*="PageType"]:after {
+  content: "PageType is not set";
+  width: 150px;  
+}
+/* _label="2NOM2_Category" */
+.label a[_label*="_Category"]:after {
+  content: "Label is not set";
+  width: 150px;  
+}
+/* #srcid */
+a[href*="#srcid"]:after {
+  content: "URL contains: #srcid";
+  width: 200px;
+}
+/* ?intcmp */
+a[href*="?intcmp"]:after {
+  content: "URL contains: ?intcmp";
+  width: 200px;
+}
+/* http://t.e.currys.co.uk */
+a[href*="http://t.e.currys.co.uk"]:after {
+  content: "Old-send ESP URL";
+  width: 200px;  
+}
+/* PCWB global tracking exists */
+
+/* Missing tracking ? */
+.missingQuery:after {
+  content: "Missing: ?";
+  width: 90px;  
+}
+/* Is not HTTPS */
+.notSecure:after {
+  content: "No HTTPS";
+  width: 100px;  
+}
+/* White-space before https */
+a[href*=" https"]:after {
+  content: "White-space before HTTPS";
+  width: 200px;
+}
+/* white-space before tracking query ? */
+a[href*=" ?"]:after {
+  content: "White-space before Tracking";
+  width: 200px;
+}
+/* Table missing: role="presentation" */
+.sTable table:not([role*="presentation"]):after {
+  content: "Missing role= presentation";
+  width: 200px;  
+}
+/* Table align method Warning */
+.sTable td > table + table:after, 
+.sTable th > table + table:after  {
+  content: "Table Align method!!!";
+  width: 200px;
+}
+/* Alt is done with jquery global selector on load */
+.altText img, .sImg img { border: 1px solid red; box-sizing:border-box; }
+.altText .fauxImg:after {
+  content: "Image ALT has invalid character";
+  width: 200px;
+}
+/* fall-back font-stack */
+.fonts:not(.fa) {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+td[background].bgImage { 
+  background-image: none!important; 
+}
+.sTable table {
+  box-shadow: 0 0 0 1px rgba(255,255,255,.9), 0 0 0 2px rgba(0, 152, 253,.5); 
+}
+.sTR tr {
+  box-shadow: 0 0 0 1px rgba(255,255,255,.9), 0 0 0 2px rgba(102, 153, 153,.5);
+}
+.sTD td {
+  box-shadow: 0 0 0 1px rgba(255,255,255,.9), 0 0 0 2px rgba(37, 253, 153,.5); 
+}
+.sTH th {
+  box-shadow: 0 0 0 1px rgba(255,255,255,.9), 0 0 0 2px rgba(204, 0, 153,.5);  
+}
+.sSpan span {
+  background:rgba(0, 0, 0,.65);
+  color: white!important;
+}
+.sA a {
+  display:inline-block;
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(204, 0, 153, .5));
+  drop-shadow: (0px 0px 5px rgba(204, 0, 153, .5));    
+}
+
+
+.spam .red, .spam .orange, .spam .spamBG2 {
+  color:white; letter-spacing:0; padding: 2px 4px; margin: -2px 3px 0 3px; display:inline-block; border-radius:3px; -webkit-filter: drop-shadow(0px 0px 3px rgba(255, 0, 0, 0.8)); drop-shadow: (0px 0px 3px rgba(255, 0, 0, 0.8)); text-shadow: 0 2px 0 2px rgba(0, 0, 0, 1);
+}
+.spam .red { background-color:rgba(255, 0, 0,.7); }
+.spam .orange { background-color:rgba(255,90,0,1);}
+.spam .spamBG2 { background-color:rgba(204, 0, 153,.7);}
+
+/* Fix to hide for Dropdown */
+.sT, .lT {display:none;}
+
+/* MQ */
+@media only screen and (min-width: 0px) and (max-width: 649px) {
+  body {
+    margin-top: 40px;
+  } 
+  .fixed:after {
+  height: 32px;
+  border-bottom: 1px solid #347736;
+  }  
+  .task_flyout {
+    width:40%;
+  }  
+  nav li {
+    float:none; 
+  }
+  .dropdown {
+    float: none;
+    overflow: hidden;
+  }
+  nav a, nav button, .dropdown .dropbtn {
+    font-size: 14px; 
+    padding: 8px 8px;
+  }
+  nav li {
+    border-bottom: 1px solid #347736;
+  }  
+}
