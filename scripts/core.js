@@ -40,9 +40,14 @@ $(window).on("load", function() {
         $("body").addClass("mobNav");
         flag = 1;
       } else if (flag == 1) {
-        // refresh page
-        //window.location.href=window.location.href;
-        window.location.reload(true);
+        
+        // Clear Cache
+        var versionUpdate = (new Date()).getTime();
+        var url = window.location.host + window.location.pathname;
+        window.location.href = url + "?v=" + versionUpdate;
+        
+        // Working
+        //window.location.reload(true);
         flag = 0;
       }
     });
