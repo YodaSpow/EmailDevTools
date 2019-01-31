@@ -428,7 +428,6 @@ $("*")
   // .highlight("free ", "spamBG3") // works: joiner maybe on Left
   .highlight(" Knowhow", "orange")
   .highlight(" Knowhow ", "orange")
-  .highlight("'", "red")
   //.highlight("£", "red"); doesnt work
 // .highlight(" & ", "spamBG") // doesnt work reads rendered HTML not unescaped UTF8 entities.
 
