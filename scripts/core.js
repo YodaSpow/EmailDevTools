@@ -1,9 +1,14 @@
 $(document).ready(function(){
-  $('img').each(function(){
+	// Images that do no support clear-cache
+	var kickdyn = "img[src*='img.kickdyn.com']", 
+	placeholdit = "img[src*='placeholdit']",	
+	cache	= kickdyn + "," + placeholdit;
+  $('img').not(cache).each(function(){
     var versionUpdate = (new Date()).getTime();
     this.src = this.src + '?' + versionUpdate;
   });
 });
+
 $(window).on("load", function() {
   var wrapperClass = "body > table";
   $(wrapperClass).addClass("content");
@@ -47,13 +52,13 @@ $(window).on("load", function() {
         flag = 1;
       } else if (flag == 1) {
         
-        // Clear Cache
-        var versionUpdate = (new Date()).getTime();
+        // Clear-cache
+        /*var versionUpdate = (new Date()).getTime();
         var url = window.location.host + window.location.pathname;
-        window.location.href = url + "?v=" + versionUpdate;
+        window.location.href = url + "?v=" + versionUpdate;*/
         
         // Working
-        //window.location.reload(true);
+        window.location.reload(true);
         flag = 0;
       }
     });
