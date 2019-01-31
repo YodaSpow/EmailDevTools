@@ -1,3 +1,9 @@
+$(document).ready(function(){
+  $('img').each(function(){
+    var versionUpdate = (new Date()).getTime();
+    this.src = this.src + '?' + versionUpdate;
+  });
+});
 $(window).on("load", function() {
   var wrapperClass = "body > table";
   $(wrapperClass).addClass("content");
