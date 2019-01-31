@@ -13,7 +13,7 @@ $(window).on("load", function() {
   var wrapperClass = "body > table";
   $(wrapperClass).addClass("content");
   // Pseudo tooltip for images ALT: DIV only appears based on these conditions
-  $("img[alt*='£'], [alt*='&'], [alt*='#'], [alt*='alt']").wrap( "<div class='fauxImg'></div>" );
+  $("img[alt*='£'], [alt*='&'], [alt*='#']").wrap( "<div class='fauxImg'></div>" );
   
   // Whitelisted domains URLs for the checks: 
   var currysD = "a[href*='www.currys.co.uk']",
