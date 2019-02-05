@@ -351,8 +351,9 @@ td[background].bgImage {
   body {
     margin-top: 40px;
   }
+  /* Important for some competitor emails to trump body classes */
   .mobNav {
-    margin-top: 245px;  
+    margin-top: 245px!important;
   }
   .fixed:after {
   height: 32px;
