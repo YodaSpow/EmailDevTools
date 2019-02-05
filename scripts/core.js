@@ -31,7 +31,7 @@ $(window).on("load", function() {
 
   $(document).ready(function() {  
   // Firefox fix  
-  $(".logo, .iT, .fT, .spT").removeAttr("href");
+  $(".logo, .iT, .fT, .spT, .foldT").removeAttr("href");
   // 1st load, turn off EmailTools Nav
   $( "nav li" ).not(".tool").addClass("hideNav");
   $( ".logo" ).addClass("redB");
@@ -285,6 +285,22 @@ $(window).on("load", function() {
       }
     });
   });
+  // Fold
+  $(document).ready(function() {
+    var flag = 0;
+    var tog = ".foldT";
+    $(tog).click(function() {
+      if (flag == 0) {
+        $(tog).addClass("redB");
+        $("body").addClass("fold");
+        flag = 1;
+      } else if (flag == 1) {
+        $(tog).removeClass("redB");
+        $("body").removeClass("fold");
+        flag = 0;
+      }
+    });
+  }); 
   
   /* Active DropDowns  - Doesn't work if more than 1 is selected.*/
   // https://www.w3schools.com/jquery/html_toggleclass.asp
@@ -321,6 +337,9 @@ $(document).on("click", function(event){
 // Hook point for Toggle nav
 $("body>table").before("<div id='navBar'></div>");
 
+// Insert overlay
+$("body>table").before("<div id='overlay'></div>");
+
 // Raw Javascript
 (function() {
   // All toggles we'd like to add
@@ -330,7 +349,8 @@ $("body>table").before("<div id='navBar'></div>");
     { href: "#", text: "Fonts", class: "fT" },
     { href: "#", text: "Links", class: "lT" },
     { href: "#", text: "Spam", class: "spT" },
-    { href: "#", text: "Structure", class: "sT"}
+    { href: "#", text: "Structure", class: "sT"},
+    { href: "#", text: "Fold", class: "foldT"}
   ];
   
   // A few variables for use later
@@ -370,6 +390,7 @@ $("body>table").before("<div id='navBar'></div>");
   navList.children[3].className = "linksToggle dN";
   navList.children[4].className = "spamToggle";
   navList.children[5].className = "structureToggle dN"; // dN hides navItems CSS
+  navList.children[6].className = "foldToggle"; // dN hides navItems CSS 
   
   linkDrop = document.createElement("div");
    linkDrop.innerHTML =

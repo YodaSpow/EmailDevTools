@@ -22,7 +22,7 @@ nav li {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2; 
+  z-index: 20; 
 }
 .fixed:after {
 left: 100%;  
@@ -128,6 +128,16 @@ nav a:hover, button:hover {
   background-color: #f44336; color:#ffffff;
 }
 
+/* Fold overlay */
+.fold #overlay {
+  width: 100%;
+  height: 1760px;
+  position: absolute;
+  background: url("https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/fold_opt.png") no-repeat top left; 
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+}
 /* Tooltips: position start */
 .yes a[href^="#"],
 .yes a[href*="##"], 
@@ -342,7 +352,7 @@ td[background].bgImage {
     margin-top: 40px;
   }
   .mobNav {
-    margin-top: 215px;  
+    margin-top: 245px;  
   }
   .fixed:after {
   height: 32px;
