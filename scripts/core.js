@@ -338,7 +338,7 @@ $(document).on("click", function(event){
 $("body>table").before("<div id='navBar'></div>");
 
 // Insert overlay
-$("body>table").before("<div id='overlay'></div>");
+$("body>table").before("<div id='overlay'><div class='oTop'></div><div class='oMid'></div><div class='oBot'></div><div class='oTxt'>Industry standard does not represent Currys list, Analytics done by #emailweekly: <i>www.emaildesignreview.com</i></div></div>");
 
 // Raw Javascript
 (function() {

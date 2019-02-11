@@ -130,14 +130,42 @@ nav a:hover, button:hover {
 
 /* Fold overlay */
 .fold #overlay {
-  width: 100%;
-  height: 1760px;
+  height: 1800px;
   position: absolute;
-  background: url("https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/fold_opt.png") no-repeat top left; 
+  background: url("https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/fold2.png") no-repeat top left; 
   top: 0px;
   left: 0px;
-  z-index: 10;
+  z-index: 10;   
 }
+/* Shared */
+.fold #overlay, .fold #overlay div {
+  width: 100%;  
+  pointer-events: none; 
+  overflow: hidden;
+}
+.fold #overlay div {
+  margin-left: 92px!important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4); 
+}
+
+.fold #overlay .oTop {
+  height: 410px;
+}
+.fold #overlay .oMid {
+  height: 1189px;  
+}
+.fold #overlay .oBot {
+  height: 99px;  
+}
+.fold #overlay .oTxt {
+  height: 99px;
+  padding: 10px!important;
+  border: none;
+  width: 140px;
+  color: #d100c5;
+  font-size: 10px;
+}
+
 /* Tooltips: position start */
 .yes a[href^="#"],
 .yes a[href*="##"], 
@@ -376,5 +404,8 @@ td[background].bgImage {
   }
   nav li {
     border-bottom: 1px solid #347736;
-  }  
+  }
+  .fold #overlay .oTxt {
+    display: none;
+  }
 }
