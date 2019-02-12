@@ -51,13 +51,6 @@ $(window).on("load", function() {
         $("body").addClass("mobNav");
         flag = 1;
       } else if (flag == 1) {
-        
-        // Clear-cache
-        /*var versionUpdate = (new Date()).getTime();
-        var url = window.location.host + window.location.pathname;
-        window.location.href = url + "?v=" + versionUpdate;*/
-        
-        // Working
         window.location.reload(true);
         flag = 0;
       }
