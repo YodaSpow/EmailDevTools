@@ -164,7 +164,9 @@ nav a:hover, button:hover {
   width: 140px;
   color: #d100c5;
   font-size: 10px;
+  display: block;
 }
+
 
 /* Tooltips: position start */
 .yes a[href^="#"],
