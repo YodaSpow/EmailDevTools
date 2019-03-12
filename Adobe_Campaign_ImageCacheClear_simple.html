@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="https://currys-ssl.cdn.dixons.com/grafx/favicon.png" />
+<link rel="Shortcut Icon" type="image/x-icon" href="https://currys-ssl.cdn.dixons.com/grafx/favicon.ico" />
+<link rel="apple-touch-icon" href="https://currys-ssl.cdn.dixons.com/grafx/apple-touch-icon.png" />
+<base target="_blank">
+<title></title>
+&lt;% if ( chainProfile.partyId !== "") { %&gt;
+&lt;%@ include view='dixCoreMasterTemplateCSS' %&gt;
+&lt;% } else { %&gt;
+<link href="https://currys-ssl.cdn.dixons.com/css/themes/email/AC/CORE/css/CoreMasterTemplateCSS.css" rel="stylesheet" type="text/css" />
+&lt;% } %&gt;
+<style type="text/css">
+@media only screen and (min-width: 0px) and (max-width: 650px) {
+}
+@media only screen and (min-width: 441px) and (max-width: 650px) {
+}
+@media only screen and (max-width: 440px) {
+}
+</style>
+<!--[if (mso)|(mso 16)]>
+<style type="text/css">body, table, td, a, span { font-family: Arial, Helvetica, sans-serif!important; }
+a {text-decoration: none;}
+sup { font-size:80%; line-height:1; vertical-align:top; mso-text-raise: 30%; }
+</style>
+<![endif]-->
+
+<!--[if gte mso 9]>
+<xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml>
+<![endif]-->
+</head>
+<body id="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" yahoo="fix" style="font-family: Arial,Helvetica,sans-serif;">
+<script>
+<% 
+var Split = "";
+var SubjectLine = "Vanilla JS AC(ESP) IMG+?time-stamp";
+var PreHeader = "";
+  if ( targetData.Split == "BAU" ) {
+    var Split = 'BAU';
+  }
+  else if ( targetData.Split == "Test" ) {
+    var Split = 'TEST';
+  }      
+  else {
+    var Split = 'NA';
+  }
+var CampaignName= 'JS' + '_' + Split;
+var CampaignType= 'DEV';
+var shortDayOfWeek= formatDate(new Date(), '%A').toUpperCase();
+%>
+</script>
+
+  
+<script>
+<% 
+  
+var cC = (new Date()).getTime(); // Works in AC
+
+/* Doesnt work in AC: (comment gets ignored in AC to - handy!)
+var imgs = document.querySelectorAll('img'), len = imgs.length;
+for (var i=0; i<len; i++) {
+    var s = imgs[i].src;
+    imgs[i].src = s + "?" + cC;
+    console.log(imgs[i].src);
+}  
+*/
+  
+%> 
+</script>
+<!-- AC Version 2.12
+SL: &lt;%= SubjectLine %&gt; 
+PH: &lt;%= PreHeader %&gt;
+TIME: &lt;%= cC %&gt;
+-->  
+<!-- rpcampaign: <%= CampaignName %><%= formatDate(new Date(targetData.BroadcastDate), '%4Y%2M%2D') %> -->
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="min-width:650px; table-layout: fixed;">
+  <tr>
+    <td width="100%" align="center" valign="top" bgcolor="#feffff" style="min-width:100vm;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="min-width:650px; table-layout: fixed;">
+        <!-- Top -->
+        <tr>
+          <td align="center" valign="top" bgcolor="#feffff" style="padding-top: 5px;">
+            <table role="presentation" width="650" border="0" cellspacing="0" cellpadding="0" class="dw3" style="border:none;">
+              <!-- PreHeader -->
+              <tr>
+                <td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:10px; line-height: 12px; color:#333333; padding-bottom:4px;">~PreHeader~</td>
+              </tr>
+              <!-- Brand -->
+              <tr>
+                <td>
+                  <table role="presentation" width="650" border="0" align="center" cellpadding="0" cellspacing="0" class="dw">
+                    <tr>
+                      <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:10px; line-height: 12px; color:#333332;">&nbsp;Add <a href="mailto:<%= delivery.mailParameters.senderAddress %>" style="text-decoration:underline; color:#333333;">&lt;%= delivery.mailParameters.senderAddress %&gt;</a> to your address book </td>
+                      <td align="right" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:10px; line-height: 12px; color:#333332;"><a href="<%@ include view='MirrorPageUrl' %>" _label="Mirror Page" _type="mirrorPage" style="text-decoration:underline; color:#333333;">Online version</a></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- Logo -->
+              <tr>
+                <td align="center" style="padding: 10px 0px 10px 0px;"><a href="https://www.currys.co.uk/gbuk/index.html?<%@ include view='dixDIXtrackingCPCW1' %>~HOM~HOM~HDR~<%@ include view='dixDIXtrackingCPCW2' %>" _label="HDR"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/CORE/CPCW_logo_3x.png" alt="Currys PC World" width="280" height="57" class="w70" style="display:block; margin:0 auto; font-family:gothamBlack, Arial Black, Helvetica, sans-serif; color:#6A2C6B; font-size:24px; line-height:45px;" border="0" /></a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- Navigation -->
+        <tr>
+          <td align="center" valign="top" bgcolor="#e9e9e9">
+            <table role="presentation" width="650" border="0" cellspacing="0" cellpadding="0" class="dw">
+              <tr>
+                <td align="center" bgcolor="#e9e9e9" style="padding: 10px 0px 10px 0px;">
+                  <table role="presentation" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#e9e9e9" class="dw3">
+                    <tr>
+                      <td width="37" height="22" align="left" valign="middle" class="hideT hideM"><a href="https://www.currys.co.uk/gbuk/index.html?<%@ include view='dixDIXtrackingCPCW1' %>~HOM~HOM~NAV~<%@ include view='dixDIXtrackingCPCW2' %>" _label="NAV_HOM" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 12px; color:#333333; text-decoration:none; -webkit-text-size-adjust: 90%;">Home</a></td>
+                      <td width="65" height="22" align="center" valign="middle" class="hideborder" style="border-left:#cccccc solid 1px;"><a href="https://www.currys.co.uk/gbuk/household-appliances-35-u.html?<%@ include view='dixDIXtrackingCPCW1' %>~UNI~MDA~NAV~<%@ include view='dixDIXtrackingCPCW2' %>" _label="NAV_MDA" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 12px; color:#333333; text-decoration:none; -webkit-text-size-adjust: 90%;">Kitchen <br />
+                        Appliances</a></td>
+                      <td width="70" height="22" align="center" valign="middle" class="hideM" style="border-left:#cccccc solid 1px;"><a href="https://www.currys.co.uk/gbuk/home-appliances-36-u.html?<%@ include view='dixDIXtrackingCPCW1' %>~UNI~SKA~NAV~<%@ include view='dixDIXtrackingCPCW2' %>" _label="NAV_SKA" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 12px; color:#333333; text-decoration:none; -webkit-text-size-adjust: 90%;">Small <br />
+                        Appliances</a></td>
+                      <td width="80" height="22" align="center" valign="middle" style="border-left:#cccccc solid 1px;"><a href="https://www.currys.co.uk/gbuk/tv-and-home-entertainment-31-u.html?<%@ include view='dixDIXtrackingCPCW1' %>~UNI~TVN~NAV~<%@ include view='dixDIXtrackingCPCW2' %>" _label="NAV_TVN" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 12px; color:#333333; text-decoration:none; -webkit-text-size-adjust: 90%;">TV &amp; <br />
+                        Entertainment</a></td>
+                      <td width="56" height="22" align="center" valign="middle" class="hideT hideM" style="border-left:#cccccc solid 1px;"><a href="https://www.currys.co.uk/gbuk/cameras-and-camcorders-38-u.html?<%@ include view='dixDIXtrackingCPCW1' %>~UNI~IMG~NAV~<%@ include view='dixDIXtrackingCPCW2' %>" _label="NAV_IMG" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 12px; color:#333333; text-decoration:none; -webkit-text-size-adjust: 90%;">Cameras</a></td>
+                      <td width="59" height="22" align="center" valign="middle" class="hideM" style="border-left:#cccccc solid 1px;"><a href="https://www.currys.co.uk/gbuk/audio-32-u.html?<%@ include view='dixDIXtrackingCPCW1' %>~UNI~AUD~NAV~<%@ include view='dixDIXtrackingCPCW2' %>" _label="NAV_AUD" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 12px; color:#333333; text-decoration:none; -webkit-text-size-adjust: 90%;">Audio</a></td>
+                      <td width="62" height="22" align="center" valign="middle" style="border-left:#cccccc solid 1px;"><a href="https://www.currys.co.uk/gbuk/computing/laptops-315-c.html?<%@ include view='dixDIXtrackingCPCW1' %>~CAT~LAP~NAV~<%@ include view='dixDIXtrackingCPCW2' %>" _label="NAV_LAP" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 12px; color:#333333; text-decoration:none; -webkit-text-size-adjust: 90%;">Computing</a></td>
+                      <td width="99" height="22" align="center" valign="middle" class="hideT hideM" style="border-left:#cccccc solid 1px;"><a href="https://www.currys.co.uk/gbuk/computing-accessories-40-u.html?<%@ include view='dixDIXtrackingCPCW1' %>~UNI~ACC~NAV~<%@ include view='dixDIXtrackingCPCW2' %>" _label="NAV_ACC" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 12px; color:#333333; text-decoration:none; -webkit-text-size-adjust: 90%;">PC Accessories</a></td>
+                      <td width="60" height="22" align="center" valign="middle" style="border-left:#cccccc solid 1px;"><a href="https://www.currys.co.uk/gbuk/phones-broadband-and-sat-nav/mobile-phones-and-accessories-362-c.html?<%@ include view='dixDIXtrackingCPCW1' %>~CAT~MOB~NAV~<%@ include view='dixDIXtrackingCPCW2' %>" _label="NAV_MOB" style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; line-height: 12px; color:#333333; text-decoration:none; -webkit-text-size-adjust: 90%;">Mobile Phones</a></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- Modules -->
+
+
+        <!-- HFWYALF -->
+        <tr>
+          <td align="center" style="padding: 0px 0px 50px 0px;">
+            <table role="presentation" class="dw3 hyfwylf" width="650" border="0" cellspacing="0" cellpadding="0">
+              <tbody>
+                <tr>
+                  <td height="30" align="center" class="f28 inlineTxt" style="font-family:gothamBook, Arial, Helvetica, sans-serif; font-size: 25px; line-height: 30px; font-weight: bold; color:#636363; letter-spacing:-0.04em; padding: 4px 0px 4px 0px;">IMG TIME: &lt;%= cC %&gt;</td>
+                </tr>
+                <!-- Inner -->
+                <tr>
+                  <td style="padding: 10px 0px 50px 0px;">
+                    <table role="presentation" width="650" border="0" cellpadding="0" cellspacing="0" align="center" class="dw">
+                      <tr>
+                        <td valign="top" align="center"><img class="dw" width="650" height="181" src="https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk45/BuiltInCOO/test1.jpg?&lt;%= cC %&gt;" alt=" " style="display: block; color: #1b447e; font-size: 18px; line-height: 20px; text-align: center; text-transform: uppercase;" border="0" /></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr> 
+                <tr>
+                  <!-- TH -->
+                  <th align="center" width="650" class="dw db">
+                    <table role="presentation" width="650" class="dw" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <th width="320" class="dw db">
+                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <th valign="top" style="font-weight:normal;">
+                                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td><a href="https://www.currys.co.uk/gbuk/household-appliances/laundry-332-c.html?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~WMA~CAT1~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT1_WMA"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/footer/mda.jpg" width="100" height="111" border="0" class="aw" alt="Shop" style="display:block;"/></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="top" style="padding-top: 5px;"><a href="https://www.currys.co.uk/gbuk/household-appliances/laundry-332-c.html?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~WMA~CAT1~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT1_WMA" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">Laundry</a></td>
+                                  </tr>
+                                </table>
+                              </th>
+                              <th width="10" height="10" valign="top">&nbsp;</th>
+                              <th valign="top" style="font-weight:normal;">
+                                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td><a href="https://www.currys.co.uk/gbuk/home-appliances/floorcare-337-c.html?<%@ include view='dixDIXtrackingCPCW1' %>~CAT~FLO~CAT2~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT2_FLO"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/footer/flo.jpg" width="100" height="111" border="0" class="aw" alt="Shop" style="display:block;"/></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="top" style="padding-top: 5px;"><a href="https://www.currys.co.uk/gbuk/home-appliances/floorcare-337-c.html?<%@ include view='dixDIXtrackingCPCW1' %>~CAT~FLO~CAT2~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT2_FLO" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">Floorcare</a></td>
+                                  </tr>
+                                </table>
+                              </th>
+                              <th width="10" height="10" valign="top">&nbsp;</th>
+                              <th align="top" style="font-weight:normal;">
+                                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td><a href="https://www.currys.co.uk/gbuk/tv-and-home-entertainment/televisions/televisions/301_3002_30002_xx_xx/xx-criteria.html?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~TVN~CAT3~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT3_TVN"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/footer/tvn.jpg" width="100" height="111" border="0" class="aw" alt="Shop" style="display:block;"/></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="top" style="padding-top: 5px;"><a href="https://www.currys.co.uk/gbuk/tv-and-home-entertainment/televisions/televisions/301_3002_30002_xx_xx/xx-criteria.html?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~TVN~CAT3~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT3_TVN" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">Televisions</a></td>
+                                  </tr>
+                                </table>
+                              </th>
+                            </tr>
+                          </table>
+                        </th>
+                        <th width="330" class="dw db tP20">
+                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <th width="10" height="10" class="hideAll" valign="top">&nbsp;</th>
+                              <th valign="top" style="font-weight:normal;">
+                                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td><a href="https://www.currys.co.uk/gbuk/audio-32-u.html?<%@ include view='dixDIXtrackingCPCW1' %>~UNI~AUD~CAT4~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT4_AUD"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/footer/aud.jpg" width="100" height="111" border="0" class="aw" alt="Shop" style="display:block;"/></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="top" style="padding-top: 5px;"><a href="https://www.currys.co.uk/gbuk/audio-32-u.html?<%@ include view='dixDIXtrackingCPCW1' %>~UNI~AUD~CAT4~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT4_AUD" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">Audio</a></td>
+                                  </tr>
+                                </table>
+                              </th>
+                              <th width="10" height="10" valign="top">&nbsp;</th>
+                              <th valign="top" style="font-weight:normal;">
+                                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td><a href="https://www.currys.co.uk/gbuk/computing/laptops/laptops/315_3226_30328_xx_xx/xx-criteria.html?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~LAP~CAT5~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT5_LAP"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/footer/lap.jpg" width="100" height="111" border="0" class="aw" alt="Shop" style="display:block;"/></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="top" style="padding-top: 5px;"><a href="https://www.currys.co.uk/gbuk/computing/laptops/laptops/315_3226_30328_xx_xx/xx-criteria.html?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~LAP~CAT5~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT5_LAP" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">Laptops</a></td>
+                                  </tr>
+                                </table>
+                              </th>
+                              <th width="10" height="10" valign="top">&nbsp;</th>
+                              <th valign="top" style="font-weight:normal;">
+                                <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td><a href="https://www.currys.co.uk/gbuk/gift-vouchers-1030-theme.html?<%@ include view='dixDIXtrackingCPCW1' %>~CON~SER~CAT6~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT6_SER"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/footer/giftcard.jpg" width="100" height="111" border="0" class="aw" alt="Shop" style="display:block;"/></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" valign="top" style="padding-top: 5px;"><a href="https://www.currys.co.uk/gbuk/gift-vouchers-1030-theme.html?<%@ include view='dixDIXtrackingCPCW1' %>~CON~SER~CAT6~<%@ include view='dixDIXtrackingCPCW2' %>" _label="CAT6_SER" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">Giftcards</a></td>
+                                  </tr>
+                                </table>
+                              </th>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                    </table>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <!-- Footer GDPR C/PCW -->
+        <tr>
+          <td align="center" valign="top" bgcolor="#f2f2f2" style="padding:30px 0px 30px 0px;">
+            <table role="presentation" width="630" cellpadding="0" cellspacing="0" border="0" align="center" class="dw3" bgcolor="#f2f2f2">
+              <tr>
+                <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height: 13px; color:#333332;"><strong>Important Your Plan information</strong><br />
+                  <br />
+                  DSG Retail Limited acts as a credit broker and not as a lender. Credit is provided by Creation Consumer Finance Ltd. Both DSG Retail Limited and Creation Consumer Finance Ltd are authorised and regulated by the Financial&nbsp;Conduct&nbsp;Authority.<br /><br /></td>
+              </tr>
+              <tr>
+                <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height: 13px; color:#333332;"><strong>Terms and conditions</strong><br /><br />
+                  <!-- PricePromise Footer Inject -->
+                  &lt;%@ include view='dixCoreFooterCurrysPricePromise' %&gt;
+                  <!-- GDPR Footer Inject -->
+                  &lt;%@ include view='dixCoreFooterCurrys' %&gt;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ReturnPath Pixel Inject -->
+&lt;%@ include view='dixCoreReturnPathTrackingCPCW' %&gt;
+  
+&lt;% if ( chainProfile.partyId == "") { %&gt; 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<script type="text/javascript" language="javascript">
+var versionUpdate = (new Date()).getTime();
+var script = document.createElement("script");
+var link = document.createElement("link");
+script.type = "text/javascript";
+script.src = "https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/core.js?v=" + versionUpdate;
+link.type = "text/css;"
+link.rel = "stylesheet"
+link.href = "https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/core.css?v=" + versionUpdate;
+document.body.appendChild(link);
+document.body.appendChild(script);
+</script> 
+&lt;% } %&gt;  
+</body>
+</html>

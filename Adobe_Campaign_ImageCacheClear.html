@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="https://currys-ssl.cdn.dixons.com/grafx/favicon.png" />
+<link rel="Shortcut Icon" type="image/x-icon" href="https://currys-ssl.cdn.dixons.com/grafx/favicon.ico" />
+<link rel="apple-touch-icon" href="https://currys-ssl.cdn.dixons.com/grafx/apple-touch-icon.png" />
+<base target="_blank">
+<title></title>
+&lt;% if ( chainProfile.partyId !== "") { %&gt;
+&lt;%@ include view='dixCoreMasterTemplateCSS2' %&gt;
+&lt;% } else { %&gt;
+<link href="https://currys-ssl.cdn.dixons.com/css/themes/email/AC/CORE/css/CoreMasterTemplateCSS2.css?v2.0" rel="stylesheet" type="text/css" />
+&lt;% } %&gt;
+<style type="text/css">
+@media only screen and (min-width: 0px) and (max-width: 650px) {
+}
+@media only screen and (min-width:441px) and (max-width:650px) {
+}
+@media only screen and (max-width:440px) {
+}
+</style>
+<!--[if (mso)|(mso 16)]>
+<style type="text/css">body, table, td, a, span { font-family: Arial, Helvetica, sans-serif!important; }
+a {text-decoration: none;}
+sup { font-size:80%; line-height:1; vertical-align:top; mso-text-raise: 30%; }
+</style>
+<![endif]-->
+
+<!--[if gte mso 9]>
+<xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml>
+<![endif]-->
+</head><body id="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" yahoo="fix" style="font-family: Arial,Helvetica,sans-serif;">
+<script>
+<% 
+var Split = "";
+var SubjectLine = "Vanilla JS AC(ESP) IMG+?time-stamp";
+var PreHeader = "Image cache cleared on images you don't want Server Cache on.";
+  if ( targetData.Split == "BAU" ) {
+    var Split = 'BAU';
+  }
+  else if ( targetData.Split == "Test" ) {
+    var Split = 'TEST';
+  }      
+  else {
+    var Split = 'NA';
+  }
+var CampaignName= 'JS' + '_' + Split;
+var CampaignType= 'DEV';
+var shortDayOfWeek= formatDate(new Date(), '%A').toUpperCase();
+%>
+</script>
+
+  
+<script>
+<% 
+  
+var cC = (new Date()).getTime(); // Works in AC
+
+/* 
+Doesnt work in AC: 
+Works in codepen: https://codepen.io/spowart/pen/eXvRRK?editors=1011
+comment gets ignored in Adobe Campaign to - handy!)
+
+var imgs = document.querySelectorAll('img'), len = imgs.length;
+for (var i=0; i<len; i++) {
+    var s = imgs[i].src;
+    imgs[i].src = s + "?" + cC;
+    console.log(imgs[i].src);
+}  
+*/
+  
+%> 
+</script>
+<!-- AC Version 2.12
+SL: &lt;%= SubjectLine %&gt; 
+PH: &lt;%= PreHeader %&gt;
+TIME: &lt;%= cC %&gt;
+-->   
+<!-- rpcampaign: <%= CampaignName %><%= formatDate(new Date(targetData.BroadcastDate), '%4Y%2M%2D') %> -->
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="min-width:650px; table-layout: fixed;">
+  <tr>
+    <td width="100%" align="center" valign="top" bgcolor="#feffff" style="min-width:100vm;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="min-width:650px; table-layout: fixed;">
+        <!-- $|Top Section -->
+        <tr>
+          <td align="center" valign="top" bgcolor="#fafafa" style="padding:6px 0px 6px 0px;">
+            <table role="presentation" width="650" border="0" cellspacing="0" cellpadding="0" class="dw" style="border:none;">
+              <tr>
+                <td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:10px; line-height:12px; color:#333333;">
+                  <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" style="border:none;" role="presentation">
+                    <!-- PreHeader -->
+                    <tr>
+                      <td align="left" style="font-family:Arial, Helvetica, sans-serif; font-size:10px; line-height: 12px; color:#333333; padding-bottom:8px;">&lt;%= PreHeader %&gt;</td>
+                    </tr>
+                    <!-- Web -->
+                    <tr>
+                      <td align="left" valign="bottom" style="font-family:Arial, Helvetica, sans-serif; font-size:10px; line-height:12px; color:#737373;">
+                        <a href="<%@ include view='MirrorPageUrl' %>" _label="Mirror Page" _type="mirrorPage" style="text-decoration:underline; color:#737373;">Web version</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top" bgcolor="#feffff">
+            <table role="presentation" width="650" border="0" cellspacing="0" cellpadding="0" class="dw" style="border:none;">
+              <tr>
+                <td align="center" style="font-family:Arial, Helvetica, sans-serif; font-size:10px; line-height:12px; color:#333333;">
+                  <table role="presentation" width="650" border="0" cellspacing="0" cellpadding="0" class="dw" style="border:none;">
+                    <!-- Logo -->
+                    <tr>
+                      <th align="center" width="100%">
+                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" dir="ltr" role="presentation">
+                          <tr>
+                            <th valign="middle" class="t-50 m-w60" style="font-weight:normal;">
+                              <table role="presentation" class="dw" border="0" cellpadding="0" cellspacing="0" align="left" dir="ltr">
+                                <tr>
+                                  <td>
+                                    <table role="presentation" class="dw" border="0" cellpadding="0" cellspacing="0" align="left" dir="ltr">
+                                      <tr>
+                                        <td align="center" valign="middle" style="padding:10px 0px 10px 0px;">
+                                          <a href="https://www.currys.co.uk/gbuk/index.html?<%@ include view='dixDIXtrackingCPCW1' %>~HOM~HOM~HDR~<%@ include view='dixDIXtrackingCPCW2' %>" _label="HDR"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/CORE/CPCW_logo_3x.png" alt="Currys PC World" width="230" height="47" class="dw3" style="display:block; margin:0 auto; font-family:gothamBlack, Arial Black, Helvetica, sans-serif; color:#6A2C6B;" border="0" /></a>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </th>
+                            <th width="20" height="20" class="gC">&nbsp;</th>
+                            <th valign="middle" style="font-weight:normal;">
+                              <table role="presentation" class="dw" border="0" cellpadding="0" cellspacing="0" align="right" dir="ltr">
+                                <tr>
+                                  <td>
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" dir="ltr">
+                                      <tr>
+                                        <td align="right" valign="middle" style="padding:10px 0px 10px 0px;">
+                                          <a href="https://www.currys.co.uk/gbuk/yourplan-1347-commercial.html?<%@ include view='dixDIXtrackingCPCW1' %>~COM~SER~YP~<%@ include view='dixDIXtrackingCPCW2' %>#store" _label="YP_SER" style="font-family:gothamBook, Arial, Helvetica, sans-serif; font-weight:bold; color:#0D428A; font-size:16px; line-height:18px; text-align:right; text-decoration:none; -webkit-text-size-adjust:inherit;" class="rtb-h1">Flexible credit available<sup>&Dagger;</sup></a>
+                                        </td>
+                                        <td width="64" align="center" valign="middle" style="padding:10px 0px 10px 0px;">
+                                          <a href="https://www.currys.co.uk/gbuk/yourplan-1347-commercial.html?<%@ include view='dixDIXtrackingCPCW1' %>~COM~SER~YP~<%@ include view='dixDIXtrackingCPCW2' %>#store" _label="YP_SER"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/AC/CORE/Templates/SuppilerFunded/T1/img/TRS_YP.png" alt="Your Plan" width="64" height="47" class="dw3-" style="display:block; margin:0 auto; font-family:gothamBlack, Arial Black, Helvetica, sans-serif; color:#6A2C6B;" border="0" /></a>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </th>
+                          </tr>
+                        </table>
+                      </th>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- $|Navigation -->
+        <tr>
+          <td align="center" valign="top" bgcolor="#feffff" style="border-top:1px solid #f7f7f7;">
+            <table width="650" border="0" align="center" cellpadding="0" cellspacing="0" class="dw" role="presentation">
+              <tr>
+                <td align="center" bgcolor="#feffff" style="padding: 10px 0px 10px 0px;">
+                  <table role="presentation" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#feffff" class="dw3">
+                    <tr>
+                      <td width="100" align="center" valign="middle">
+                        <a href="https://www.currys.co.uk/gbuk/household-appliances-35-u.html?<%@ include view='dixDIXtrackingCPCW1' %>~UNI~MDA~NAV~<%@ include view='dixDIXtrackingCPCW2' %>" _label="NAV_MDA-SKA" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:24px; color:#757575; text-decoration:none; -webkit-text-size-adjust:90%;">Appliances</a>
+                      </td>
+                      <td width="100" align="center" valign="middle">
+                        <a href="https://www.currys.co.uk/gbuk/tv-and-home-entertainment-31-u.html?<%@ include view='dixDIXtrackingCPCW1' %>~UNI~TVN~NAV~<%@ include view='dixDIXtrackingCPCW2' %>" _label="NAV_TVN-AUD" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:24px; color:#757575; text-decoration:none; -webkit-text-size-adjust:90%;">TV&nbsp;&amp;&nbsp;Audio</a>
+                      </td>
+                      <td width="100" align="center" valign="middle">
+                        <a href="https://www.currys.co.uk/gbuk/computing-33-u.html?<%@ include view='dixDIXtrackingCPCW1' %>~UNI~LAP~NAV~<%@ include view='dixDIXtrackingCPCW2' %>" _label="NAV_LAP-DES" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:24px; color:#757575; text-decoration:none; -webkit-text-size-adjust:90%;">Computing</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+
+        <!-- Branch txt -->
+        <tr>
+          <td align="center" style="padding:30px 0px 0px 0px; box-shadow: 0px 5px 14px -7px rgba(0, 0, 0,.3);">
+            <table role="presentation" width="650" border="0" cellpadding="0" cellspacing="0" align="center" class="dw3">
+              <tr>
+                <td bgcolor="#fdfdfd">
+                  <table role="presentation" width="650" border="0" cellspacing="0" cellpadding="0" class="dw" align="center">
+                    <tr>
+                      <td align="center" class="h1-" style="padding-bottom: 10px; font-family:gothamBook, Arial, Helvetica, sans-serif; font-weight:bold; font-size:25px; font-weight:bold; line-height:28px; color:#111111; letter-spacing:-0.02em; -webkit-text-size-adjust:inherit;"> <span style="color: #DB0104">No Query:</span> test1.jpg</td>
+                    </tr>                    
+                    <tr>
+                      <td valign="top" align="center"><img class="dw" width="650" height="181" src="https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk45/BuiltInCOO/test1.jpg" alt=" " style="display: block; color: #1b447e; font-size: 18px; line-height: 20px; text-align: center; text-transform: uppercase;" border="0" /></td>
+                    </tr> 
+                    <tr>
+                      <td align="center" class="h1-" style="padding: 20px 0px 10px 0px; font-family:gothamBook, Arial, Helvetica, sans-serif; font-weight:bold; font-size:25px; font-weight:bold; line-height:28px; color:#111111; letter-spacing:-0.02em; -webkit-text-size-adjust:inherit;"><span style="color: #00AA03">Has Query:</span> test1.jpg?&lt;%= cC %&gt;</td>
+                    </tr>                     
+                    <tr>
+                      <td valign="top" align="center"><img class="dw" width="650" height="181" src="https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk45/BuiltInCOO/test1.jpg?&lt;%= cC %&gt;" alt=" " style="display: block; color: #1b447e; font-size: 18px; line-height: 20px; text-align: center; text-transform: uppercase;" border="0" /></td>
+                    </tr>                   
+                    <!-- Intro txt -->
+                    <tr>
+                      <td>
+                        <table role="presentation" width="648" class="dw" border="0" cellpadding="0" cellspacing="0" align="center">
+                          <tr>
+                            <td align="center" style="padding: 20px 0px 15px 0px;">
+                              <table role="presentation" width="90%" border="0" align="center" cellpadding="0" cellspacing="0" class="tc-">
+                                <tr>
+                                  <td align="left" style="padding-bottom: 5px; font-family:Arial, Helvetica, sans-serif; font-weight:bold; font-size:24px; line-height:28px; color:#0d428a; letter-spacing:-0.02em; text-decoration:none; -webkit-text-size-adjust:inherit;" class="h1 inlineTxt">Vanilla JS: <span style="font-size: 16px; line-height:18px; color: #666666; font-weight: normal; display: inline-block;">IMG Time: <strong>?&lt;%= cC %&gt;</strong></span></td>
+                                </tr>
+                                <tr>
+                                  <td align="left" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size: 15px; line-height:20px; font-weight: normal; color:#575756;" class="p">Need to view source code after send&#8209;time from Adobe Campaign.<br /><br /> <strong>The logic to the madness:</strong> <br />Both images have same name the red one is uploaded 1st to Server cache then the green one same name is uploaded to after. The red one will change to the green one WHEN the Server clears cache.</td>
+                                </tr> 
+                                <tr>
+                                  <td align="left" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size: 15px; line-height:20px; font-weight: normal; color:#575756; padding: 20px 0px;" class="p">Look at IMG src for main banner. e.g: "?&lt;%= cC %&gt;" <br /><br /><strong>CODE:</strong><br />&lt;img class=&quot;dw&quot; width=&quot;650&quot; height=&quot;181&quot; src=&quot;https://currys-ssl.cdn.dixons.com/css/themes/email/2018-2019/wk45/BuiltInCOO/test1.jpg<strong>?&lt;%= cC %&gt;</strong>&quot; alt=&quot; &quot; style=&quot;display: block; color: #1b447e; font-size: 18px; line-height: 20px; text-align: center; text-transform: uppercase;&quot; border=&quot;0&quot; /&gt;
+                                  
+                                  
+                                  <br /><br /><em style="color: #888888;">N.B: JS for loop didn&rsquo;t work, had to put in manually for now.</em>
+                                  </td>
+                                </tr>                                
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr> 
+        <tr><td height="50">&nbsp;</td></tr>        
+
+        
+        <!-- Socials -->
+        <tr>
+          <td align="center" bgcolor="#feffff" style="padding: 0px 0px 30px 0px;">
+            <table role="presentation" class="dw hyfwylf" width="648" border="0" cellspacing="0" cellpadding="0">
+              <tbody>
+                <tr>
+                  <th width="324" class="dw db">
+                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <th width="33%" valign="bottom" style="font-weight:normal;">
+                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td><a href="http://www.facebook.com/curryspcworld" _label="Social1"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/social_facebook.gif" width="108" height="43" border="0" alt="Visit our" class="aw" style="display:block;"/></a></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="top" style="padding-top: 5px;"><a href="http://www.facebook.com/curryspcworld" _label="Social1" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">Facebook</a></td>
+                            </tr>
+                          </table>
+                        </th>
+                        <th width="33%" valign="bottom" style="font-weight:normal;">
+                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td><a href="http://www.twitter.com/curryspcworld" _label="Social2"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/social_twitter.gif" width="108" height="43" border="0" alt="Visit our" class="aw" style="display:block;"/></a></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="top" style="padding-top: 5px;"><a href="http://www.twitter.com/curryspcworld" _label="Social2" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">Twitter</a></td>
+                            </tr>
+                          </table>
+                        </th>
+                        <th width="33%" valign="bottom" style="font-weight:normal;">
+                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td><a href="http://www.pinterest.com/curryspcworld/" _label="Social3"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/social_pinterest.gif" width="108" height="43" border="0" alt="Visit our" class="aw" style="display:block;"/></a></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="top" style="padding-top: 5px;"><a href="http://www.pinterest.com/curryspcworld/" _label="Social3" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">Pinterest</a></td>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                    </table>
+                  </th>
+                  <th width="324" class="dw db tP20">
+                    <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <th width="33%" valign="bottom" style="font-weight:normal;">
+                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td><a href="http://www.youtube.com/curryspcworld" _label="Social4"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/social_youtube_i.gif" width="108" height="43" border="0" alt="Visit our" class="aw" style="display:block;"/></a></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="top" style="padding-top: 5px;"><a href="http://www.youtube.com/curryspcworld" _label="Social4" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">YouTube</a></td>
+                            </tr>
+                          </table>
+                        </th>
+                        <th width="33%" valign="bottom" style="font-weight:normal;">
+                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td valign="middle"><a href="https://techtalk.currys.co.uk/home/?<%@ include view='dixDIXtrackingCPCW1' %>~TEC~HOM~Social5~<%@ include view='dixDIXtrackingCPCW2' %>" _label="Social5"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/social_techtalk.gif" width="100" height="39" border="0" alt="Our blog" class="aw" style="display:block; margin:0 auto;"/></a></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="top" style="padding-top: 5px;"><a href="https://techtalk.currys.co.uk/home/?<%@ include view='dixDIXtrackingCPCW1' %>~TEC~HOM~Social5~<%@ include view='dixDIXtrackingCPCW2' %>" _label="Social5" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">TechTalk</a></td>
+                            </tr>
+                          </table>
+                        </th>
+                        <th width="33%" valign="bottom" style="font-weight:normal;">
+                          <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td valign="middle"><a href="https://www.teamknowhow.com/?utm_medium=Email&utm_source=Footer_Icon&utm_campaign=CurrysCRM" _label="Social6"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/social_teamknowhow.gif" width="100" height="39" border="0" alt="Our expert service partner" class="aw" style="display:block; margin:0 auto;"/></a></td>
+                            </tr>
+                            <tr>
+                              <td align="center" valign="top" style="padding-top: 5px;"><a href="https://www.teamknowhow.com/?utm_medium=Email&utm_source=Footer_Icon&utm_campaign=CurrysCRM" _label="Social6" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; line-height: 14px; color:#636363; text-decoration: underline;">Team Knowhow</a></td>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                    </table>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>        
+        
+        <!-- $|Footer -->
+        <tr>
+          <td align="center" valign="top" bgcolor="#f2f2f2" style="padding:30px 0px 30px 0px;">
+            <table role="presentation" width="630" cellpadding="0" cellspacing="0" border="0" align="center" class="dw3" bgcolor="#f2f2f2">
+              <tr>
+                <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height: 13px; color:#333332;"><strong>Important Your Plan information</strong><br />
+                  <br />
+                  DSG Retail Limited acts as a credit broker and not as a lender. Credit is provided by Creation Consumer Finance Ltd. Both DSG Retail Limited and Creation Consumer Finance Ltd are authorised and regulated by the Financial&nbsp;Conduct&nbsp;Authority.<br />
+&Dagger;&nbsp;Credit subject to status.<br />
+                  <br />
+                </td>
+              </tr>
+              <tr>
+                <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height: 13px; color:#333332;"><strong>Terms and conditions</strong><br />
+                  <br />
+                  <!-- PricePromise Footer Inject -->
+                  &lt;%@ include view='dixCoreFooterCurrysPricePromise' %&gt;
+                  <!-- GDPR Footer Inject -->
+                  &lt;%@ include view='dixCoreFooterCurrys' %&gt;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- $|RP -->
+&lt;%@ include view='dixCoreReturnPathTrackingCPCW' %&gt;
+<!-- Email Tools -->
+&lt;% if ( chainProfile.partyId == "") { %&gt;
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" language="javascript">
+var versionUpdate = (new Date()).getTime();
+var script = document.createElement("script");
+var link = document.createElement("link");
+script.type = "text/javascript";
+script.src = "https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/core.js?v=" + versionUpdate;
+link.type = "text/css;"
+link.rel = "stylesheet"
+link.href = "https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/core.css?v=" + versionUpdate;
+document.body.appendChild(link);
+document.body.appendChild(script);
+</script>
+&lt;% } %&gt;
+</body>
+</html>
