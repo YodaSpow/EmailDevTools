@@ -1,9 +1,12 @@
 $(document).ready(function(){
+
 	// Images that do no support clear-cache
 	var kickdyn = "img[src*='img.kickdyn.com']", 
 	placeholdit = "img[src*='placeholdit']",	
 	cache	= kickdyn + "," + placeholdit;
   $('img').not(cache).each(function(){
+    /* Remove AC bespoke IMG variable: ?&lt;%= cC %&gt; */
+    this.src = this.src.replace(/(\?&lt;%= cC %&gt;|\?%3C%=%20cC%20%%3E)/g, ""); 
     var versionUpdate = (new Date()).getTime();
     this.src = this.src + '?' + versionUpdate;
   });
