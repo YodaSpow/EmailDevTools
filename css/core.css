@@ -336,9 +336,16 @@ a[href*=" ?"]:after {
   content: "Image ALT has invalid character";
   width: 200px;
 }
-/* fall-back font-stack */
-.fonts:not(.fa) {
-  font-family: Arial, Helvetica, sans-serif !important;
+/* Fonts */
+.fonts [style*="gothamBlack"] { 
+  font-family: "Arial Black", sans-serif !important;
+}
+.fonts [style*="gothamBook"] { 
+  font-family: Arial, sans-serif !important;
+}
+.fonts [style*="gothamBook"][style*="lack"] { 
+  color:red!important;
+  font-family: "Arial Black", sans-serif !important;
 }
 td[background].bgImage { 
   background-image: none!important; 

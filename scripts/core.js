@@ -93,12 +93,12 @@ $(window).on("load", function() {
       if (flag == 0) {
         $(tog).addClass("redB");
         $(tog).text("Fonts");
-        $("*").addClass("fonts");
+        $("body").addClass("fonts");
         flag = 1;
       } else if (flag == 1) {
         $(tog).removeClass("redB");
         $(tog).text("Fonts");
-        $("*").removeClass("fonts");
+        $("body").removeClass("fonts");
         flag = 0;
       }
     });
