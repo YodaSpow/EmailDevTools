@@ -344,7 +344,6 @@ a[href*=" ?"]:after {
   font-family: Arial, sans-serif !important;
 }
 .fonts [style*="gothamBook"][style*="lack"] { 
-  color:red!important;
   font-family: "Arial Black", sans-serif !important;
 }
 td[background].bgImage { 
