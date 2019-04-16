@@ -856,18 +856,25 @@ sup { font-size:80%; line-height:1; vertical-align:top; mso-text-raise: 30%; }
             </table>
           </td>
         </tr>
-        <!-- Footer GDPR C/PCW -->
+        <!-- $|Footer -->
         <tr>
           <td align="center" valign="top" bgcolor="#f2f2f2" style="padding:30px 0px 30px 0px;">
             <table role="presentation" width="630" cellpadding="0" cellspacing="0" border="0" align="center" class="dw3" bgcolor="#f2f2f2">
               <tr>
                 <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height: 13px; color:#333332;"><strong>Important Your Plan information</strong><br />
                   <br />
-                  DSG Retail Limited acts as a credit broker and not as a lender. Credit is provided by Creation Consumer Finance Ltd. Both DSG Retail Limited and Creation Consumer Finance Ltd are authorised and regulated by the Financial&nbsp;Conduct&nbsp;Authority.<br /><br /></td>
+                  DSG Retail Limited acts as a credit broker and not as a lender. Credit is provided by Creation Consumer Finance Ltd. Both DSG Retail Limited and Creation Consumer Finance Ltd are authorised and regulated by the Financial&nbsp;Conduct&nbsp;Authority.<br />
+                  &Dagger;&nbsp;Credit subject to status.<br />
+                  <br />
+                </td>
               </tr>
               <tr>
-                <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height: 13px; color:#333332;"><strong>Terms and conditions</strong><br /><br />
-                &sup1;free This YouTube Premium free&nbsp;trial offer free is only open to residents of Great Britain who activate a Google Home Hub on or before December 31, 2018. Offer only available to customers who are not current YouTube Premium, YouTube Music Premium, YouTube Red or Google Play Music subscribers, have not been YouTube Premium, YouTube Music Premium, YouTube Red, or Google Play Music subscribers nor participated in a YouTube Premium, YouTube Music Premium, YouTube Red or Google Play Music trial before. Offer must be redeemed by December 31, 2018. Offer is comprised of an initial free&nbsp;14&nbsp;day trial (no form of payment required), however during the 14 day trial you will have the option to extend your trial for a further 6&nbsp;months by providing a valid form of payment. At the end of the 6 month period, you will be automatically charged the standard subscription price, currently &pound;11.99 per month (VAT inclusive if applicable) unless cancelled. You can cancel your 6&nbsp;month trial at no charge at any time before the trial is&nbsp;over. If you do not elect to enter into the additional 6&nbsp;month trial by providing a form of payment, your trial will automatically expire at the end of the initial 14&nbsp;day&nbsp;period. Offer requires a Google account. Full terms here: <a href="youtube.com/t/red_restrictions?gl=GB" _label="TsCs" style="text-decoration:underline; color:#333333;">youtube.com/t/red_restrictions?gl=GB</a>. Promoter: Google Commerce Limited, Gordon House, Barrow Street, Dublin 4, Ireland.</td>
+                <td height="39" align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height: 13px; color:#333332;"><strong>Terms and conditions</strong><br />
+                  <br />
+                  <!-- PricePromise Footer Inject -->
+                  &lt;%@ include view='dixCoreFooterCurrysPricePromise' %&gt;
+                  <!-- GDPR Footer Inject -->
+                  &lt;%@ include view='dixCoreFooterCurrys' %&gt;</td>
               </tr>
             </table>
           </td>
@@ -881,7 +888,13 @@ sup { font-size:80%; line-height:1; vertical-align:top; mso-text-raise: 30%; }
 &lt;% if ( chainProfile.partyId == "") { %&gt;
   
 <!-- Email Tools - Local only -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <!--
+  https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/Currys_PB_injects.js  
+  
+  -->
+<script src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/Currys_PB_injects.js"></script>      
 <script type="text/javascript" language="javascript">
 var versionUpdate = (new Date()).getTime();
 var script = document.createElement("script");
@@ -896,6 +909,9 @@ document.body.appendChild(script);
 </script> 
  
 &lt;% } %&gt;
+  
+
+ 
   
   
 </body>
