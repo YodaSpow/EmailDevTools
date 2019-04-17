@@ -861,13 +861,29 @@ sup { font-size:80%; line-height:1; vertical-align:top; mso-text-raise: 30%; }
     </td>
   </tr>
 </table>
+
 &lt;% if ( chainProfile.partyId == "") { %&gt;
-<!-- Email Tools - Local only -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
-<script src="https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/Currys_PB_injects.js"></script>    
-<link href="css/core.css" rel="stylesheet" type="text/css" />
-<script src="scripts/core.js"></script> 
-<!-- // -->  
-&lt;% } %&gt;
+<!-- Email Tools -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+<script type="text/javascript" language="javascript">
+document.addEventListener("DOMContentLoaded", function() {
+  var versionUpdate = (new Date()).getTime();
+  var emailTools = document.createElement("script");
+  var injects = document.createElement("script"); 
+  var css = document.createElement("link");
+  emailTools.type = "text/javascript";
+  emailTools.src = "https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/core.js?v=" + versionUpdate;
+  injects.type = "text/javascript";
+  injects.src = "https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/Currys_PB_injects.js?v=" + versionUpdate;  
+  css.type = "text/css;"
+  css.rel = "stylesheet"
+  css.href = "https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/core.css?v=" + versionUpdate;
+  document.body.appendChild(css);
+  document.body.appendChild(emailTools);
+  document.body.appendChild(injects);
+});  
+</script> 
+&lt;% } %&gt;  
+  
 </body>
 </html>
