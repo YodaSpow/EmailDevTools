@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="https://currys-ssl.cdn.dixons.com/grafx/favicon.png" />
+<link rel="Shortcut Icon" type="image/x-icon" href="https://currys-ssl.cdn.dixons.com/grafx/favicon.ico" />
+<link rel="apple-touch-icon" href="https://currys-ssl.cdn.dixons.com/grafx/apple-touch-icon.png" />
+<base target="_blank">
+<title></title>
+&lt;% if ( chainProfile.partyId !== "") { %&gt;
+&lt;%@ include view='dixCoreMasterTemplateCSS' %&gt;
+&lt;% } else { %&gt;
+<link href="https://currys-ssl.cdn.dixons.com/css/themes/email/AC/CORE/css/CoreMasterTemplateCSS3.css?v3.0" rel="stylesheet" type="text/css" />
+&lt;% } %&gt;
+<style type="text/css">
+body { background-color: #f6f6f6; }
+@media only screen and (min-width: 0px) and (max-width: 649px) {
+.w80 { width: 80%!important; }
+.tc { width: 80%!important; height: auto!important; }
+}
+@media only screen and (min-width: 441px) and (max-width: 649px) {
+.h1, .h1 a { font-size: 35px!important; line-height:1.1em!important; }
+}
+@media only screen and (max-width: 440px) {
+.h1, .h1 a { font-size: 30px!important; line-height: 1.1em!important; }
+.p { font-size: 14px!important; line-height: 1.6em!important; }
+.tc { width: 90%!important; height: auto!important; }
+}
+</style>
+<!--[if (mso)|(mso 16)]>
+<style type="text/css">body, table, td, a, span { font-family: Arial, Helvetica, sans-serif!important; }
+a {text-decoration: none;}
+sup { font-size:80%; line-height:1; vertical-align:top; mso-text-raise: 30%; }
+</style>
+<![endif]-->
+
+<!--[if gte mso 9]>
+<xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml>
+<![endif]-->
+</head>
+<!-- AC Version 2.9 -->
+<body id="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" yahoo="fix" style="font-family: Arial,Helvetica,sans-serif;" bgcolor="#f6f6f6">
+<script>
+<% var CampaignName= 'GoogleHomeHub'; %>
+<% var CampaignType= 'TAR'; %>
+<% var shortDayOfWeek= formatDate(new Date(), '%A').toUpperCase(); %>
+</script>
+<!-- rpcampaign: <%= CampaignName %><%= formatDate(new Date(targetData.BroadcastDate), '%4Y%2M%2D') %> -->
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="min-width:650px; table-layout: fixed;">
+  <tr>
+    <td width="100%" align="center" valign="top" bgcolor="#f6f6f6" style="min-width:100vm;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="min-width:650px; table-layout: fixed;">
+
+        
+        
+        <!-- Footer GDPR PCWB -->
+        <tr>
+          <td height="30" align="center" class="f28 inlineTxt" style="font-family:gothamBook, Arial Black, Helvetica, sans-serif; font-size: 25px; font-weight: bold; color:#0c347b; letter-spacing:-0.04em; padding: 4px 0px 4px 0px;">PCWB Footer - AC Personalisation Inject</td>
+        </tr>        
+        <tr>
+          <td align="center">
+            <table role="presentation" class="dw" width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td style="padding: 0px 0px 30px 0px;" align="center">
+                  <table role="presentation" width="650" cellpadding="0" cellspacing="0" border="0" align="center" class="dw3">
+                    <tr>
+                      <td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height: 13px; color:#333332;"><strong>Terms and conditions</strong>
+                      <br /><br />
+                      1. Does not apply to ink products or third party sellers. Major UK electrical retailers include <span class="ios3">Amazon.co.uk, AO.com</span>, Argos, Asda, John Lewis and Tesco. Full list of major retailers applicable to this Price Promise available at <a href="https://www.pcworldbusiness.co.uk/customer-services/price-promise.jtp?<%@ include view='dixDIXtrackingPCWB' %>&utm_content=TsCsPP" _label="TsCsPP" style="color: #333332; text-decoration: underline;">pcworldbusiness.co.uk</a>. We&rsquo;ll match our competitor&rsquo;s store or website UK price, including voucher offers. The competitor&rsquo;s product must be brand new, identical to ours, and offered on the same terms. We and the competitor must have stock ready for delivery. We must be able to verify the competitor&rsquo;s price and stock position. We&rsquo;ll match the price of a product, not delivery charges or other services. Voucher offers and codes redeemable in the issuing retailer will be matched with equivalent savings discounted at time of purchase, limited to one per transaction. Excludes custom quotes and gift vouchers/cards. Cannot be used with any other&nbsp;offer.
+                      <br /><br />
+                      &lt;%@ include view='dixCoreFooterPCWB' %&gt;</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>             
+                
+        
+        
+      </table>
+    </td>
+  </tr>
+</table>
+
+&lt;% if ( chainProfile.partyId == "") { %&gt;
+<!-- Email Tools -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+<script type="text/javascript" language="javascript">
+document.addEventListener("DOMContentLoaded", function() {  
+  var versionUpdate = (new Date()).getTime();
+  var emailTools = document.createElement("script");
+  var injects = document.createElement("script"); 
+  var css = document.createElement("link");
+  emailTools.type = "text/javascript";
+  emailTools.src = "https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/core.js?v=" + versionUpdate;
+  injects.type = "text/javascript";
+  injects.src = "https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/PB_injects.js?v=" + versionUpdate;  
+  css.type = "text/css;"
+  css.rel = "stylesheet"
+  css.href = "https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/core.css?v=" + versionUpdate;
+  document.body.appendChild(css);
+  document.body.appendChild(emailTools);
+  document.body.appendChild(injects);
+});   
+</script> 
+&lt;% } %&gt;  
+  
+  
+</body>
+</html>
