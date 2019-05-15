@@ -13,7 +13,8 @@ $(document).ready(function(){
 });
 
 $(window).on("load", function() {
-  var wrapperClass = "body > table";
+  // var wrapperClass = "body > table";
+  var wrapperClass = "body";
   $(wrapperClass).addClass("content");
   // Pseudo tooltip for images ALT: DIV only appears based on these conditions
   $("img[alt*='£'], [alt*='&'], [alt*='#']").wrap( "<div class='fauxImg'></div>" );
@@ -331,10 +332,12 @@ $(document).on("click", function(event){
 });
 
 // Hook point for Toggle nav
-$("body>table").before("<div id='navBar'></div>");
+//$("body>table").before("<div id='navBar'></div>");
+
+$("body").prepend("<div id='navBar'></div>");
 
 // Insert overlay
-$("body>table").before("<div id='overlay'><div class='oTop'></div><div class='oMid'></div><div class='oBot'></div><div class='oTxt hideNav'>Industry standard does not represent Currys list, Analytics done by #emailweekly: <i>www.emaildesignreview.com</i></div></div>");
+$("body").prepend("<div id='overlay'><div class='oTop'></div><div class='oMid'></div><div class='oBot'></div><div class='oTxt hideNav'>Industry standard does not represent Currys list, Analytics done by #emailweekly: <i>www.emaildesignreview.com</i></div></div>");
 
 // Raw Javascript
 (function() {

@@ -3,7 +3,7 @@ html {
   position: relative; 
 }
 body {
-  margin-top: 60px;
+  margin-top: 60px!important;
   border-top: 1px solid #cccccc;
 }
 #navBar {
@@ -331,19 +331,19 @@ a[href*=" ?"]:after {
   width: 200px;
 }
 /* Alt is done with jquery global selector on load */
-.altText img, .sImg img { border: 1px solid red; box-sizing:border-box; }
+.altText img, .sImg img { border: 1px solid red!important; padding-top: 1%; box-sizing:border-box; }
 .altText .fauxImg:after {
   content: "Image ALT has invalid character";
   width: 200px;
 }
 /* Fonts */
-.fonts [style*="gothamBlack"] { 
+.fonts [style*="gothamBlack"], .fonts [style*="gBlack"] { 
   font-family: "Arial Black", sans-serif !important;
 }
-.fonts [style*="gothamBook"] { 
+.fonts [style*="gothamBook"], .fonts [style*="gBook"] { 
   font-family: Arial, sans-serif !important;
 }
-.fonts [style*="gothamBook"][style*="lack"] { 
+.fonts [style*="gothamBook"][style*="lack"], .fonts [style*="gBook"][style*="lack"] { 
   font-family: "Arial Black", sans-serif !important;
 }
 td[background].bgImage { 
@@ -380,7 +380,7 @@ td[background].bgImage {
 .spam .spamBG2 { background-color:rgba(204, 0, 153,.7);}
 
 /* Fix to hide for Dropdown */
-.sT, .lT {display:none;}
+.sT, .lT {display:none!important;}
 
 /* MQ */
 @media only screen and (min-width: 0px) and (max-width: 649px) {
