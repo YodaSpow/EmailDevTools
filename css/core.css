@@ -331,7 +331,12 @@ a[href*=" ?"]:after {
   width: 200px;
 }
 /* Alt is done with jquery global selector on load */
-.altText img, .sImg img { border: 1px solid red!important; padding-top: 1%; box-sizing:border-box; }
+.altText img { background-color: #ffffff; background-image: url("https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/imgBG.png")!important; min-height: 44px; min-width: 44px; box-shadow: inset 0 0 1px #b7b6b6, inset 0 0 15px rgba(255, 0, 255, 0.3); }
+
+/*.altText img[style*='background'] { background-color:inherit; }*/
+
+.sImg img { border: 1px solid red!important; box-sizing: border-box; }
+
 .altText .fauxImg:after {
   content: "Image ALT has invalid character";
   width: 200px;
