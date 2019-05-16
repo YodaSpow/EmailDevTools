@@ -10,19 +10,12 @@ $(document).ready(function(){
     var versionUpdate = (new Date()).getTime();
     this.src = this.src + '?' + versionUpdate;
   });
-
 });
 
 $(window).on("load", function() {
   // var wrapperClass = "body > table";
   var wrapperClass = "body";
   $(wrapperClass).addClass("content");
-  
-  /*
-  $('img').each(function(){
-    $("img[style*='background']").addClass(wrapperClass).("imgBG");
-  }); 
-  */
   
   // Pseudo tooltip for images ALT: DIV only appears based on these conditions
   $("img[alt*='£'], [alt*='&'], [alt*='#']").wrap( "<div class='fauxImg'></div>" );
