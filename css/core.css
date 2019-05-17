@@ -190,6 +190,7 @@ a[href*=" ?"] {
 }
 .altText .fauxImg {
   position: relative;
+  width: 100%;
 }
 .yes a[href^="#"],
 .yes a[href*="##"], 
