@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	// Images that do no support clear-cache
 	var kickdyn = "img[src*='img.kickdyn.com']", 
-	placeholdit = "img[src*='placeholdit']",	
+	placeholdit = "img[src*='imgplaceholder.com']",	
 	cache	= kickdyn + "," + placeholdit;
   $('img').not(cache).each(function(){
     /* Remove AC bespoke IMG variable: ?&lt;%= cC %&gt; */
