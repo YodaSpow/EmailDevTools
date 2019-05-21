@@ -69,7 +69,18 @@ $(window).on("load", function() {
       if (flag == 0) {
         $("img").each(function() {
           var $this = $(this);
-          $this.attr("src", $this.attr("src").replace(/http/g, "-http"));
+          
+          // Removes pre-existing clear-cache query on image src
+          $this.attr("src", $this.attr("src").replace(/[\?](\d+)/g, ""));   
+          //$this.attr("src", $this.attr("src").replace(/http/g, "-http")); // Works only in Chrome not Firefox
+          
+          // Firefox babysit
+          setTimeout(function(){
+          var imgPath = "-" + $this.attr("src");   
+          $this.attr("src", "");
+          $this.attr("src", imgPath +"?"+new Date().getTime());   
+          }, 0);
+          
         });
         $(tog).addClass("redB");
         $("td").addClass("bgImage");
