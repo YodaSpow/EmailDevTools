@@ -227,7 +227,7 @@ a[href*=" ?"]:before {
   content: "";
   border: solid transparent;
   position: absolute;
-  top: -20px;
+  top: -15px;
   left: 10px;
   border-left: 0px solid transparent;
   border-right: 20px solid transparent;
@@ -265,7 +265,7 @@ a[href*=" ?"]:after {
   padding: 5px;
   border-radius: 2px;
   left: 10px;
-  top: -32px;
+  top: -25px;
   z-index: 10;
 }
 /* Category */
