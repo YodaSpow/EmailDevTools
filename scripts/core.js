@@ -36,7 +36,7 @@ $(window).on("load", function() {
 
   $(document).ready(function() {  
   // Firefox fix  
-  $(".logo, .iT, .fT, .spT, .foldT").removeAttr("href");
+  $(".logo, .iT, .fT, .spT, .speT, .foldT").removeAttr("href");
   // 1st load, turn off EmailTools Nav
   $( "nav li" ).not(".tool").addClass("hideNav");
   $( ".logo" ).addClass("redB");
@@ -195,6 +195,27 @@ $(window).on("load", function() {
       }
     });
   });
+  // Spelling
+  $(document).ready(function() {
+    var flag = 0;
+    var tog = ".speT";
+    $(tog).click(function() {
+      if (flag == 0) {
+        $(tog).addClass("redB");
+        $(tog).text("Spelling");
+        $( "table" ).attr({ contenteditable: "true" });
+        flag = 1;
+      } else if (flag == 1) {
+        $(tog).removeClass("redB");
+        $(tog).text("Spelling");
+        // Need to fix: $(".logo, .iT, .fT, .spT, .speT, .foldT").removeAttr("href");
+        $( "table" ).removeAttr("contenteditable");
+        flag = 0;
+      }
+    });
+  });
+  
+  
   // table
   $(document).ready(function() {
     var flag = 0;
@@ -356,6 +377,7 @@ $("body").prepend("<div id='overlay'><div class='oTop'></div><div class='oMid'><
     { href: "#", text: "Images", class: "iT" },
     { href: "#", text: "Fonts", class: "fT" },
     { href: "#", text: "Links", class: "lT" },
+    { href: "#", text: "Spelling", class: "speT" },    
     { href: "#", text: "Spam", class: "spT" },
     { href: "#", text: "Structure", class: "sT"},
     { href: "#", text: "Fold", class: "foldT"}
@@ -396,9 +418,10 @@ $("body").prepend("<div id='overlay'><div class='oTop'></div><div class='oMid'><
   navList.children[1].className = "imgToggle"; // li button
   navList.children[2].className = "fontToggle";
   navList.children[3].className = "linksToggle dN";
-  navList.children[4].className = "spamToggle";
-  navList.children[5].className = "structureToggle dN"; // dN hides navItems CSS
-  navList.children[6].className = "foldToggle"; // dN hides navItems CSS 
+  navList.children[4].className = "SpellToggle dN";  // speT
+  navList.children[5].className = "spamToggle";
+  navList.children[6].className = "structureToggle dN"; // dN hides navItems CSS
+  navList.children[7].className = "foldToggle"; // dN hides navItems CSS 
   
   linkDrop = document.createElement("div");
    linkDrop.innerHTML =
@@ -410,7 +433,7 @@ $("body").prepend("<div id='overlay'><div class='oTop'></div><div class='oMid'><
   structureDrop.innerHTML =
     '<button class="dropbtn dropSt">Structure <i class="fa"></i> </button> <div class="dropdown-content dstructure"> <button class="sTtable">&lt;table&gt;</button> <button class="sTtd">&lt;td&gt;</button> <button class="sTth">&lt;th&gt;</button> <button class="sTimg">&lt;img&gt;</button> <button class="sTspan">&lt;span&gt;</button> <button class="sTa">&lt;a&gt;</button> </div>';
   structureDrop.className = "dropdown";
-  navList.children[5].appendChild(structureDrop);
+  navList.children[6].appendChild(structureDrop);
 
   // Add list to div before HTML email.
   window.onload = function() {
