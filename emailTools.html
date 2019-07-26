@@ -14,6 +14,14 @@
 &lt;% } else { %&gt;
 <link href="https://currys-ssl.cdn.dixons.com/css/themes/email/AC/CORE/css/CoreMasterTemplateCSS3.css?v3.0" rel="stylesheet" type="text/css" />
 &lt;% } %&gt;
+<style type="text/css"> 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+@font-face { font-family: 'gBook'; src: url('https://currys-ssl.cdn.dixons.com/css/themes/email/AC/CORE/font/GothamBook.woff') format('woff'), url('https://currys-ssl.cdn.dixons.com/css/themes/email/AC/CORE/font/GothamBook.ttf') format('truetype'); font-weight: normal; font-style: normal; mso-font-alt: 'Arial'; }
+@font-face { font-family: 'gBlack'; src: url('https://currys-ssl.cdn.dixons.com/css/themes/email/AC/CORE/font/GothamBlack.woff') format('woff'), url('https://currys-ssl.cdn.dixons.com/css/themes/email/AC/CORE/font/GothamBlack.ttf') format('truetype'); font-weight: normal; font-style: normal; mso-font-alt: 'Arial Black'; }
+
+@font-face { font-family: 'gUltra'; src: url('https://currys-ssl.cdn.dixons.com/css/themes/email/AC/CORE/font/GothamUltra.woff') format('woff'), url('https://currys-ssl.cdn.dixons.com/css/themes/email/AC/CORE/font/GothamUltra.ttf') format('truetype'); font-weight: normal; font-style: normal; mso-font-alt: 'Arial Black'; }
+}  
+</style>  
 <style type="text/css">
 body { background-color: #f6f6f6; }
 @media only screen and (min-width: 0px) and (max-width: 649px) {
@@ -136,12 +144,10 @@ sup { font-size:80%; line-height:1; vertical-align:top; mso-text-raise: 30%; }
         <tr>
           <td height="30" align="center" class="f28 inlineTxt" style="font-family:gothamBlack, Arial Black, Helvetica, sans-serif; font-size: 25px; font-weight: bold; color:#0c347b; letter-spacing:-0.04em; padding: 4px 0px 4px 0px;">font-family:gothamBlack, Arial Black</td>
         </tr>  
-        
-        
-        
+              
         <tr>
-          <td height="30" align="center" class="f28 inlineTxt" style="font-family:gothamBook, Arial, Helvetica, sans-serif; font-size: 25px; font-weight: bold; color:#0c347b; letter-spacing:-0.04em; padding: 4px 0px 4px 0px;">font-family:gothamBook, Arial</td>
-        </tr>
+          <td height="30" align="center" class="f28 inlineTxt" style="font-family:gUltra, Arial Black, Helvetica, sans-serif; font-size:30px; line-height:90%; font-weight:bold; color:#0d428a; text-decoration:none; text-transform: uppercase; padding: 4px 0px 4px 0px;">font-family:gUltra, Arial Black, Helvetica, sans-serif</td>
+        </tr>        
         <!-- 1BNR1 -->
         <tr>
           <td align="center" style="padding: 20px 0px 30px 0px;">
@@ -891,7 +897,8 @@ sup { font-size:80%; line-height:1; vertical-align:top; mso-text-raise: 30%; }
 </table>
 
 &lt;% if ( chainProfile.partyId == "") { %&gt;
-<!-- Email Tools -->
+  
+<!-- Email Tools - Local only -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
 <script type="text/javascript" language="javascript">
 document.addEventListener("DOMContentLoaded", function() {  
@@ -900,17 +907,18 @@ document.addEventListener("DOMContentLoaded", function() {
   var injects = document.createElement("script"); 
   var css = document.createElement("link");
   emailTools.type = "text/javascript";
-  emailTools.src = "https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/core.js?v=" + versionUpdate;
+  emailTools.src = "scripts/core.js?v=" + versionUpdate;
   injects.type = "text/javascript";
-  injects.src = "https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/PB_injects.js?v=" + versionUpdate;  
+  injects.src = "scripts/PB_injects.js?v=" + versionUpdate;  
   css.type = "text/css;"
   css.rel = "stylesheet"
-  css.href = "https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/core.css?v=" + versionUpdate;
+  css.href = "css/core.css?v=" + versionUpdate;
   document.body.appendChild(css);
   document.body.appendChild(emailTools);
-  document.body.appendChild(injects);
+  document.body.appendChild(injects); 
 });   
-</script>   
+</script> 
+ 
 &lt;% } %&gt; 
 
 </body>

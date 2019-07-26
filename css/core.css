@@ -175,8 +175,8 @@ nav a:hover, button:hover {
 .category a[href*="Category"],
 .label a[_label*="_Category"],
 .sTable table:not([role*="presentation"]),
-.sTable td > table + table, 
-.sTable th > table + table,
+/*.sTable td > table + table, 
+.sTable th > table + table,*/
 a[href*="#srcid=11026"],
 a[href*="?intcmp"],
 a[href*="http://t.e.currys.co.uk"],
@@ -214,8 +214,8 @@ a[href*=" ?"] {
 .category a[href*="Category"]:before,
 .label a[_label*="_Category"]:before,
 .sTable table:not([role*="presentation"]):before,
-.sTable td > table + table:before, 
-.sTable th > table + table:before,
+/*.sTable td > table + table:before, 
+.sTable th > table + table:before,*/
 .altText .fauxImg:before,
 a[href*="#srcid"]:before,
 a[href*="?intcmp"]:before,
@@ -240,8 +240,8 @@ a[href*=" ?"]:before {
 .category a[href*="Category"]:after,
 .label a[_label*="_Category"]:after,
 .sTable table:not([role*="presentation"]):after,
-.sTable td > table + table:after, 
-.sTable th > table + table:after,
+/*.sTable td > table + table:after, 
+.sTable th > table + table:after,*/
 .altText .fauxImg:after,
 a[href*="#srcid"]:after,
 a[href*="?intcmp"]:after,
@@ -325,14 +325,14 @@ a[href*=" ?"]:after {
   content: "Missing role= presentation";
   width: 200px;  
 }
-/* Table align method Warning */
+/* Table align method Warning 
 .sTable td > table + table:after, 
 .sTable th > table + table:after  {
   content: "Table Align method!!!";
   width: 200px;
-}
+}*/
 /* Alt is done with jquery global selector on load */
-.altText img { /* background-color: #ffffff; */ background-image: url("https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/imgBG3.png")!important; min-height: 44px; min-width: 44px; box-shadow: inset 0 0 1px #b7b6b6, inset 0 0 15px rgba(255, 0, 255, 0.3); }
+.altText img { background-image: url("https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/imgBG3.png")!important; min-height: 44px; min-width: 44px; box-shadow: inset 0 0 1px #b7b6b6, inset 0 0 15px rgba(255, 0, 255, 0.3); }
 .sImg img { border: 1px solid red!important; box-sizing: border-box; }
 
 .altText .fauxImg:after {
@@ -340,7 +340,7 @@ a[href*=" ?"]:after {
   width: 200px;
 }
 /* Fonts */
-.fonts [style*="gothamBlack"], .fonts [style*="gBlack"] { 
+.fonts [style*="gothamBlack"], .fonts [style*="gBlack"], .fonts [style*="gothamUltra"], .fonts [style*="gUltra"] { 
   font-family: "Arial Black", sans-serif !important;
 }
 .fonts [style*="gothamBook"], .fonts [style*="gBook"] { 
