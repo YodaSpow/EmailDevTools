@@ -332,7 +332,8 @@ a[href*=" ?"]:after {
   width: 200px;
 }*/
 /* Alt is done with jquery global selector on load */
-.altText img { background-image: url("https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/imgBG3.png")!important; min-height: 44px; min-width: 44px; box-shadow: inset 0 0 1px #b7b6b6, inset 0 0 15px rgba(255, 0, 255, 0.3); }
+.altText img { min-height: 44px; min-width: 44px; box-shadow: inset 0 0 1px #b7b6b6, inset 0 0 15px rgba(255, 0, 255, 0.3); position: relative; }
+.altText img:before { position: absolute; top: 0; left: 0; content: " "; background: url(https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/imgBG3.png); width: 100%; height: 100%; }
 .sImg img { border: 1px solid red!important; box-sizing: border-box; }
 
 .altText .fauxImg:after {
