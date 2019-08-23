@@ -345,16 +345,31 @@ a[href*=" ?"]:after {
   content: "Image ALT has invalid character";
   width: 200px;
 }
-/* Fonts */
-.fonts [style*="gothamBlack"], .fonts [style*="gBlack"], .fonts [style*="gothamUltra"], .fonts [style*="gUltra"] { 
+
+/* 
+Fonts: 
+Set conditionas of different chain group requirements
+*/
+
+/* gothamBlack | gBlack + Arial (B/b:lack) used in font-family */
+.fonts [style*="gothamBlack"], .fonts [style*="gBlack"], .fonts [style*="gothamUltra"], .fonts [style*="gUltra"], .fonts [style*="idmHEAD"] { 
   font-family: "Arial Black", sans-serif !important;
 }
+/* FALLBACK: - if Arial (B/b:lack) is NOT used in font-family  */
 .fonts [style*="gothamBook"], .fonts [style*="gBook"] { 
   font-family: Arial, sans-serif !important;
 }
-.fonts [style*="gothamBook"][style*="lack"], .fonts [style*="gBook"][style*="lack"] { 
+/* gothamBook | gBook | idmHEAD + Arial (B/b:lack) used in font-family */
+.fonts [style*="gothamBook"][style*="lack"], .fonts [style*="gBook"][style*="lack"], .fonts [style*="idmHEAD"][style*="lack"] { 
   font-family: "Arial Black", sans-serif !important;
 }
+/* idmREG | idmSUB + Arial (only) used in font-family */
+.fonts [style*="idm"][style*="Arial,"] { 
+  font-family: "Arial", sans-serif !important;
+}
+
+
+/* Structure guidelines */
 td[background].bgImage { 
   background-image: none!important; 
 }
