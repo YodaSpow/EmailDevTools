@@ -480,7 +480,30 @@ $("*")
   // .highlight("free ", "spamBG3") // works: joiner maybe on Left
   .highlight(" Knowhow", "orange")
   .highlight(" Knowhow ", "orange")
-  //.highlight("£", "red"); doesnt work
+  // Spam words
+  .highlight(" Act Now ", "red")
+  .highlight(" Affordable ", "red")
+  .highlight(" Amazing stuff ", "red")
+  .highlight(" Double your income ", "red")
+  .highlight(" Earn extra cash ", "red")
+  .highlight(" Eliminate debt ", "red")
+  .highlight(" Free gift ", "red")
+  .highlight(" Limited time offer ", "red")
+  .highlight(" !!! ", "red")
+  .highlight(" Act now! ", "red")
+  .highlight(" Discount ", "red")
+  .highlight(" Double your income ", "red")
+  .highlight(" Guarantee ", "red")
+  .highlight(" Join millions ", "red")
+  .highlight(" Lose weight ", "red")
+  .highlight(" All natural ", "red")
+  .highlight(" Bargain ", "red")
+  .highlight(" Best price ", "red")
+  .highlight(" Lowest price ", "red")
+  .highlight(" click ", "red")
+  .highlight(" No purchase necessary ", "red");
+
+//.highlight("£", "red"); doesnt work
 // .highlight(" & ", "spamBG") // doesnt work reads rendered HTML not unescaped UTF8 entities.
 
 // Spam Word:
