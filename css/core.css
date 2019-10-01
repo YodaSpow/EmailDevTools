@@ -182,6 +182,8 @@ a[href*="?intcmp"],
 a[href*="http://t.e.currys.co.uk"],
 .missingQuery,
 .notSecure,
+/* Movable ink checks */
+.altText .mi-Correct, .mi-noA, .mi-hasQ, .mi-hasAQ,
 a[href*=" https"],
 a[href*=" ?"] {
   position: relative;
@@ -222,6 +224,8 @@ a[href*="?intcmp"]:before,
 a[href*="http://t.e.currys.co.uk"]:before,
 .missingQuery:before,
 .notSecure:before,
+/* Movable ink checks */
+.altText .mi-Correct:before, .mi-noA:before, .mi-hasQ:before, .mi-hasAQ:before,
 a[href*=" https"]:before,
 a[href*=" ?"]:before {
   content: "";
@@ -248,6 +252,8 @@ a[href*="?intcmp"]:after,
 a[href*="http://t.e.currys.co.uk"]:after,
 .missingQuery:after,
 .notSecure:after,
+/* Movable ink checks */
+.altText .mi-Correct:after, .mi-noA:after, .mi-hasQ:after, .mi-hasAQ:after,
 a[href*=" https"]:after,
 a[href*=" ?"]:after {
   content: "Need link!";
@@ -310,6 +316,36 @@ a[href*="http://t.e.currys.co.uk"]:after {
   content: "No HTTPS";
   width: 100px;  
 }
+/* MI Shadow only */
+.mi-Correct:after, .mi-noA:after, .mi-hasQ:after, .mi-hasQ:after, .mi-hasAQ:after { -webkit-filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.3)); drop-shadow: (0px 0px 1px rgba(0, 0, 0, 0.3)); border: 1px solid rgba(0, 0, 0,.3); }
+/* Movable ink is correct - Visible on image off only. */
+.altText .mi-Correct:after {
+  content: "Movable Ink is correct"; 
+  width: 180px;
+  background: #008000;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255,.3);
+}
+/* MI: Needs & */
+.mi-noA:after {
+  content: "Movable Ink needs '&' after 'Furl'";
+  width: 220px; 
+  left: -100px;
+  -webkit-filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.8));
+  drop-shadow: (0px 0px 1px rgba(0, 0, 0, 0.8));
+}
+/* MI: Needs & - Remove ? */
+.mi-hasQ:after {
+  content: "Movable Ink needs '&' after 'Furl', remove: '?' ";
+  width: 290px;
+  left: -100px;
+}
+/* MI: Needs & - Remove ? */
+.mi-hasAQ:after {
+  content: "Movable Ink needs '&' after 'Furl', remove: '?' ";
+  width: 290px; 
+  left: -100px;
+}
 /* White-space before https */
 a[href*=" https"]:after {
   content: "White-space before HTTPS";
@@ -332,7 +368,7 @@ a[href*=" ?"]:after {
   width: 200px;
 }*/
 /* Alt is done with jquery global selector on load */
-.altText img { min-height: 44px; min-width: 44px; box-shadow: inset 0 0 1px #b7b6b6, inset 0 0 15px rgba(255, 0, 255, 0.3); position: relative; }
+.altText img { min-height: 44px; min-width: 44px; box-shadow: inset 0 0 1px #b7b6b6, inset 0 0 15px rgba(255, 0, 255, 0.3); position: relative; background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 100%); -webkit-text-fill-color: inherit; }
 .altText img:before { position: absolute; top: 0; left: 0; content: " "; background: url(https://currys-ssl.cdn.dixons.com/css/themes/email/Assets/emailTool/imgBG3.png); width: 100%; height: 100%; }
 
 @-moz-document url-prefix() {
@@ -352,6 +388,7 @@ Set conditionas of different chain group requirements
 */
 
 /* gothamBlack | gBlack + Arial (B/b:lack) used in font-family */
+.fonts [class*="grad"] { background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 100%); -webkit-text-fill-color: inherit; }
 .fonts [style*="gothamBlack"], .fonts [style*="gBlack"], .fonts [style*="gothamUltra"], .fonts [style*="gUltra"], .fonts [style*="idmHEAD"] { 
   font-family: "Arial Black", sans-serif !important;
 }

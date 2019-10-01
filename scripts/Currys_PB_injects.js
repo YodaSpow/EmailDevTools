@@ -1,5 +1,10 @@
 // Adobe Campaign EJS Commenting out and Populating
 
+/*
+var commentEJS = /(&lt;%).*(%&gt;)/g;
+document.body.innerHTML = document.body.innerHTML.replace(commentEJS, "<!-- $&-->");
+*/
+
 /* SCRAPPED
 var pricePromise = /&lt;%@\sinclude\sview='dixCoreFooterCurrysPricePromise'\s%&gt;/g;
 var GDPR = /&lt;%@\sinclude\sview='dixCoreFooterCurrys'\s%&gt;/g;
@@ -10,5 +15,4 @@ var coreStr = '<div title="EmailTools: Inject GDPR"><!-- $&-->To find out more, 
 document.body.innerHTML = document.body.innerHTML.replace(pricePromise, ppStr);
 document.body.innerHTML = document.body.innerHTML.replace(GDPR, coreStr);
 document.body.innerHTML = document.body.innerHTML.replace(commentEJS, "<!-- $&-->");
-
 */

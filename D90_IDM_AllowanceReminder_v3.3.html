@@ -1,0 +1,810 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="https://currys-ssl.cdn.dixons.com/css/themes/email/iD/assets/favicon/favicon-16x16.png" />
+<link rel="Shortcut Icon" type="image/x-icon" href="https://currys-ssl.cdn.dixons.com/css/themes/email/iD/assets/favicon/favicon-16x16.png" />
+<link rel="apple-touch-icon" href="https://currys-ssl.cdn.dixons.com/css/themes/email/iD/assets/favicon/favicon-32x32.png" />
+<base target="_blank">
+<title></title>
+&lt;% if ( iDMobileRecipients.id !== "") { %&gt;
+&lt;%@ include view='dixCoreMasterTemplateCSSidm3' %&gt;
+&lt;% } else { %&gt;
+<link href="https://currys-ssl.cdn.dixons.com/css/themes/email/AC/CORE/css/CoreMasterTemplateCSS_IDM_3-1.css?v3.0" rel="stylesheet" type="text/css" />
+&lt;% } %&gt;
+<style type="text/css">
+@media only screen and (min-width: 0px) and (max-width: 649px) {
+}
+@media only screen and (min-width:441px) and (max-width:649px) {
+.t-w30 { width:30% !important; }
+.t-w40 { width:40% !important; }
+.t-w50 { width:50% !important; }
+.t-w60 { width:60% !important; }
+.t-w70 { width:70% !important; }
+}
+@media only screen and (max-width:440px) {
+.m-w30 { width:30% !important; }
+.m-w40 { width:40% !important; }
+.m-w50 { width:50% !important; }
+.m-w60 { width:60% !important; }
+.m-w70 { width:70% !important; }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+}
+</style>
+<script>
+	<% var forenameREF = iDMobileRecipients.First_Name; %>
+	<% var forenameLength = forenameREF.length; %>
+	<% var forename = "";
+		if ( forenameREF == "") {
+			forename = "there"
+		} else if ( forenameLength <= 2 ) {
+			forename = "there"
+		} else if ( !/[^a-zA-Z]/.test(forenameREF) ) {
+			forename = forenameREF
+		} else {
+			forename = "there"; } %>
+</script>
+<script>
+	<% var SIMO = "";
+		if ( iDMobileRecipients.iDMobileWelcome.Contract_Term == "24") {
+			SIMO = "No"
+		} else {
+			SIMO = "Yes"; } %>
+	<% var NewCust = "";
+		if ( iDMobileRecipients.iDMobileWelcome.Customer_Type == "New connections") {
+			NewCust = "Yes"
+		} else {
+			NewCust = "No"; } %>
+</script>
+	
+		  <% var billingDate = iDMobileRecipients.iDMobileWelcome.Billing_Date,
+				date = billingDate.getDate(), 
+				month = "Jan,February,March,April,May,June,July,August,September,October,November,December"
+			  .split(",")[billingDate.getMonth()];
+
+			function nth(d) {
+			  if(d>3 && d<21) return 'th';
+			  switch (d % 10) {
+					case 1:  return "st";
+					case 2:  return "nd";
+					case 3:  return "rd";
+					default: return "th";
+				}
+			} 
+
+			var getBillingDayPart = date+"<sup>"+nth(date)+"</sup>";
+
+			var getBillingDayMonthPart = date+"<sup>"+nth(date)+"</sup>" +" "+month;  %>
+<!--[if (mso)|(mso 16)]>
+<style type="text/css">body, table, td, a, span { font-family: Arial, Helvetica, sans-serif!important; }
+a {text-decoration: none;}
+sup { font-size:80%; line-height:1; vertical-align:top; mso-text-raise: 30%; }
+</style>
+<![endif]-->
+
+<!--[if gte mso 9]>
+<xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml>
+<![endif]-->
+</head><body id="body" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" yahoo="fix" style="font-family: Arial,Helvetica,sans-serif;">
+<script>
+	// DO NOT CHANGE
+<% var TrackingAffiliate= 'CRM'; %>
+	// DO NOT CHANGE
+<% var TrackingSource= 'CRM'; %>
+	// DO NOT CHANGE
+<% var TrackingMedium= 'email'; %>
+	// Content - SimFree, InLife or PayMonthly
+<% var TrackingContent= 'InLife'; %>
+	// Day of send - auto-populated
+<% var TrackingDoS= formatDate(new Date(), '%4Y%2M%2D'); %>
+	// Activity - Retention, Promo, Service or Marketing
+<% var TrackingActivity= 'Service'; %>
+	// Email Ref - Either Campaign Name or Key deal
+<% var TrackingEmailRef= 'd90_allowance'; %>
+	// utm_term is not located here, must be updated in every link
+</script>
+
+<!-- AC Version 2.16 -->
+<table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="min-width:650px; table-layout: fixed;">
+  <tr>
+    <td width="100%" align="center" valign="top" bgcolor="#feffff" style="min-width:100vm;">
+      <table role="presentation" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="min-width:650px; table-layout: fixed;">
+        <!-- $|Top Section -->
+        <tr>
+          <td align="center" valign="top" bgcolor="#F5F5F5" style="padding:6px 0px 6px 0px;">
+            <table role="presentation" width="650" border="0" cellspacing="0" cellpadding="0" class="dw" style="border:none;">
+              <tr>
+                <td align="center" style="font-family: idmREG, Arial, Helvetica, sans-serif; font-size:10px; line-height:12px; color:#333333;">
+                  <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" style="border:none;" role="presentation">
+                    <!-- PreHeader -->
+                    <tr>
+                      <td align="left" style="font-family: idmREG, Arial, Helvetica, sans-serif; font-size:10px; line-height: 12px; color:#333333; padding-bottom:8px;">Make sure your plan is fully powered up.</td>
+                    </tr>
+                    <!-- Web -->
+                    <tr>
+                      <td align="left" valign="bottom" style="font-family: idmREG, Arial, Helvetica, sans-serif; font-size:10px; line-height:12px; color:#737373;"> <a href="<%@ include view='MirrorPageUrl' %>" _label="Mirror Page" _type="mirrorPage" style="text-decoration:underline; color:#737373;">Web version</a> </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" valign="top" bgcolor="#10A45E">
+            <table role="presentation" width="650" border="0" cellspacing="0" cellpadding="0" class="dw" style="border:none;">
+              <tr>
+                <td align="center" style="font-family: idmREG, Arial, Helvetica, sans-serif; font-size:10px; line-height:12px; color:#333333;">
+                  <table role="presentation" width="650" border="0" cellspacing="0" cellpadding="0" class="dw" style="border:none;">
+                    <!-- Logo -->
+                    <tr>
+                      <th align="center" width="100%">
+                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" dir="ltr" role="presentation">
+                          <tr>
+                            <th valign="middle" class="t-w50 m-w60" style="font-weight:normal;">
+                              <table role="presentation" class="dw" border="0" cellpadding="0" cellspacing="0" align="left" dir="ltr">
+                                <tr>
+                                  <td>
+                                    <table role="presentation" class="dw" border="0" cellpadding="0" cellspacing="0" align="left" dir="ltr">
+                                      <tr>
+                                        <td align="center" valign="middle" style="padding:15px 0px 15px 0px;"> <a href="https://www.idmobile.co.uk/?<%@ include view='dixIDMtracking2018' %>_HDR" _label="HDR"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/iD/assets/N19master/idlogo.png" alt="iD" width="230" height="47" class="dw3 hAuto" style="display:block; margin:0 auto; font-family:idmHEAD, Arial Black, Helvetica, sans-serif; color:#6A2C6B;" border="0" /></a> </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </th>
+                            <th width="40" height="20" class="gC-">&nbsp;</th>
+                            <th valign="middle" class="t-w30 m-w40" style="font-weight:normal;">
+                              <table role="presentation" class="dw" border="0" cellpadding="0" cellspacing="0" align="right" dir="ltr">
+                                <tr>
+                                  <td valign="middle">
+                                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" dir="ltr" class="dw">
+                                      <tr>
+                                        <td align="center" valign="middle" style="padding:15px 0px 15px 0px;"> <a href="https://community.idmobile.co.uk/?<%@ include view='dixIDMtracking2018' %>_COMM" _label="COMM"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/iD/assets/N19master/community-3.png" alt=" Community" width="200" height="39" class="dw" style="display:block; margin:0 auto; font-family:idmHEAD, Arial Black, Helvetica, sans-serif; color:#6A2C6B;" border="0" /></a></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </th>
+                          </tr>
+                        </table>
+                      </th>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- $|Navigation -->
+        <tr>
+          <td align="center" valign="top" bgcolor="#F5F5F5" style="border-top:1px solid #f7f7f7;">
+            <table width="650" border="0" align="center" cellpadding="0" cellspacing="0" class="dw" role="presentation">
+              <tr>
+                <td align="center" bgcolor="#F5F5F5" style="padding: 10px 0px 10px 0px;">
+                  <table role="presentation" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#F5F5F5" class="dw3">
+                    <tr>
+                      <td width="100" align="center" valign="middle"> <a href="https://my.idmobile.co.uk/?<%@ include view='dixIDMtracking2018' %>_ACCOUNT" _label="ACCOUNT" style="font-family: idmREG, Arial, Helvetica, sans-serif; font-size:11px; line-height:24px; color:#1C1C1C; text-decoration:none; -webkit-text-size-adjust:90%;">My Account</a> </td>
+                      <td width="100" align="center" valign="middle"> <a href="https://www.idmobile.co.uk/help-and-advice?<%@ include view='dixIDMtracking2018' %>_HELP" _label="HELP" style="font-family: idmREG, Arial, Helvetica, sans-serif; font-size:11px; line-height:24px; color:#1C1C1C; text-decoration:none; -webkit-text-size-adjust:90%;">Help &amp; Advice</a> </td>
+                     <td width="100" align="center" valign="middle"> <a href="https://www.idmobile.co.uk/app?<%@ include view='dixIDMtracking2018' %>_APP" _label="APP" style="font-family: idmREG, Arial, Helvetica, sans-serif; font-size:11px; line-height:24px; color:#1C1C1C; text-decoration:none; -webkit-text-size-adjust:90%;">Get the app</a> </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- $|Modules -->
+
+        
+       <!-- $ Main Banner ¬ -->
+        <tr>
+          <td align="center" style="padding:10px 0px 30px 0px;">
+            <table role="presentation" width="650" border="0" cellspacing="0" cellpadding="0" class="dw" align="center">
+              <tr>
+                <td bgcolor="#feffff">
+                  <table role="presentation" width="650" border="0" cellspacing="0" cellpadding="0" class="dw" align="center">
+                    <tr>
+                      <td style="padding-bottom:0px;">
+                        <table role="presentation" width="650" border="0" cellpadding="0" cellspacing="0" align="center" class="dw">
+                          <tr>
+                            <td width="650" align="center" valign="top" class="dw" style="line-height:1%; mso-line-height-rule:exactly;"><a href="https://my.idmobile.co.uk/?<%@ include view='dixIDMtracking2018' %>_MainBNR" _label="MainBNR"><img class="dw altHDR" align="left" width="650" height="240" src="https://img.kickdyn.com/imgdf.png?c=27057.5gAeXreCFkAyI4aeZJtv&Forename=<%= forename %>&emailRef=116" alt=" Your quarterly plan check" style="display:block; color:#10A45E; font-size:36px; line-height:40px; font-weight:bold; text-align:center; text-transform:uppercase;" border="0" /></a></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- Intro txt -->
+                    <tr>
+                      <td>
+                        <table role="presentation" width="650" class="dw" border="0" cellpadding="0" cellspacing="0" align="center">
+                          <tr>
+                            <td align="center">
+                              <table role="presentation" width="90%" class="dw3" border="0" cellpadding="0" cellspacing="0" align="center">
+                                <tr>
+                                  <td align="center" valign="middle" class="" style="font-family:idmREG, Arial, Helvetica, sans-serif; font-size:14px; line-height:16px; color:#1C1C1C; padding:15px 0px 5px 0px;">
+								   <% if ( SIMO == "Yes") { %>
+								   We hope you've enjoyed the first 90 days of your iD&nbsp;Mobile SIM&nbsp;only plan. Here's a quick reminder of your monthly&nbsp;allowances:
+								   <% } else { %>
+								   We hope you've enjoyed the first 90 days of your iD&nbsp;Mobile pay&nbsp;monthly plan. Here's a quick reminder of your monthly&nbsp;allowances:
+								   <% } %>
+                               		</td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+       
+       
+       <!-- $ 3NOM ¬ 1-3 -->
+        <tr>
+          <td align="center" style="padding-bottom:20px;">
+            <table role="presentation" width="650" border="0" align="center" cellpadding="0" cellspacing="0" class="dw3">
+              <tbody>
+                <tr>
+                  <th align="center" width="650" class="dw db">
+                    <table role="presentation" width="650" class="dw" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <th width="200" valign="top" class="dw db" style="font-weight:normal; border: solid 1px #E6E6E6; padding-top: 6px;">
+                          <table role="presentation" width="90%" align="center" valign="top" class="dw3" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td height="30" align="center" valign="middle"><a href="https://my.idmobile.co.uk/?<%@ include view='dixIDMtracking2018' %>_3PLAN1" _label="3PLAN1" style="font-family:idmHEAD, Arial, Helvetica, sans-serif; font-size:20px; line-height:22px; font-weight:bold; color:#1C1C1C; text-decoration:none;">Inclusive Data</a></td>
+                            </tr>
+                            <tr>
+                              <td height="35" align="center" valign="top" style="font-family:idmREG, Arial, Helvetica, sans-serif; font-size:16px; line-height:18px; color:#1C1C1C;"><%= iDMobileRecipients.iDMobileWelcome.Inclusive_Data.toUpperCase()  %></td>
+                            </tr>
+                          </table>
+                        </th>
+                        <th width="25" height="20" class="db" align="center">&nbsp;</th>
+                        <th width="200" valign="top" class="dw db" style="font-weight:normal; border: solid 1px #E6E6E6; padding-top: 6px;">
+                          <table role="presentation" width="90%" align="center" class="dw3" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td height="30" align="center" valign="middle"><a href="https://my.idmobile.co.uk/?<%@ include view='dixIDMtracking2018' %>_3PLAN1" _label="3PLAN1" style="font-family:idmHEAD, Arial, Helvetica, sans-serif; font-size:20px; line-height:22px; font-weight:bold; color:#1C1C1C; text-decoration:none;">Inclusive Minutes</a></td>
+                            </tr>
+                            <tr>
+                              <td height="35" align="center" valign="top" style="font-family:idmREG, Arial, Helvetica, sans-serif; font-size:16px; line-height:18px; color:#1C1C1C;"><% if ( iDMobileRecipients.iDMobileWelcome.Inclusive_Minutes == "999999999" ) { %>Unlimited
+                                    <% } else { %>
+                                    <%= iDMobileRecipients.iDMobileWelcome.Inclusive_Minutes  %>
+                                    <% } %></td>
+                            </tr>
+                          </table>
+                        </th>
+                        <th width="25" height="20" class="db" align="center">&nbsp;</th>
+                        <th width="200" valign="top" class="dw db" style="font-weight:normal; border: solid 1px #E6E6E6; padding-top: 6px;">
+                          <table role="presentation" width="90%" align="center" class="dw3" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td height="30" align="center" valign="middle"><a href="https://my.idmobile.co.uk/?<%@ include view='dixIDMtracking2018' %>_3PLAN1" _label="3PLAN1" style="font-family:idmHEAD, Arial, Helvetica, sans-serif; font-size:20px; line-height:22px; font-weight:bold; color:#1C1C1C; text-decoration:none;">Inclusive Texts</a></td>
+                            </tr>
+                            <tr>
+                              <td height="35" align="center" valign="top" style="font-family:idmREG, Arial, Helvetica, sans-serif; font-size:16px; line-height:18px; color:#1C1C1C;"><% if ( iDMobileRecipients.iDMobileWelcome.Inclusive_Text == "999999999" ) { %>Unlimited
+                                    <% } else { %>
+                                    <%= iDMobileRecipients.iDMobileWelcome.Inclusive_Text %>
+                                    <% } %></td>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                    </table>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        
+        
+       <!-- $ Copy -->
+        <tr>
+          <td align="center" style="padding-bottom:20px;">
+            <table role="presentation" width="650" border="0" align="center" cellpadding="0" cellspacing="0" class="dw3">
+              <tbody>
+                 <tr>
+					<td align="center">
+					  <table role="presentation" width="90%" class="dw3" border="0" cellpadding="0" cellspacing="0" align="center">
+						<tr>
+						  <td align="center" valign="middle" class="" style="font-family:idmHEAD, Arial, Helvetica, sans-serif; font-size:20px; line-height:22px; font-weight:bold; color:#1C1C1C; text-decoration:none; padding:15px 0px 5px 0px;">
+						   <strong>Don't forget, your plan also comes with these network benefits designed to give you more power and control.</strong>
+							</td>
+						</tr>
+					  </table>
+					</td>
+				  </tr> 
+              </tbody>
+            </table>
+          </td>
+        </tr>
+				  
+		
+		 <!-- $ 2NOM ¬ 1-2 -->
+        <tr>
+          <td align="center" style="padding:0px 0px 30px 0px;">
+            <table role="presentation" width="650" border="0" align="center" cellpadding="0" cellspacing="0" class="dw3">
+              <tbody>
+                <tr>
+                  <th dir="rtl-" align="center" width="650" class="dw db">
+                    <table role="presentation" width="650" class="dw" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <th width="310" class="dw db" style="font-weight:normal;">
+                          <table role="presentation" width="100%" align="center" class="dw" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td valign="top" align="left"><a href="https://www.idmobile.co.uk/help-and-advice/wifi-calling?<%@ include view='dixIDMtracking2018' %>_2NOM1" _label="2NOM1"><img align="left" width="310" height="206" src="https://currys-ssl.cdn.dixons.com/css/themes/email/iD/assets/N19master/d90-wifi-1.png" alt=" " border="0" class="dw" style="display:block;" /></a></td>
+                            </tr>
+                            <tr>
+                              <td height="45" align="center" valign="middle" class="nomTitle"><a href="https://www.idmobile.co.uk/help-and-advice/wifi-calling?<%@ include view='dixIDMtracking2018' %>_2NOM1" _label="2NOM1" style="font-family:idmREG, Arial, Helvetica, sans-serif; font-size:18px; line-height:20px; font-weight:bold; color:#10A45E; text-decoration:none;">Stay connected with Wi&#8209;Fi Calling</a></td>
+                            </tr>
+							 <tr>
+                              <td height="100" class="hAuto" align="center" valign="top" style="font-family:idmREG, Arial, Helvetica, sans-serif; font-size:14px; line-height:16px; color:#1C1C1C; padding: 5px 0px 10px 0px;">Our fast 3G and 4G network* covers 99% of the UK population. You can <a href="https://www.idmobile.co.uk/help-and-advice/coverage?<%@ include view='dixIDMtracking2018' %>_2NOM1txt" _label="2NOM1txt" style="font-family:idmREG, Arial, Helvetica, sans-serif; font-size:14px; line-height:16px; color:#1C1C1C; text-decoration:underline;">check your coverage at any time</a>, and use Wi&#8209;Fi Calling to make calls and send texts from indoor blackspots and remote locations.</td>
+                            </tr> 
+                            <!-- CTA -->
+                            <tr>
+                              <td align="center">
+                                <table role="presentation" width="210" class="cta" border="0" cellpadding="0" cellspacing="0" align="center">
+                                  <tr>
+                                    <td height="44" valign="middle" align="center" bgcolor="#0099D6" class="hAuto"><a href="https://www.idmobile.co.uk/help-and-advice/wifi-calling?<%@ include view='dixIDMtracking2018' %>_2NOM1" _label="2NOM1" style="background-color:#0099D6; border-radius:6px; color:#feffff; display:block; font-family:idmREG, Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; line-height:44px; text-align:center; text-decoration:none; -webkit-text-size-adjust:inherit;">Learn more</a></td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </th>
+                        <th width="30" height="30" class="db bP20" align="center">&nbsp;</th>
+                        <th width="310" class="dw db" style="font-weight:normal;">
+                          <table role="presentation" width="100%" align="center" class="dw" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td valign="top" align="left"><a href="https://www.idmobile.co.uk/datarollover?<%@ include view='dixIDMtracking2018' %>_2NOM2" _label="2NOM2"><img align="left" width="310" height="206" src="https://currys-ssl.cdn.dixons.com/css/themes/email/iD/assets/N19master/d90-rollover-1.png" alt=" " border="0" class="dw" style="display:block;" /></a></td>
+                            </tr>
+                            <tr>
+                              <td height="45" align="center" valign="middle" class="nomTitle"><a href="https://www.idmobile.co.uk/datarollover?<%@ include view='dixIDMtracking2018' %>_2NOM2" _label="2NOM2" style="font-family:idmREG, Arial, Helvetica, sans-serif; font-size:18px; line-height:20px; font-weight:bold; color:#10A45E; text-decoration:none;">Keep on rolling with Data Rollover</a></td>
+                            </tr>
+							 <tr>
+                              <td height="100" class="hAuto" align="center" valign="top" style="font-family:idmREG, Arial, Helvetica, sans-serif; font-size:14px; line-height:16px; color:#1C1C1C; padding: 5px 0px 10px 0px;">If you don't use all of your monthly data, we're happy to help! We automatically roll it over for you, so you can use it the next month when&nbsp;needed.</td>
+                            </tr> 
+                            <!-- CTA -->
+                            <tr>
+                              <td align="center">
+                                <table role="presentation" width="210" class="cta" border="0" cellpadding="0" cellspacing="0" align="center">
+                                  <tr>
+                                    <td height="44" valign="middle" align="center" bgcolor="#0099D6" class="hAuto"><a href="https://www.idmobile.co.uk/datarollover?<%@ include view='dixIDMtracking2018' %>_2NOM2" _label="2NOM2" style="background-color:#0099D6; border-radius:6px; color:#feffff; display:block; font-family:idmREG, Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; line-height:44px; text-align:center; text-decoration:none; -webkit-text-size-adjust:inherit;">Learn more</a></td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                    </table>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>		  
+				  
+		 <!-- $ 2NOM ¬ 3-4 -->
+        <tr>
+          <td align="center" style="padding:0px 0px 30px 0px;">
+            <table role="presentation" width="650" border="0" align="center" cellpadding="0" cellspacing="0" class="dw3">
+              <tbody>
+                <tr>
+                  <th dir="rtl-" align="center" width="650" class="dw db">
+                    <table role="presentation" width="650" class="dw" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <th width="310" class="dw db" style="font-weight:normal;">
+                          <table role="presentation" width="100%" align="center" class="dw" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td valign="top" align="left"><a href="https://www.idmobile.co.uk/help-and-advice/eu-roaming?<%@ include view='dixIDMtracking2018' %>_2NOM3" _label="2NOM3"><img align="left" width="310" height="206" src="https://currys-ssl.cdn.dixons.com/css/themes/email/iD/assets/N19master/d90-roaming-1.png" alt=" " border="0" class="dw" style="display:block;" /></a></td>
+                            </tr>
+                            <tr>
+                              <td height="45" align="center" valign="middle" class="nomTitle"><a href="https://www.idmobile.co.uk/help-and-advice/eu-roaming?<%@ include view='dixIDMtracking2018' %>_2NOM3" _label="2NOM3" style="font-family:idmREG, Arial, Helvetica, sans-serif; font-size:18px; line-height:20px; font-weight:bold; color:#10A45E; text-decoration:none;">Go far &amp; wide with Inclusive Roaming</a></td>
+                            </tr>
+							 <tr>
+                              <td height="100" class="hAuto" align="center" valign="top" style="font-family:idmREG, Arial, Helvetica, sans-serif; font-size:14px; line-height:16px; color:#1C1C1C; padding: 5px 0px 10px 0px;">Take your phone abroad, and use it like at home. With our Inclusive Roaming feature, you get to use your allowances (including add&#8209;ons) in <a href="https://www.idmobile.co.uk/help-and-advice/eu-roaming?<%@ include view='dixIDMtracking2018' %>_2NOM3txt" _label="2NOM3txt" style="font-family:idmREG, Arial, Helvetica, sans-serif; font-size:14px; line-height:16px; color:#1C1C1C; text-decoration:underline;">50 worldwide destinations</a> across the EU and&nbsp;beyond!</td>
+                            </tr> 
+                            <!-- CTA -->
+                            <tr>
+                              <td align="center">
+                                <table role="presentation" width="210" class="cta" border="0" cellpadding="0" cellspacing="0" align="center">
+                                  <tr>
+                                    <td height="44" valign="middle" align="center" bgcolor="#0099D6" class="hAuto"><a href="https://www.idmobile.co.uk/help-and-advice/eu-roaming?<%@ include view='dixIDMtracking2018' %>_2NOM3" _label="2NOM3" style="background-color:#0099D6; border-radius:6px; color:#feffff; display:block; font-family:idmREG, Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; line-height:44px; text-align:center; text-decoration:none; -webkit-text-size-adjust:inherit;">Learn more</a></td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </th>
+                        <th width="30" height="30" class="db bP20" align="center">&nbsp;</th>
+                        <th width="310" class="dw db" style="font-weight:normal;">
+                          <table role="presentation" width="100%" align="center" class="dw" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td valign="top" align="left"><a href="https://www.idmobile.co.uk/help-and-advice/capping?<%@ include view='dixIDMtracking2018' %>_2NOM4" _label="2NOM4"><img align="left" width="310" height="206" src="https://currys-ssl.cdn.dixons.com/css/themes/email/iD/assets/N19master/d90-billcap-1.png" alt=" " border="0" class="dw" style="display:block;" /></a></td>
+                            </tr>
+                            <tr>
+                              <td height="45" align="center" valign="middle" class="nomTitle"><a href="https://www.idmobile.co.uk/help-and-advice/capping?<%@ include view='dixIDMtracking2018' %>_2NOM4" _label="2NOM4" style="font-family:idmREG, Arial, Helvetica, sans-serif; font-size:18px; line-height:20px; font-weight:bold; color:#10A45E; text-decoration:none;">Make your cap fit with Bill Capping</a></td>
+                            </tr>
+							 <tr>
+                              <td height="100" class="hAuto" align="center" valign="top" style="font-family:idmREG, Arial, Helvetica, sans-serif; font-size:14px; line-height:16px; color:#1C1C1C; padding: 5px 0px 10px 0px;"><% if ( iDMobileRecipients.iDMobileWelcome.billcap.toFixed(2) == "0.00") { %>
+								   There's a pre&#8209;set cap on your plan to help you avoid bill shock. If you like doing chargeable things like sending cheeky emojis by text or making international calls, make sure your cap is always set above &pound;0 so you can keep doing&nbsp;them! 
+								   <% } else { %>
+								   Your bill cap is easy to adjust (it only takes a few seconds with the iD&nbsp;app), giving you the flexibility to limit your monthly spend to an amount that always works for&nbsp;you.
+								   <% } %></td>
+                            </tr> 
+                            <!-- CTA -->
+                            <tr>
+                              <td align="center">
+                                <table role="presentation" width="210" class="cta" border="0" cellpadding="0" cellspacing="0" align="center">
+                                  <tr>
+                                    <td height="44" valign="middle" align="center" bgcolor="#0099D6" class="hAuto"><a href="https://www.idmobile.co.uk/help-and-advice/capping?<%@ include view='dixIDMtracking2018' %>_2NOM4" _label="2NOM4" style="background-color:#0099D6; border-radius:6px; color:#feffff; display:block; font-family:idmREG, Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; line-height:44px; text-align:center; text-decoration:none; -webkit-text-size-adjust:inherit;">Learn more</a></td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </th>
+                      </tr>
+                    </table>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>		  
+      
+         <!-- $ BG Colour Wrapper¬ -->
+<tr>
+  <td align="center" style="padding-bottom: 30px;">
+	<table role="presentation" width="650" bgcolor="#F5F5F5" border="0" cellspacing="0" cellpadding="0" class="dw3" align="center">
+        <!-- $ Sub Section 2¬ -->
+        <tr>
+          <td align="center" style="padding:10px 0px 10px 0px;">
+            <table role="presentation" width="650" border="0" cellspacing="0" cellpadding="0" class="dw" align="center">
+              <tr>
+                <td>
+                  <table role="presentation" width="650" border="0" cellspacing="0" cellpadding="0" class="dw" align="center">
+                  <tr>
+						<td align="center" valign="top"> <a href="https://community.idmobile.co.uk?<%@ include view='dixIDMtracking2018' %>_1BNR1" _label="1BNR1"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/iD/assets/N19master/d90-community-1.png" alt=" " width="80" height="55" align="center" style="display:block; color:#10A45E; font-family:idmHEAD, Arial Black, Helvetica, sans-serif; font-size:20px; line-height:44px; margin:0 auto; text-align:center;" border="0" /></a> </td>
+					  </tr>
+                   <tr>
+					  <td align="center" valign="middle" class="f28 inlineTxt" style="font-family:idmHEAD, Arial Black, Helvetica, sans-serif; font-size:20px; line-height:22px; font-weight:bold; color:#1C1C1C; letter-spacing:-0.01em; padding:10px 0px 8px 0px;">Hang out with the iD&nbsp;Community</td>
+					</tr>
+                    <!-- Intro txt -->
+                    <tr>
+                      <td>
+                        <table role="presentation" width="650" class="dw" border="0" cellpadding="0" cellspacing="0" align="center">
+                          <tr>
+                            <td align="center">
+                              <table role="presentation" width="90%" class="dw3" border="0" cellpadding="0" cellspacing="0" align="center">
+                                <tr>
+                                  <td align="center" valign="middle" style="font-family:idmREG, Arial, Helvetica, sans-serif; font-size:14px; line-height:16px; color:#1C1C1C; padding:8px 0px 15px 0px;">The iD&nbsp;Community is a great place to hang out online. Need help and advice? Then post questions and get answers from fellow customers just like you. Plus, there are loads of helpful articles and fun&nbsp;competitions!</td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- CTA -->
+					<tr>
+					  <td align="center" style="padding:10px 0px 15px 0px;">
+						<table role="presentation" width="200" class="cta" border="0" cellpadding="0" cellspacing="0" align="center">
+						  <tr>
+							<td height="44" valign="middle" align="center" bgcolor="#0099D6" class="hAuto" style="font-family:idmREG, Arial, Helvetica, sans-serif; color:#feffff; text-decoration:none;"><a href="https://community.idmobile.co.uk?<%@ include view='dixIDMtracking2018' %>_1BNR1" _label="1BNR1" style="background-color:#0099D6; border-radius:6px; color:#feffff; display:block; font-family:idmREG, Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; line-height:44px; text-align:center; text-decoration:none; -webkit-text-size-adjust:inherit;">Join in</a></td>
+						  </tr>
+						</table>
+					  </td>
+					</tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        
+<!-- $ BG Colour wrapper end¬ --> 	  
+  	  </table>
+	</td>
+</tr>
+				  
+				  
+				  
+ <% if ( iDMobileRecipients.Selfcare_Status == 0 ) { %>   
+      <!-- $ BG Colour Wrapper¬ -->
+<tr>
+  <td align="center" style="padding-bottom: 30px;">
+	<table role="presentation" width="650" bgcolor="#FBB900" border="0" cellspacing="0" cellpadding="0" class="dw3" align="center">
+        <!-- $ Sub Section 2¬ -->
+        <tr>
+          <td align="center" style="padding:10px 0px 10px 0px;">
+            <table role="presentation" width="650" border="0" cellspacing="0" cellpadding="0" class="dw" align="center">
+              <tr>
+                <td>
+                  <table role="presentation" width="650" border="0" cellspacing="0" cellpadding="0" class="dw" align="center">
+                   <tr>
+					  <td align="center" valign="middle" class="f28 inlineTxt" style="font-family:idmHEAD, Arial Black, Helvetica, sans-serif; font-size:20px; line-height:22px; font-weight:bold; color:#1C1C1C; letter-spacing:-0.01em; padding:10px 0px 8px 0px;">Get the&nbsp;free iD&nbsp;app for full control!</td>
+					</tr>
+                    <!-- Intro txt -->
+                    <tr>
+                      <td>
+                        <table role="presentation" width="650" class="dw" border="0" cellpadding="0" cellspacing="0" align="center">
+                          <tr>
+                            <td align="center">
+                              <table role="presentation" width="90%" class="dw3" border="0" cellpadding="0" cellspacing="0" align="center">
+                                <tr>
+                                  <td align="center" valign="middle" style="font-family:idmREG, Arial, Helvetica, sans-serif; font-size:14px; line-height:16px; color:#1C1C1C; padding:8px 0px 15px 0px;">Got your&nbsp;free iD&nbsp;app yet? It's quick and easy to download and gives you the power to manage your account on the go, 24/7. Use it to: <br /><br />
+									<strong>&#10004; Check your remaining allowances<br />
+									&#10004; Buy add&#8209;ons<br />
+									&#10004; Adjust your cap<br />
+									&#10004; View and pay bills<br />
+									<% if ( SIMO == "Yes") { %>	
+									&#10004; Upgrade to a new pay monthly phone plan<br />
+									<% } else { %>
+									&#10004; Change your plan<br />
+									<% } %>	
+									&#10004; And lots more!	
+									</strong>
+									</td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- CTA -->
+					<tr>
+					  <td align="center" style="padding:10px 0px 15px 0px;">
+						<table role="presentation" width="200" class="cta" border="0" cellpadding="0" cellspacing="0" align="center">
+						  <tr>
+							<td height="44" valign="middle" align="center" bgcolor="#feffff" class="hAuto" style="font-family:idmREG, Arial, Helvetica, sans-serif; color:#feffff; text-decoration:none;"><a href="https://www.idmobile.co.uk/app?<%@ include view='dixIDMtracking2018' %>_1BNR2" _label="1BNR2" style="background-color:#feffff; border-radius:6px; color:#1C1C1C; display:block; font-family:idmREG, Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; line-height:44px; text-align:center; text-decoration:none; -webkit-text-size-adjust:inherit;">Download now</a></td>
+						  </tr>
+						</table>
+					  </td>
+					</tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        
+<!-- $ BG Colour wrapper end¬ --> 	  
+  	  </table>
+	</td>
+</tr>
+       
+	<% } else { %> 
+	    <!-- $ BG Colour Wrapper¬ -->
+<tr>
+  <td align="center" style="padding-bottom: 30px;">
+	<table role="presentation" width="650" bgcolor="#FBB900" border="0" cellspacing="0" cellpadding="0" class="dw3" align="center">
+        <!-- $ Sub Section 2¬ -->
+        <tr>
+          <td align="center" style="padding:10px 0px 10px 0px;">
+            <table role="presentation" width="650" border="0" cellspacing="0" cellpadding="0" class="dw" align="center">
+              <tr>
+                <td>
+                  <table role="presentation" width="650" border="0" cellspacing="0" cellpadding="0" class="dw" align="center">
+                   <tr>
+					  <td align="center" valign="middle" class="f28 inlineTxt" style="font-family:idmHEAD, Arial Black, Helvetica, sans-serif; font-size:20px; line-height:22px; font-weight:bold; color:#1C1C1C; letter-spacing:-0.01em; padding:10px 0px 8px 0px;">Use the&nbsp;free iD&nbsp;app for full control!</td>
+					</tr>
+                    <!-- Intro txt -->
+                    <tr>
+                      <td>
+                        <table role="presentation" width="650" class="dw" border="0" cellpadding="0" cellspacing="0" align="center">
+                          <tr>
+                            <td align="center">
+                              <table role="presentation" width="90%" class="dw3" border="0" cellpadding="0" cellspacing="0" align="center">
+                                <tr>
+                                  <td align="center" valign="middle" style="font-family:idmREG, Arial, Helvetica, sans-serif; font-size:14px; line-height:16px; color:#1C1C1C; padding:8px 0px 15px 0px;">The iD&nbsp;app is your free&nbsp;little helper. Remember, it gives you the power to manage your account on the go, 24/7. You can use it to: <br /><br />
+									<strong>&#10004; Check your remaining allowances<br />
+									&#10004; Buy add&#8209;ons<br />
+									&#10004; Adjust your cap<br />
+									&#10004; View and pay bills<br />
+									<% if ( SIMO == "Yes") { %>	
+									&#10004; Upgrade to a new pay monthly phone plan<br />
+									<% } else { %>
+									&#10004; Change your plan<br />
+									<% } %>	
+									&#10004; And lots more!	
+									</strong>
+									</td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- CTA -->
+					<tr>
+					  <td align="center" style="padding:10px 0px 15px 0px;">
+						<table role="presentation" width="200" class="cta" border="0" cellpadding="0" cellspacing="0" align="center">
+						  <tr>
+							<td height="44" valign="middle" align="center" bgcolor="#feffff" class="hAuto" style="font-family:idmREG, Arial, Helvetica, sans-serif; color:#feffff; text-decoration:none;"><a href="https://www.idmobile.co.uk/app?<%@ include view='dixIDMtracking2018' %>_1BNR2" _label="1BNR2" style="background-color:#feffff; border-radius:6px; color:#1C1C1C; display:block; font-family:idmREG, Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; line-height:44px; text-align:center; text-decoration:none; -webkit-text-size-adjust:inherit;">Download now</a></td>
+						  </tr>
+						</table>
+					  </td>
+					</tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        
+<!-- $ BG Colour wrapper end¬ --> 	  
+  	  </table>
+	</td>
+</tr>
+       
+     <% } %>  
+    				  
+       
+       
+		
+		 <!-- $ Copy -->
+        <tr>
+          <td align="center" style="padding-bottom:20px;">
+            <table role="presentation" width="650" border="0" align="center" cellpadding="0" cellspacing="0" class="dw3">
+              <tbody>
+                 <tr>
+					<td align="center">
+					  <table role="presentation" width="90%" class="dw3" border="0" cellpadding="0" cellspacing="0" align="center">
+						<tr>
+						  <td align="center" valign="middle" class="" style="font-family:idmREG, Arial, Helvetica, sans-serif; font-size:14px; line-height:16px; color:#1C1C1C; padding:15px 0px 5px 0px;">
+						   We're the network that offers more, so we're always thinking of ways to give you more choice, control, flexibility and power. Enjoy your network benefits, and look out for more in the&nbsp;future!
+							</td>
+						</tr>
+					  </table>
+					</td>
+				  </tr> 
+              </tbody>
+            </table>
+          </td>
+        </tr>
+				  
+		
+        
+        <!-- [$]V1.2 WHYGIR -->
+        <tr>
+          <td align="center" style="padding-bottom: 50px;">
+            <table role="presentation" class="dw" width="350" border="0" cellspacing="0" cellpadding="0" style="border-top: 1px solid #F5F5F5;">
+              <tbody>
+                <tr>
+					  <td align="center" valign="middle" class="f28 inlineTxt" style="font-family:idmHEAD, Arial Black, Helvetica, sans-serif; font-size:20px; line-height:22px; font-weight:bold; color:#1C1C1C; letter-spacing:-0.01em; padding:10px 0px 8px 0px;">Follow us</td>
+					</tr>
+                <tr>
+                  <th align="center" width="350" class="dw db" style="padding-top: 5px;">
+                    <table role="presentation" width="350" align="center" class="dw3" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <th width="100" valign="top" class="dw db" style="font-weight:normal;">
+                          <table width="100" border="0" align="center" cellpadding="0" cellspacing="0" class="dw t-w70" role="presentation">
+                            <tr>
+                              <th width="100" valign="top" class="t-w30 t-dIB m-dB dw" style="font-weight:normal; display:inline-block;">
+                                <table role="presentation" width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td width="75" align="center" valign="top"> <a  href="https://www.facebook.com/idmobileuk/" _label="FACEB"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/iD/assets/N19master/facebook-1.png" alt=" " width="50" height="50" align="center" style="display:block; color:#10A45E; font-family:idmHEAD, Arial Black, Helvetica, sans-serif; font-size:20px; line-height:44px; margin:0 auto; text-align:center;" border="0" /></a> </td>
+                                  </tr>
+                                </table>
+                              </th>
+                              <!--[if (gte mso 9)|(IE)]>
+                            </tr>
+                            <tr align="center">
+                              <![endif]-->
+                            </tr>
+                          </table>
+                        </th>
+                        <th width="25" height="30" class="db" align="center">&nbsp;</th>
+                        <th width="100" valign="top" class="dw db" style="font-weight:normal;">
+                          <table width="100" border="0" align="center" cellpadding="0" cellspacing="0" class="dw t-w70" role="presentation">
+                            <tr>
+                              <th width="100" valign="top" class="t-w30 t-dIB m-dB dw" style="font-weight:normal; display:inline-block;">
+                                <table role="presentation" width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td width="75" align="center" valign="middle"><a href="https://www.instagram.com/idmobileuk/?hl=en" _label="INSTA"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/iD/assets/N19master/insta-1.png" alt=" " width="50" height="50" align="center" style="display:block; color:#10A45E; font-family:idmHEAD, Arial Black, Helvetica, sans-serif; font-size:20px; line-height:44px; margin:0 auto; text-align:center;" border="0" /></a> </td>
+                                  </tr>
+                                </table>
+                              </th>
+                              <!--[if (gte mso 9)|(IE)]>
+                            </tr>
+                            <tr align="center">
+                              <![endif]-->
+                             </tr>
+                          </table>
+                        </th>
+                        <th width="25" height="30" class="db" align="center">&nbsp;</th>
+                        <th width="100" valign="top" class="dw db" style="font-weight:normal;">
+                          <table width="100" border="0" align="center" cellpadding="0" cellspacing="0" class="dw t-w70" role="presentation">
+                            <tr>
+                              <th width="100" valign="top" class="t-w30 t-dIB m-dB dw" style="font-weight:normal; display:inline-block;">
+                                <table role="presentation" width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td width="75" align="center" valign="middle"> <a  href="https://twitter.com/id_mobile_uk" _label="TWITT"><img src="https://currys-ssl.cdn.dixons.com/css/themes/email/iD/assets/N19master/twitter-1.png" alt=" " width="50" height="50" align="center" style="display:block; color:#10A45E; font-family:idmHEAD, Arial Black, Helvetica, sans-serif; font-size:20px; line-height:44px; margin:0 auto; text-align:center;" border="0" /></a> </td>
+                                  </tr>
+                                </table>
+                              </th>
+                              <!--[if (gte mso 9)|(IE)]>
+                            </tr>
+                            <tr align="center">
+                              <![endif]-->
+                              </tr>
+                          </table>
+                        </th>
+                      </tr>
+                    </table>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <!-- $|Footer -->
+        <tr>
+          <td align="center" valign="top" bgcolor="#E6E6E6" style="padding:30px 0px 0px 0px;">
+            <table role="presentation" width="630" cellpadding="0" cellspacing="0" border="0" align="center" class="dw3" bgcolor="#E6E6E6">
+              <tr>
+                <td height="39" align="left" valign="top" style="font-family: idmREG, Arial, Helvetica, sans-serif; font-size:11px; line-height: 13px; color:#1C1C1C;"><strong>Terms and conditions</strong><br />
+                  <br />
+					* Wi Fi Calling is available on selected handsets, with more being added all the time.<br />
+					<br />
+                  &lt;%@ include view='dixCoreFooterIDMmarketing' %&gt;
+					</td>
+              </tr>
+              <tr>
+				  <td style="padding-top:20px;">
+					<table role="presentation" width="650" border="0" cellpadding="0" cellspacing="0" align="center" class="dw">
+					  <tr>
+						<td width="650" align="center" valign="top" class="dw"><a href="https://www.idmobile.co.uk/?<%@ include view='dixIDMtracking2018' %>_END" _label="END"><img class="dw altHDR" align="left" width="650" height="200" src="https://currys-ssl.cdn.dixons.com/css/themes/email/iD/assets/N19master/print-footer-4.png" alt=" " style="display:block; color:#68AB6F; font-weight:bold; text-align:center; text-transform:uppercase;" border="0" /></a></td>
+					  </tr>
+					</table>
+				  </td>
+				</tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- $|RP -->
+&lt;%@ include view='dixIDMrptracking' %&gt;
+    
+    
+&lt;% if ( chainProfile.partyId == "") { %&gt;
+  
+<!-- Email Tools - Local only -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>     
+<script type="text/javascript" language="javascript">
+document.addEventListener("DOMContentLoaded", function() {  
+  var versionUpdate = (new Date()).getTime();
+  var emailTools = document.createElement("script");
+  var injects = document.createElement("script"); 
+  var css = document.createElement("link");
+  emailTools.type = "text/javascript";
+  emailTools.src = "scripts/core.js?v=" + versionUpdate;
+  injects.type = "text/javascript";
+  injects.src = "scripts/Currys_PB_injects.js?v=" + versionUpdate;  
+  css.type = "text/css;"
+  css.rel = "stylesheet"
+  css.href = "css/core.css?v=" + versionUpdate;
+  document.body.appendChild(css);
+  document.body.appendChild(emailTools);
+  document.body.appendChild(injects); 
+});   
+</script> 
+ 
+&lt;% } %&gt;     
+</body>
+</html>

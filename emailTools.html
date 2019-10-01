@@ -9,11 +9,13 @@
 <link rel="apple-touch-icon" href="https://currys-ssl.cdn.dixons.com/grafx/apple-touch-icon.png" />
 <base target="_blank">
 <title></title>
+  
 &lt;% if ( chainProfile.partyId !== "") { %&gt;
 &lt;%@ include view='dixCoreMasterTemplateCSS' %&gt;
 &lt;% } else { %&gt;
 <link href="https://currys-ssl.cdn.dixons.com/css/themes/email/AC/CORE/css/CoreMasterTemplateCSS3.css?v3.0" rel="stylesheet" type="text/css" />
 &lt;% } %&gt;
+  
 <style type="text/css"> 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 @font-face { font-family: 'gBook'; src: url('https://currys-ssl.cdn.dixons.com/css/themes/email/AC/CORE/font/GothamBook.woff') format('woff'), url('https://currys-ssl.cdn.dixons.com/css/themes/email/AC/CORE/font/GothamBook.ttf') format('truetype'); font-weight: normal; font-style: normal; mso-font-alt: 'Arial'; }
@@ -25,11 +27,20 @@
 @font-face { font-family: 'idmHEAD'; src: url('https://currys-ssl.cdn.dixons.com/css/themes/email/iD/assets/header/iDHeadline.woff') format('woff'), url('https://currys-ssl.cdn.dixons.com/css/themes/email/iD/assets/header/iDHeadline.ttf') format('truetype'); font-weight: normal; font-style: normal; mso-font-alt: 'Arial Black'; }
 @font-face { font-family: 'idmSUB'; src: url('https://currys-ssl.cdn.dixons.com/css/themes/email/iD/assets/header/iDSubHeadline.woff') format('woff'), url('https://currys-ssl.cdn.dixons.com/css/themes/email/iD/assets/header/iDSubHeadline.ttf') format('truetype'); font-weight: normal; font-style: normal; mso-font-alt: 'Arial Black'; }
 @font-face { font-family: 'idmREG'; src: url('https://currys-ssl.cdn.dixons.com/css/themes/email/iD/assets/header/iDRegular.woff') format('woff'), url('https://currys-ssl.cdn.dixons.com/css/themes/email/iD/assets/header/iDRegular.ttf') format('truetype'); font-weight: normal; font-style: normal; mso-font-alt: 'Arial'; }  
+  
+.grad-T { background: -webkit-linear-gradient(left, #082b69 0%, #691c5b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.04em; display: inline-block; }  
 }  
 </style>  
 <style type="text/css">
 body { background-color: #f6f6f6; }
 @media only screen and (min-width: 0px) and (max-width: 649px) {
+.fw { width: 100% !important; }
+.x-90 { width: 90% !important; }  
+.container, .dw { width: 100% !important; }
+.wrapper, .dw3 { width: 94% !important; }
+.h, .hideAll { display: none !important; }
+.dB, .db { display: block!important; }  
+  
 .w80 { width: 80%!important; }
 .tc { width: 80%!important; height: auto!important; }
 }
@@ -142,6 +153,58 @@ sup { font-size:80%; line-height:1; vertical-align:top; mso-text-raise: 30%; }
           </td>
         </tr>
         <tr>
+          <td>
+            <!-- removed bg -->
+            <table role="presentation" width="642" bgcolor="#e30613" class="fw" border="0" cellpadding="0" cellspacing="0" align="center">
+              <tr>
+                <td align="center" style="padding:10px 0px 20px 0px;">
+                  <table role="presentation" width="500" border="0" align="center" cellpadding="0" cellspacing="0" class="x-90" dir="ltr">
+                    <!-- $ COPY ¬ set: text, text-align, color --> 
+                    <tr>
+                      <td height="30" align="center" class="f28 inlineTxt" style="font-family:gothamBook, Arial Black, Helvetica, sans-serif; font-size: 25px; font-weight: bold; color:#feffff; letter-spacing:-0.04em; padding: 4px 0px 4px 0px;">Correct Movable Ink</td>
+                    </tr>                  
+                    <tr>
+                      <td align="center" valign="top" class="fw"><a href="http://www.movable-ink-5819.com/p/cp/aff55306368dff67/c?mi_u=<%= chainProfile.partyId %>&url=http%3A%2F%2Fwww.movable-ink-5819.com%2Fp%2Frp%2Fcc01de2bc7a51b77%2Furl&<%@ include view='dixDIXtrackingCPCW1' %>~SEG~OTH~MI~<%@ include view='dixDIXtrackingCPCW2' %>" _label="MI_OTH"><img class="fw" width="500" src="http://www.movable-ink-5819.com/p/rp/cc01de2bc7a51b77.png?mi_u=<%= chainProfile.partyId %>" alt="Ends - September 30, 2019 at 11:59PM BST" style="width:100%; max-width:100%; display:block; border:0px; color: #feffff; text-transform: uppercase; font-size: 20px; line-height: 24px;" border="0" /></a></td>
+                    </tr>
+                    <!-- Tests -->
+                    <tr>
+                      <td height="30" align="center" class="f28 inlineTxt" style="font-family:gothamBook, Arial Black, Helvetica, sans-serif; font-size: 25px; font-weight: bold; color:#feffff; letter-spacing:-0.04em; padding: 20px 0px 20px 0px;">Incorrect Movable Ink: Has: Furl&lt;%</td>
+                    </tr>                  
+                    <tr>
+                      <td align="center" valign="top" class="fw"><a href="http://www.movable-ink-5819.com/p/cp/aff55306368dff67/c?mi_u=<%= chainProfile.partyId %>&url=http%3A%2F%2Fwww.movable-ink-5819.com%2Fp%2Frp%2Fcc01de2bc7a51b77%2Furl<%@ include view='dixDIXtrackingCPCW1' %>~SEG~OTH~MI~<%@ include view='dixDIXtrackingCPCW2' %>" _label="MI_OTH"><img class="fw" width="500" src="http://www.movable-ink-5819.com/p/rp/cc01de2bc7a51b77.png?mi_u=<%= chainProfile.partyId %>" alt="Ends - September 30, 2019 at 11:59PM BST" style="width:100%; max-width:100%; display:block; border:0px; color: #feffff; text-transform: uppercase; font-size: 20px; line-height: 24px;" border="0" /></a></td>
+                    </tr>
+                    <tr>
+                      <td height="30" align="center" class="f28 inlineTxt" style="font-family:gothamBook, Arial Black, Helvetica, sans-serif; font-size: 25px; font-weight: bold; color:#feffff; letter-spacing:-0.04em; padding: 20px 0px 20px 0px;">Incorrect Movable Ink: Has: Furl?</td>
+                    </tr>                  
+                    <tr>
+                      <td align="center" valign="top" class="fw"><a href="http://www.movable-ink-5819.com/p/cp/aff55306368dff67/c?mi_u=<%= chainProfile.partyId %>&url=http%3A%2F%2Fwww.movable-ink-5819.com%2Fp%2Frp%2Fcc01de2bc7a51b77%2Furl?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~OTH~MI~<%@ include view='dixDIXtrackingCPCW2' %>" _label="MI_OTH"><img class="fw" width="500" src="http://www.movable-ink-5819.com/p/rp/cc01de2bc7a51b77.png?mi_u=<%= chainProfile.partyId %>" alt="Ends - September 30, 2019 at 11:59PM BST" style="width:100%; max-width:100%; display:block; border:0px; color: #feffff; text-transform: uppercase; font-size: 20px; line-height: 24px;" border="0" /></a></td>
+                    </tr>
+                    <tr>
+                      <td height="30" align="center" class="f28 inlineTxt" style="font-family:gothamBook, Arial Black, Helvetica, sans-serif; font-size: 25px; font-weight: bold; color:#feffff; letter-spacing:-0.04em; padding: 20px 0px 20px 0px;">Incorrect Movable Ink: Has: Furl&amp;? | Furl?&amp;</td>
+                    </tr>                  
+                    <tr>
+                      <td align="center" valign="top" class="fw"><a href="http://www.movable-ink-5819.com/p/cp/aff55306368dff67/c?mi_u=<%= chainProfile.partyId %>&url=http%3A%2F%2Fwww.movable-ink-5819.com%2Fp%2Frp%2Fcc01de2bc7a51b77%2Furl&?<%@ include view='dixDIXtrackingCPCW1' %>~SEG~OTH~MI~<%@ include view='dixDIXtrackingCPCW2' %>" _label="MI_OTH"><img class="fw" width="500" src="http://www.movable-ink-5819.com/p/rp/cc01de2bc7a51b77.png?mi_u=<%= chainProfile.partyId %>" alt="Ends - September 30, 2019 at 11:59PM BST" style="width:100%; max-width:100%; display:block; border:0px; color: #feffff; text-transform: uppercase; font-size: 20px; line-height: 24px;" border="0" /></a></td>                     
+                    </tr>
+                    <tr>
+                      <td align="center" valign="top" class="fw"><a href="http://www.movable-ink-5819.com/p/cp/aff55306368dff67/c?mi_u=<%= chainProfile.partyId %>&url=http%3A%2F%2Fwww.movable-ink-5819.com%2Fp%2Frp%2Fcc01de2bc7a51b77%2Furl?&<%@ include view='dixDIXtrackingCPCW1' %>~SEG~OTH~MI~<%@ include view='dixDIXtrackingCPCW2' %>" _label="MI_OTH"><img class="fw" width="500" src="http://www.movable-ink-5819.com/p/rp/cc01de2bc7a51b77.png?mi_u=<%= chainProfile.partyId %>" alt="Ends - September 30, 2019 at 11:59PM BST" style="width:100%; max-width:100%; display:block; border:0px; color: #feffff; text-transform: uppercase; font-size: 20px; line-height: 24px;" border="0" /></a></td>                     
+                    </tr>                     
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>        
+        <!-- $ 1BNR1 ¬ single image -->
+        <tr>
+          <td align="center" style="padding-bottom:50px;">
+            <table role="presentation" width="650" class="dw" border="0" cellpadding="0" cellspacing="0" align="center">
+              <tr>
+                <td valign="top"><a class="dw" href="##1BNR1##?<%@ include view='dixDIXtrackingCPCW1' %>~PageType~Category~1BNR1~<%@ include view='dixDIXtrackingCPCW2' %>" _label="1BNR1_Category"><img class="dw" align="left" width="650" height="120" src="https://via.placeholder.com/650x120/00b0e8/feffff.png?text=1BNR1" alt="##alt##" style="display:block;" border="0" /></a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
           <td height="30" align="center" class="f28 inlineTxt" style="font-family:gothamBook, Arial Black, Helvetica, sans-serif; font-size: 25px; font-weight: bold; color:#0c347b; letter-spacing:-0.04em; padding: 4px 0px 4px 0px;">font-family:gothamBook, Arial Black</td>
         </tr>
         
@@ -151,8 +214,12 @@ sup { font-size:80%; line-height:1; vertical-align:top; mso-text-raise: 30%; }
         </tr>  
               
         <tr>
-          <td height="30" align="center" class="f28 inlineTxt" style="font-family:gUltra, Arial Black, Helvetica, sans-serif; font-size:30px; line-height:90%; font-weight:bold; color:#0d428a; text-decoration:none; text-transform: uppercase; padding: 4px 0px 4px 0px;">font-family:gUltra, Arial Black, Helvetica, sans-serif</td>
-        </tr>   
+          <td height="30" align="center" class="f28 inlineTxt" style="font-family:gUltra, Arial Black, Helvetica, sans-serif; font-size:30px; line-height:90%; font-weight:bold; color:#0d428a; text-decoration:none; text-transform: uppercase; padding: 4px 0px 4px 0px;"><span class="grad-txt">font-family:gUltra, Arial Black, Helvetica, sans-serif</span></td>
+        </tr>
+        
+        <tr>
+          <td height="45" align="center" valign="middle" class="nomTitle"><a href="https://www.currys.co.uk/gbuk/smart-tech/smart-tech/smart-watches-and-fitness/smart-watches/apple-watch-series-4-space-grey-black-sports-loop-40-mm-10185450-pdt.html?<%@ include view='dixDIXtrackingCPCW1' %>~PageType~Category~2NOM1~<%@ include view='dixDIXtrackingCPCW2' %>" _label="2NOM1_Category" style="font-family:gothamBook, Arial Black, Helvetica, sans-serif; font-size: 25px; font-weight: bold; color:#0c347b; letter-spacing:-0.04em; text-decoration: none;" class="grad-T">Hisense 55&quot; U7A Smart&nbsp;4K Ultra&nbsp;HD&nbsp;HDR&nbsp;TVs</a></td>
+        </tr>        
         
         <!-- iD fonts -->
         <tr>
@@ -269,7 +336,7 @@ sup { font-size:80%; line-height:1; vertical-align:top; mso-text-raise: 30%; }
           <td style="padding:20px 0px 0px 0px;">
             <table role="presentation" width="650" border="0" cellpadding="0" cellspacing="0" align="center" class="dw">
               <tr>
-                <td width="650" align="center" valign="top" class="dw"><a href="#Dummy" _label="MainBNR_OTH"><img class="dw altHDR" align="left" width="650" height="168" src="http://img.kickdyn.com/11029/jyqX9epjfu1KT4S4d2i3/imgancnt.png" alt="External Image call" style="display:block; color:#feffff; font-size:36px; line-height:40px; font-weight:bold; text-align:center; background:#000001; text-transform:uppercase;" border="0" /></a></td>
+                <td width="650" align="center" valign="top" class="dw"><a href="#Dummy" _label="MainBNR_OTH"><img class="dw altHDR" align="left" width="650" height="168" src="https://imgplaceholder.com/650x240/00b0e8/feffff?text=mainBNR1&font-size=50" alt="External Image call" style="display:block; color:#feffff; font-size:36px; line-height:40px; font-weight:bold; text-align:center; background:#000001; text-transform:uppercase;" border="0" /></a></td>
               </tr>
             </table>
           </td>
@@ -289,7 +356,7 @@ sup { font-size:80%; line-height:1; vertical-align:top; mso-text-raise: 30%; }
                       <td align="left" valign="top">
                         <table role="presentation" align="left" width="310" border="0" cellpadding="0" cellspacing="0" class="dw">
                           <tr>
-                            <td valign="top" align="left" style="line-height:1%; mso-line-height-rule:exactly;"><a href="##2BNR1##<%@ include view='dixDIXtrackingCPCW1' %>~PageType~Category~2BNR1~<%@ include view='dixDIXtrackingCPCW2' %>" _label="2BNR1_Category"><img align="left" width="310" height="196" src="https://placeholdit.imgix.net/~text?txtsize=110&bg=00b0e8&txtclr=feffff&txt=880x560&w=880&h=560" alt="##alt##" border="0" class="dw" style="display:block;" /></a></td>
+                            <td valign="top" align="left" style="line-height:1%; mso-line-height-rule:exactly;"><a href="##2BNR1##<%@ include view='dixDIXtrackingCPCW1' %>~PageType~Category~2BNR1~<%@ include view='dixDIXtrackingCPCW2' %>" _label="2BNR1_Category"><img align="left" width="310" height="196" src="https://imgplaceholder.com/880x560/00b0e8/feffff?text=2NOM1&font-size=80" alt="##alt##" border="0" class="dw" style="display:block;" /></a></td>
                           </tr>
                           <tr>
                             <td align="center" valign="middle" style="padding:2px 0px 0px 0px;"><a href="##2BNR1##?<%@ include view='dixDIXtrackingCPCW1' %>~PageType~Category~2BNR1~<%@ include view='dixDIXtrackingCPCW2' %>" _label="2BNR1_Category" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; color:#0c347b; text-decoration: underline;">Find out more</a></td>
@@ -306,7 +373,7 @@ sup { font-size:80%; line-height:1; vertical-align:top; mso-text-raise: 30%; }
                       <td align="right" class="tP30">
                         <table role="presentation" align="right" width="310" border="0" cellpadding="0" cellspacing="0" class="dw">
                           <tr>
-                            <td valign="top" align="left" style="line-height:1%; mso-line-height-rule:exactly;"><a href="##2BNR2##?<%@ include view='dixDIXtrackingCPCW1' %>~PageType~Category~2BNR2~<%@ include view='dixDIXtrackingCPCW2' %>" _label="2BNR2_Category"><img align="left" width="310" height="196" src="https://placeholdit.imgix.net/~text?txtsize=110&bg=00b0e8&txtclr=feffff&txt=880x560&w=880&h=560" alt="##alt##" border="0" class="dw" style="display:block;" /></a></td>
+                            <td valign="top" align="left" style="line-height:1%; mso-line-height-rule:exactly;"><a href="##2BNR2##?<%@ include view='dixDIXtrackingCPCW1' %>~PageType~Category~2BNR2~<%@ include view='dixDIXtrackingCPCW2' %>" _label="2BNR2_Category"><img align="left" width="310" height="196" src="https://imgplaceholder.com/880x560/00b0e8/feffff?text=2NOM2&font-size=80" alt="##alt##" border="0" class="dw" style="display:block;" /></a></td>
                           </tr>
                           <tr>
                             <td align="center" valign="middle" style="padding:2px 0px 0px 0px;"><a href="##2BNR2##?<%@ include view='dixDIXtrackingCPCW1' %>~PageType~Category~2BNR2~<%@ include view='dixDIXtrackingCPCW2' %>" _label="2BNR2_Category" style="font-family:Arial, Helvetica, sans-serif; font-size: 12px; color:#0c347b; text-decoration: underline;">Find out more</a></td>
@@ -971,7 +1038,7 @@ document.addEventListener("DOMContentLoaded", function() {
   emailTools.type = "text/javascript";
   emailTools.src = "scripts/core.js?v=" + versionUpdate;
   injects.type = "text/javascript";
-  injects.src = "scripts/PB_injects.js?v=" + versionUpdate;  
+  injects.src = "scripts/Currys_PB_injects.js?v=" + versionUpdate;  
   css.type = "text/css;"
   css.rel = "stylesheet"
   css.href = "css/core.css?v=" + versionUpdate;

@@ -2,8 +2,10 @@ $(document).ready(function(){
 
 	// Images that do no support clear-cache
 	var kickdyn = "img[src*='img.kickdyn.com']", 
-	placeholdit = "img[src*='imgplaceholder.com']",	
-	cache	= kickdyn + "," + placeholdit;
+  movableInk = "img[src*='movable-ink']",
+	placeholdit = "img[src*='imgplaceholder.com']",
+  placeholder = "img[src*='placeholder.com']",    
+	cache	= kickdyn + "," + movableInk + "," + placeholdit + "," + placeholder;
   $('img').not(cache).each(function(){
     /* Remove AC bespoke IMG variable: ?&lt;%= cC %&gt; */
     this.src = this.src.replace(/(\?&lt;%= cC %&gt;|\?%3C%=%20cC%20%%3E)/g, ""); 
@@ -26,13 +28,27 @@ $(window).on("load", function() {
       pcwbD   = "a[href*='pcworldbusiness.co.uk']",
       tkhD    = "a[href*='teamknowhow.com']",
       ttD     = "a[href*='techtalk.currys.co.uk']",
-      domainURL = currysD + "," + idD + "," + pcwbD + "," + tkhD + "," + ttD,
+      mInk    = "a[href*='www.movable-ink']",
+      domainURL = currysD + "," + idD + "," + pcwbD + "," + tkhD + "," + ttD + "," + mInk,
       linkCheck = "link";
   
   $(domainURL).addClass("linkCheck");
-  // $( ".linkCheck" ).not(domainURL).removeClass("linkCheck");
+  $(mInk).addClass("mInk");  
   $( ".linkCheck" ).not("a[href*='?']").addClass("missingQuery");
   $( ".linkCheck" ).not("a[href*='https']").addClass("notSecure");
+  
+  
+  // Movable ink image is NOT HTTPS - (not supported in browser if you force either)
+  $( ".mInk" ).removeClass("notSecure");
+  // Has no & after Furl
+  $(".mInk").filter("a[href*='Furl<%']").addClass("mi-noA");
+  // Has ? after Furl
+  $(".mInk").filter("a[href*='Furl?<%']").addClass("mi-hasQ"); 
+  // Has &? after Furl
+  $(".mInk").filter("a[href*='Furl&?<%'], a[href*='Furl?&<%']").addClass("mi-hasAQ"); 
+  // Correct: Furl&<%
+  $(".mInk").filter("a[href*='Furl&<%']").addClass("mi-Correct"); // Maybe show Green non-invasive tooltip for image off
+  
 
   $(document).ready(function() {  
   // Firefox fix  
@@ -77,7 +93,6 @@ $(window).on("load", function() {
             $this.attr("src", "");
             $this.attr("src", imgPath);   
           }, 0);
-          
         });
         $(tog).addClass("redB");
         $("td").addClass("bgImage");
@@ -103,7 +118,7 @@ $(window).on("load", function() {
       if (flag == 0) {
         $(tog).addClass("redB");
         $(tog).text("Fonts");
-        $("body").addClass("fonts");
+        $("body").addClass("fonts");        
         flag = 1;
       } else if (flag == 1) {
         $(tog).removeClass("redB");
