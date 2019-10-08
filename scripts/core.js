@@ -22,13 +22,13 @@ $(window).on("load", function() {
   // Pseudo tooltip for images ALT: DIV only appears based on these conditions
   $("img[alt*='£'], [alt*='&'], [alt*='#']").wrap( "<div class='fauxImg'></div>" );
   
-  // Whitelisted domains URLs for the checks: 
+  // Whitelisted domains URLs for the checks: | Old MI: www.movable-ink
   var currysD = "a[href*='www.currys.co.uk']",
       idD     = "a[href*='idmobile.co.uk']",
       pcwbD   = "a[href*='pcworldbusiness.co.uk']",
       tkhD    = "a[href*='teamknowhow.com']",
       ttD     = "a[href*='techtalk.currys.co.uk']",
-      mInk    = "a[href*='www.movable-ink']",
+      mInk    = "a[href*='email.images.currys.co.uk']",
       domainURL = currysD + "," + idD + "," + pcwbD + "," + tkhD + "," + ttD + "," + mInk,
       linkCheck = "link";
   
