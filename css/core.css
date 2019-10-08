@@ -169,6 +169,7 @@ nav a:hover, button:hover {
 
 
 /* Tooltips: position start */
+.linkCheck {display: block;}
 .yes a[href^="#"],
 .yes a[href*="##"], 
 .pageType a[href*="PageType"],
@@ -262,7 +263,7 @@ a[href*=" ?"]:after {
   font-weight: bold;
   font-size: 11px;
   line-height: 12px;
-  width: 100px;
+  width: auto;
   text-align: center;
   letter-spacing: 0;
   background: red;
@@ -276,52 +277,43 @@ a[href*=" ?"]:after {
 }
 /* Category */
 .category a[href*="Category"]:after{
-  content: "Category is not set";
-  width: 150px;    
+  content: "Category is not set";  
 }
 /* pageType */
 .pageType a[href*="PageType"]:after {
-  content: "PageType is not set";
-  width: 150px;  
+  content: "PageType is not set"; 
 }
 /* _label="2NOM2_Category" */
 .label a[_label*="_Category"]:after {
-  content: "Label is not set";
-  width: 150px;  
+  content: "Label is not set"; 
 }
 /* #srcid */
 a[href*="#srcid"]:after {
   content: "URL contains: #srcid";
-  width: 200px;
 }
 /* ?intcmp */
 a[href*="?intcmp"]:after {
   content: "URL contains: ?intcmp";
-  width: 200px;
 }
 /* http://t.e.currys.co.uk */
 a[href*="http://t.e.currys.co.uk"]:after {
-  content: "Old-send ESP URL";
-  width: 200px;  
+  content: "Old-send ESP URL"; 
 }
 /* PCWB global tracking exists */
 
 /* Missing tracking ? */
 .missingQuery:after {
-  content: "Missing: ?";
-  width: 90px;  
+  content: "Missing: ?";  
 }
 /* Is not HTTPS */
 .notSecure:after {
-  content: "No HTTPS";
-  width: 100px;  
+  content: "No HTTPS";  
 }
 /* MI Shadow only */
 .mi-Correct:after, .mi-noA:after, .mi-hasQ:after, .mi-hasQ:after, .mi-hasAQ:after { -webkit-filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.3)); drop-shadow: (0px 0px 1px rgba(0, 0, 0, 0.3)); border: 1px solid rgba(0, 0, 0,.3); }
 /* Movable ink is correct - Visible on image off only. */
 .altText .mi-Correct:after {
   content: "Movable Ink is correct"; 
-  width: 180px;
   background: #008000;
   text-transform: uppercase;
   border: 1px solid rgba(255, 255, 255,.3);
@@ -329,37 +321,28 @@ a[href*="http://t.e.currys.co.uk"]:after {
 /* MI: Needs & */
 .mi-noA:after {
   content: "Movable Ink needs '&' after 'Furl'";
-  width: 220px; 
-  left: -100px;
   -webkit-filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.8));
   drop-shadow: (0px 0px 1px rgba(0, 0, 0, 0.8));
 }
 /* MI: Needs & - Remove ? */
 .mi-hasQ:after {
   content: "Movable Ink needs '&' after 'Furl', remove: '?' ";
-  width: 290px;
-  left: -100px;
 }
 /* MI: Needs & - Remove ? */
 .mi-hasAQ:after {
   content: "Movable Ink needs '&' after 'Furl', remove: '?' ";
-  width: 290px; 
-  left: -100px;
 }
 /* White-space before https */
 a[href*=" https"]:after {
   content: "White-space before HTTPS";
-  width: 200px;
 }
 /* white-space before tracking query ? */
 a[href*=" ?"]:after {
   content: "White-space before Tracking";
-  width: 200px;
 }
 /* Table missing: role="presentation" */
 .sTable table:not([role*="presentation"]):after {
-  content: "Missing role= presentation";
-  width: 200px;  
+  content: "Missing role= presentation";  
 }
 /* Table align method Warning 
 .sTable td > table + table:after, 
@@ -379,7 +362,6 @@ a[href*=" ?"]:after {
 
 .altText .fauxImg:after {
   content: "Image ALT has invalid character";
-  width: 200px;
 }
 
 /* 
