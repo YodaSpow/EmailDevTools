@@ -516,7 +516,8 @@ $("*")
   .highlight(" Best price ", "red")
   .highlight(" Lowest price ", "red")
   .highlight(" click ", "red")
-  .highlight(" No purchase necessary ", "red");
+  .highlight(" No purchase necessary ", "red")
+  .highlight(" win ", "red");
 
 //.highlight("£", "red"); doesnt work
 // .highlight(" & ", "spamBG") // doesnt work reads rendered HTML not unescaped UTF8 entities.
