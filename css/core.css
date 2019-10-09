@@ -169,7 +169,7 @@ nav a:hover, button:hover {
 
 
 /* Tooltips: position start */
-.linkCheck {display: block;}
+.linkCheck {display: inline-block; width:100%;}
 .yes a[href^="#"],
 .yes a[href*="##"], 
 .pageType a[href*="PageType"],
