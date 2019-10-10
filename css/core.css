@@ -270,6 +270,7 @@ a[href*=" ?"]:after {
   letter-spacing: 0;
   background: red;
   color: white;
+  -webkit-text-fill-color: white;
   margin: 0;
   padding: 5px;
   border-radius: 2px;
