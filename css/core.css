@@ -169,7 +169,7 @@ nav a:hover, button:hover {
 
 
 /* Tooltips: position start */
-.linkCheck {display: inline-block; width:100%;}
+/*.linkCheck {display: inline-block; width:100%;}  Brewaking HTML builds */
 .yes a[href^="#"],
 .yes a[href*="##"], 
 .pageType a[href*="PageType"],
@@ -205,6 +205,8 @@ a[href*="?intcmp"],
 a[href*="http://t.e.currys.co.uk"],
 .missingQuery,
 .notSecure,
+/* Movable ink checks */
+.altText .mi-Correct, .mi-noA, .mi-hasQ, .mi-hasAQ,
 a[href*=" https"],
 a[href*=" ?"] {
   display: inline-block;
