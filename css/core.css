@@ -191,7 +191,7 @@ a[href*=" ?"] {
   -webkit-filter: drop-shadow(0px 0px 3px rgba(255, 0, 0, 0.8));
   drop-shadow: (0px 0px 3px rgba(255, 0, 0, 0.8));
 }
-.altText .fauxImg {
+.altText .fauxImg, .altText .miPixel {
   position: relative;
 }
 .yes a[href^="#"],
@@ -200,6 +200,7 @@ a[href*=" ?"] {
 .category a[href*="Category"],
 .label a[_label*="_Category"],
 .altText .fauxImg,
+.altText .miPixel,
 a[href*="#srcid"],
 a[href*="?intcmp"],
 a[href*="http://t.e.currys.co.uk"],
@@ -222,6 +223,7 @@ a[href*=" ?"] {
 /*.sTable td > table + table:before, 
 .sTable th > table + table:before,*/
 .altText .fauxImg:before,
+/*.altText .miPixel:before,*/
 a[href*="#srcid"]:before,
 a[href*="?intcmp"]:before,
 a[href*="http://t.e.currys.co.uk"]:before,
@@ -250,6 +252,7 @@ a[href*=" ?"]:before {
 /*.sTable td > table + table:after, 
 .sTable th > table + table:after,*/
 .altText .fauxImg:after,
+.altText .miPixel:after,
 a[href*="#srcid"]:after,
 a[href*="?intcmp"]:after,
 a[href*="http://t.e.currys.co.uk"]:after,
@@ -315,11 +318,19 @@ a[href*="http://t.e.currys.co.uk"]:after {
 /* MI Shadow only */
 .mi-Correct:after, .mi-noA:after, .mi-hasQ:after, .mi-hasQ:after, .mi-hasAQ:after { -webkit-filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.3)); drop-shadow: (0px 0px 1px rgba(0, 0, 0, 0.3)); border: 1px solid rgba(0, 0, 0,.3); }
 /* Movable ink is correct - Visible on image off only. */
-.altText .mi-Correct:after {
-  content: "Movable Ink is correct"; 
+.altText .mi-Correct:after, .altText .miPixel:after {
   background: #008000;
   text-transform: uppercase;
   border: 1px solid rgba(255, 255, 255,.3);
+}
+.altText .mi-Correct:after {
+  content: "Movable Ink is correct"; 
+}
+/* Movable Ink Campaign Code: pixel */
+.altText .miPixel:after {
+  content: "Movable Ink Campaign Code: Pixel is here";
+  top: 10px;
+  left: 50px;
 }
 /* MI: Needs & */
 .mi-noA:after {
@@ -366,7 +377,6 @@ a[href*=" ?"]:after {
 .altText .fauxImg:after {
   content: "Image ALT has invalid character";
 }
-
 /* 
 Fonts: 
 Set conditionas of different chain group requirements

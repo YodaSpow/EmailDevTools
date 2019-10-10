@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-	// Images that do no support clear-cache
+	// Images that do no support clear-cache or should not
 	var kickdyn = "img[src*='img.kickdyn.com']", 
-  movableInk = "img[src*='movable-ink']",
+  movableInk = "img[src*='email.images.currys.co.uk']",
 	placeholdit = "img[src*='imgplaceholder.com']",
   placeholder = "img[src*='placeholder.com']",    
 	cache	= kickdyn + "," + movableInk + "," + placeholdit + "," + placeholder;
@@ -21,6 +21,9 @@ $(window).on("load", function() {
   
   // Pseudo tooltip for images ALT: DIV only appears based on these conditions
   $("img[alt*='£'], [alt*='&'], [alt*='#']").wrap( "<div class='fauxImg'></div>" );
+  
+  // Movable Ink Campaign Code: Pixel
+  $("img[aria-hidden*='true']").wrap( "<div class='miPixel'></div>" );  
   
   // Whitelisted domains URLs for the checks: | Old MI: www.movable-ink
   var currysD = "a[href*='www.currys.co.uk']",
