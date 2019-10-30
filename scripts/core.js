@@ -1,11 +1,12 @@
 $(document).ready(function(){
 
 	// Images that do no support clear-cache or should not
-	var kickdyn = "img[src*='img.kickdyn.com']", 
-  movableInk = "img[src*='email.images.currys.co.uk']",
+	var kickdyn = "img[src*='img.kickdyn.com']",
+  defaultMI = "img[src*='www.movable-ink']",  
+  currysMI = "img[src*='email.images.currys.co.uk']",
 	placeholdit = "img[src*='imgplaceholder.com']",
   placeholder = "img[src*='placeholder.com']",    
-	cache	= kickdyn + "," + movableInk + "," + placeholdit + "," + placeholder;
+	cache	= kickdyn + "," + defaultMI + "," + currysMI + "," + placeholdit + "," + placeholder;
   $('img').not(cache).each(function(){
     /* Remove AC bespoke IMG variable: ?&lt;%= cC %&gt; */
     this.src = this.src.replace(/(\?&lt;%= cC %&gt;|\?%3C%=%20cC%20%%3E)/g, ""); 
@@ -26,23 +27,25 @@ $(window).on("load", function() {
   $("img[aria-hidden*='true']").wrap( "<div class='miPixel'></div>" );  
   
   // Whitelisted domains URLs for the checks: | Old MI: www.movable-ink
-  var currysD = "a[href*='www.currys.co.uk']",
-      idD     = "a[href*='idmobile.co.uk']",
-      pcwbD   = "a[href*='pcworldbusiness.co.uk']",
-      tkhD    = "a[href*='teamknowhow.com']",
-      ttD     = "a[href*='techtalk.currys.co.uk']",
-      mInk    = "a[href*='email.images.currys.co.uk']",
-      domainURL = currysD + "," + idD + "," + pcwbD + "," + tkhD + "," + ttD + "," + mInk,
+  var currysD   = "a[href*='www.currys.co.uk']",
+      idD       = "a[href*='idmobile.co.uk']",
+      pcwbD     = "a[href*='pcworldbusiness.co.uk']",
+      tkhD      = "a[href*='teamknowhow.com']",
+      ttD       = "a[href*='techtalk.currys.co.uk']",
+      dMI       = "a[href*='www.movable-ink']",
+      currysMI  = "a[href*='email.images.currys.co.uk']",
+      domainURL = currysD + "," + idD + "," + pcwbD + "," + tkhD + "," + ttD + "," + dMI + "," + currysMI,
       linkCheck = "link";
   
   $(domainURL).addClass("linkCheck");
-  $(mInk).addClass("mInk");  
+  $(dMI).addClass("mInk");
+  $(currysMI).addClass("mInk");
   $( ".linkCheck" ).not("a[href*='?']").addClass("missingQuery");
   $( ".linkCheck" ).not("a[href*='https']").addClass("notSecure");
   
   
   // Movable ink image is NOT HTTPS - (not supported in browser if you force either)
-  $( ".mInk" ).removeClass("notSecure");
+  $(".mInk" ).removeClass("notSecure");
   // Has no & after Furl
   $(".mInk").filter("a[href*='Furl<%']").addClass("mi-noA");
   // Has ? after Furl
