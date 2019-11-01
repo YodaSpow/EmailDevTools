@@ -324,7 +324,7 @@ a[href*="http://t.e.currys.co.uk"]:after {
   border: 1px solid rgba(255, 255, 255,.3);
 }
 .altText .mi-Correct:after {
-  content: "Movable Ink is correct"; 
+  content: "Movable Ink URL is correct"; 
 }
 /* Movable Ink Campaign Code: pixel */
 .altText .miPixel:after {
