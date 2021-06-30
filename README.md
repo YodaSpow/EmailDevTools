@@ -20,7 +20,7 @@ Aim to have a dynamic interface that does not touch the HTML in email that can a
 Download the latest release [here](https://github.com/YodaSpow/EmailDevTools/releases).
 
 ### Bookmarklet usage:
-Bookmarklet on codepen: [here]("https://codepen.io/spowart/details/abWzBwR").
+Bookmarklet on codepen: [here](https://codepen.io/spowart/details/abWzBwR).
 
 ### Development
 After forking/cloning put this code at bottom of your HTML body:
